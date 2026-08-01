@@ -1,4 +1,4 @@
-# influx_ha_entities.py
+# InfluxDB Home Assistant entities reporting
 
 Queries an InfluxDB 2.x bucket for every unique Home Assistant `entity_id`
 that has reported a value in the last year, and exports the list to CSV.
