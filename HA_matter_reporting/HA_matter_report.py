@@ -24,16 +24,14 @@ import re
 import sys
 from typing import Any
 
-
 # ── Configuration ─────────────────────────────────────────────────────────────
 
 HA_URL = "http://192.168.178.53:8123"
 HA_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJmYTI2NDA1ZTA2NGI0YjI0YTk0OTgzZmVjNDkzMGRhZSIsImlhdCI6MTc3NzU1OTk1NywiZXhwIjoyMDkyOTE5OTU3fQ.E2dm2LhcCTqhbZhLM417hHR9rVfVaArjDGD9_rK9nKA"
 
-
 # Output mode: "table" | "csv" | "json" | "debug"
 OUTPUT = "csv"
-CSV_FILE = "matter_devices.csv"          # Path for CSV output e.g. "matter_devices.csv". Empty = print to screen.
+CSV_FILE = "matter_devices.csv"  # Path for CSV output e.g. "matter_devices.csv". Empty = print to screen.
 
 
 # ── WebSocket session ─────────────────────────────────────────────────────────
@@ -50,7 +48,13 @@ class HAWebSocket:
 
     async def __aenter__(self):
         import websockets
-        self._ws = await websockets.connect(f"{self.ws_url}/api/websocket")
+
+        # Set max_size=None to remove the size limit,
+        # or use something like 10485760 for a 10MB limit.
+        self._ws = await websockets.connect(
+            f"{self.ws_url}/api/websocket",
+            max_size=None
+        )
 
         hello = json.loads(await self._ws.recv())
         if hello.get("type") != "auth_required":
@@ -88,10 +92,10 @@ class HAWebSocket:
                 print(f"[WS] ←  {raw[:400]}", file=sys.stderr)
             if msg.get("id") == self._msg_id:
                 if not msg.get("success", True):
-                    err = msg.get("error", {})
+                    err = msg.get("error") or {}
                     raise RuntimeError(
-                        f"Command '{payload.get('type')}' failed: "
-                        f"{err.get('code')} – {err.get('message')}"
+                        f"Command '{payload.get('type', '?')}' failed: "
+                        f"{err.get('code', '?')} – {err.get('message', '?')}"
                     )
                 return msg.get("result")
 
@@ -151,7 +155,7 @@ def parse_matter_unique_id(unique_id: str) -> tuple[int | None, str | None]:
     return None, None
 
 
-def normalise_thread_datasets(raw: Any) -> list[dict]:
+def normalise_thread_datasets(raw: Any) -> list[dict[str, Any]]:
     """
     `thread/list_datasets` can return different shapes depending on HA version:
       • list of dicts  (ideal)
@@ -184,7 +188,15 @@ def normalise_thread_datasets(raw: Any) -> list[dict]:
 
 # ── data collection ───────────────────────────────────────────────────────────
 
-async def collect(ha: HAWebSocket) -> tuple[list, dict, list]:
+async def collect(
+        ha: HAWebSocket,
+) -> tuple[
+    list[dict[str, Any]],
+    dict[str, dict[str, Any]],
+    list[dict[str, Any]],
+    dict[str, str],
+    set[str],
+]:
     """Fetch everything in one WebSocket session."""
 
     # 1. HA device registry — filter to Matter devices
@@ -199,6 +211,29 @@ async def collect(ha: HAWebSocket) -> tuple[list, dict, list]:
         )
     ]
     print(f"    → {len(matter_devices)} Matter device(s) in registry", file=sys.stderr)
+
+    # 1b. Label registry — used to resolve dev["labels"] IDs to display names
+    print("  • label registry…", file=sys.stderr)
+    labels_raw: list[dict] = await ha.try_call({"type": "config/label_registry/list"}, default=[]) or []
+    label_names: dict[str, str] = {
+        l["label_id"]: str(l.get("name") or l["label_id"]) for l in labels_raw
+    }
+    print(f"    → {len(label_names)} label(s) defined", file=sys.stderr)
+
+    # 1c. Entity registry — used to detect an "Identify" button per device
+    print("  • entity registry…", file=sys.stderr)
+    all_entities: list[dict] = await ha.try_call({"type": "config/entity_registry/list"}, default=[]) or []
+    matter_device_ids = {d["id"] for d in matter_devices}
+    identify_entities = [
+        e for e in all_entities
+        if e.get("device_id") in matter_device_ids
+        and str(e.get("entity_id", "")).startswith("button.")
+        and "identify" in (
+                   (e.get("translation_key") or "") + (e.get("original_name") or "") + (e.get("unique_id") or "")
+           ).lower()
+    ]
+    devices_with_identify: set[str] = {e["device_id"] for e in identify_entities}
+    print(f"    → {len(devices_with_identify)} device(s) expose an Identify button", file=sys.stderr)
 
     # 2. Matter node diagnostics — the command requires device_id (HA device registry ID),
     #    not node_id. This covers all devices including serial_ ones.
@@ -225,17 +260,49 @@ async def collect(ha: HAWebSocket) -> tuple[list, dict, list]:
     thread_datasets = normalise_thread_datasets(thread_raw)
     print(f"    → {len(thread_datasets)} dataset(s)", file=sys.stderr)
 
-    return matter_devices, device_diagnostics, thread_datasets
+    return matter_devices, device_diagnostics, thread_datasets, label_names, devices_with_identify
 
 
 # ── data assembly ─────────────────────────────────────────────────────────────
 
 NODE_TYPE_LABELS = {
     "routing_end_device": "Router-ED",
-    "sleepy_end_device":  "Sleepy-ED",
-    "router":             "Router",
-    "end_device":         "End Device",
+    "sleepy_end_device": "Sleepy-ED",
+    "router": "Router",
+    "end_device": "End Device",
 }
+
+
+def extract_serial(dev: dict, diag: dict) -> str | None:
+    """
+    Best-effort serial number lookup. Checked in order:
+      1. HA device_registry "serial_number" field (present on newer HA
+         versions for integrations that report it)
+      2. Any "serial"-like key inside the node_diagnostics payload —
+         placement varies by device/integration version, so this walks
+         the dict defensively instead of assuming a fixed path.
+    """
+    if dev.get("serial_number"):
+        return str(dev["serial_number"])
+
+    found: list[str] = []
+
+    def walk(obj):
+        if found:
+            return
+        if isinstance(obj, dict):
+            for k, v in obj.items():
+                if "serial" in str(k).lower() and isinstance(v, (str, int)) and v:
+                    found.append(str(v))
+                    return
+                walk(v)
+        elif isinstance(obj, list):
+            for item in obj:
+                walk(item)
+
+    walk(diag)
+    return found[0] if found else None
+
 
 def extract_diag_info(diag: dict) -> dict:
     """
@@ -251,35 +318,40 @@ def extract_diag_info(diag: dict) -> dict:
     """
     node_type_raw = diag.get("node_type") or ""
     return {
-        "node_id_diag":      diag.get("node_id"),
-        "network_type":      diag.get("network_type") or "—",
-        "thread_role":       NODE_TYPE_LABELS.get(node_type_raw, node_type_raw) or "—",
-        "thread_role_raw":   node_type_raw,
+        "node_id_diag": diag.get("node_id"),
+        "network_type": diag.get("network_type") or "—",
+        "thread_role": NODE_TYPE_LABELS.get(node_type_raw, node_type_raw) or "—",
+        "thread_role_raw": node_type_raw,
         "thread_network_name": diag.get("network_name"),
-        "mac_address":       diag.get("mac_address") or "—",
-        "available":         diag.get("available"),
+        "mac_address": diag.get("mac_address") or "—",
+        "available": diag.get("available"),
         # Note: HA has a typo — "ip_adresses" with one 'd'
-        "ipv6_addresses":    diag.get("ip_adresses") or [],
-        "active_fabrics":    diag.get("active_fabrics") or [],
+        "ipv6_addresses": diag.get("ip_adresses") or [],
+        "active_fabrics": diag.get("active_fabrics") or [],
     }
 
 
 def build_rows(
-    matter_devices: list[dict],
-    device_diagnostics: dict[str, dict],
-    thread_datasets: list[dict],
-) -> list[dict]:
+        matter_devices: list[dict[str, Any]],
+        device_diagnostics: dict[str, dict[str, Any]],
+        thread_datasets: list[dict[str, Any]],
+        label_names: dict[str, str] | None = None,
+        devices_with_identify: set[str] | None = None,
+) -> list[dict[str, Any]]:
+    label_names = label_names or {}
+    devices_with_identify = devices_with_identify or set()
 
     # Thread datasets indexed by extended PAN ID
     ds_by_ext_pan: dict[str, dict] = {}
     for ds in thread_datasets:
-        epid = ds.get("extended_pan_id") or ds.get("ext_pan_id")
+        epid = ds.get("extended_pan_id") or ds.get("ext_pan_id") or ""
         if epid:
             key = str(epid).lower().replace("0x", "").lstrip("0") or "0"
             ds_by_ext_pan[key] = ds
 
     # Use the single preferred Thread dataset as fallback for all Thread devices
-    preferred_ds = next((d for d in thread_datasets if d.get("preferred")), None) or                    (thread_datasets[0] if thread_datasets else {})
+    preferred_ds = next((d for d in thread_datasets if d.get("preferred")), None) or \
+        (thread_datasets[0] if thread_datasets else {})
 
     rows = []
     for dev in matter_devices:
@@ -303,9 +375,9 @@ def build_rows(
 
         # For Thread devices, fill channel/PAN from the preferred dataset
         is_thread = (net["network_type"] == "thread")
-        thread_channel  = preferred_ds.get("channel")  if is_thread else None
-        thread_pan_id   = preferred_ds.get("pan_id")   if is_thread else None
-        thread_ext_pan  = preferred_ds.get("extended_pan_id") if is_thread else None
+        thread_channel = preferred_ds.get("channel") if is_thread else None
+        thread_pan_id = preferred_ds.get("pan_id") if is_thread else None
+        thread_ext_pan = preferred_ds.get("extended_pan_id") if is_thread else None
 
         # HA fabric (vendor_id 4939) from active_fabrics
         ha_fabric = next(
@@ -313,56 +385,100 @@ def build_rows(
         )
         fabric_label = ha_fabric.get("fabric_label") or "—"
 
+        # Identification helpers — for telling apart two identical physical units
+        serial = extract_serial(dev, diag)
+        raw_label_ids: list[str] = dev.get("labels") or []
+        labels = [label_names.get(lbl_id, lbl_id) for lbl_id in raw_label_ids]
+        has_identify = dev["id"] in devices_with_identify
+        user_named = bool(dev.get("name_by_user"))
+
         rows.append({
             # HA device registry
-            "name":         dev.get("name_by_user") or dev.get("name") or "(unknown)",
+            "name": dev.get("name_by_user") or dev.get("name") or "(unknown)",
             "ha_device_id": dev.get("id", "—"),
-            "area_id":      dev.get("area_id") or "—",
+            "area_id": dev.get("area_id") or "—",
             "manufacturer": dev.get("manufacturer") or "—",
-            "model":        dev.get("model") or "—",
-            "sw_version":   dev.get("sw_version") or "—",
-            "hw_version":   dev.get("hw_version") or "—",
+            "model": dev.get("model") or "—",
+            "sw_version": dev.get("sw_version") or "—",
+            "hw_version": dev.get("hw_version") or "—",
+            "labels": ", ".join(labels) if labels else "—",
+            "serial_number": serial or "—",
+            "has_identify_button": has_identify,
+            "user_named": user_named,
+            "ambiguous_twin": False,
             # Matter identifiers
-            "matter_node_id":   node_id if node_id is not None else "—",
+            "matter_node_id": node_id if node_id is not None else "—",
             "matter_unique_id": matter_uid or "—",
-            "fabric_id":        fabric_id_from_uid or "—",
-            "fabric_label":     fabric_label,
+            "fabric_id": fabric_id_from_uid or "—",
+            "fabric_label": fabric_label,
             # Network
-            "network_type":  net["network_type"],
-            "available":     net["available"],
-            "mac_address":   net["mac_address"],
+            "network_type": net["network_type"],
+            "available": net["available"],
+            "mac_address": net["mac_address"],
             "ipv6_addresses": net["ipv6_addresses"],
             # Thread
-            "thread_role":         net["thread_role"] if is_thread else "—",
-            "thread_network_name": net["thread_network_name"] or (preferred_ds.get("network_name") if is_thread else None) or "—",
-            "thread_channel":      thread_channel or "—",
-            "thread_pan_id":       thread_pan_id or "—",
-            "thread_ext_pan_id":   thread_ext_pan or "—",
+            "thread_role": net["thread_role"] if is_thread else "—",
+            "thread_network_name": net["thread_network_name"] or (
+                preferred_ds.get("network_name") if is_thread else None) or "—",
+            "thread_channel": thread_channel or "—",
+            "thread_pan_id": thread_pan_id or "—",
+            "thread_ext_pan_id": thread_ext_pan or "—",
             # Raw diagnostics (for debug mode)
             "_diag": diag,
         })
 
     rows.sort(key=lambda r: r["name"].lower())
+    flag_ambiguous_twins(rows)
     return rows
+
+
+def flag_ambiguous_twins(rows: list[dict[str, Any]]) -> None:
+    """
+    Mark rows (in place) with 'ambiguous_twin': True when two or more
+    devices share the same manufacturer + model AND none of the human-
+    readable disambiguators (label, serial number, custom name) are set.
+
+    The MAC address / node ID are always technically unique, but that
+    doesn't help you point at the physical unit on your desk — this flag
+    is about *human* identifiability, not network uniqueness.
+    """
+    groups: dict[tuple, list[dict]] = {}
+    for r in rows:
+        key = (r["manufacturer"], r["model"])
+        groups.setdefault(key, []).append(r)
+
+    for key, group in groups.items():
+        if len(group) < 2 or key == ("—", "—"):
+            continue
+        names_in_group = [r["name"] for r in group]
+        for r in group:
+            has_label = r["labels"] != "—"
+            has_serial = r["serial_number"] != "—"
+            # Only counts as distinguishing if the user actually renamed it
+            # AND that name is unique within this manufacturer/model group —
+            # two devices sharing the same default (or same custom) name
+            # are still indistinguishable in practice.
+            has_unique_name = r["user_named"] and names_in_group.count(r["name"]) == 1
+            r["ambiguous_twin"] = not (has_label or has_serial or has_unique_name)
 
 
 # ── output ────────────────────────────────────────────────────────────────────
 
-def print_table(rows: list[dict]) -> None:
+def print_table(rows: list[dict[str, Any]]) -> None:
     if not rows:
         print("No Matter devices found.")
         return
 
-    W = dict(name=28, mfr=16, model=20, nid=6, role=14, net=18, ch=4, ipv6=40)
+    w = dict(name=28, mfr=16, model=20, nid=6, role=14, net=18, ch=4, ipv6=40)
 
     def t(v: Any, w: int) -> str:
         s = str(v)
         return s if len(s) <= w else s[:w - 1] + "…"
 
     hdr = (
-        f"{'Device':<{W['name']}}  {'Manufacturer':<{W['mfr']}}  {'Model':<{W['model']}}  "
-        f"{'NodeID':>{W['nid']}}  {'Thread Role':<{W['role']}}  {'Network':<{W['net']}}  "
-        f"{'Ch':>{W['ch']}}  {'IPv6 (first)':<{W['ipv6']}}"
+        f"{'Device':<{w['name']}}  {'Manufacturer':<{w['mfr']}}  {'Model':<{w['model']}}  "
+        f"{'NodeID':>{w['nid']}}  {'Thread Role':<{w['role']}}  {'Network':<{w['net']}}  "
+        f"{'Ch':>{w['ch']}}  {'IPv6 (first)':<{w['ipv6']}}"
     )
     sep = "─" * len(hdr)
     print(f"\n{sep}\n{hdr}\n{sep}")
@@ -370,10 +486,10 @@ def print_table(rows: list[dict]) -> None:
     for r in rows:
         ipv6 = r["ipv6_addresses"][0] if r["ipv6_addresses"] else "—"
         print(
-            f"{t(r['name'], W['name']):<{W['name']}}  {t(r['manufacturer'], W['mfr']):<{W['mfr']}}  "
-            f"{t(r['model'], W['model']):<{W['model']}}  {str(r['matter_node_id']):>{W['nid']}}  "
-            f"{t(r['thread_role'], W['role']):<{W['role']}}  {t(r['thread_network_name'], W['net']):<{W['net']}}  "
-            f"{str(r['thread_channel']):>{W['ch']}}  {t(ipv6, W['ipv6']):<{W['ipv6']}}"
+            f"{t(r['name'], w['name']):<{w['name']}}  {t(r['manufacturer'], w['mfr']):<{w['mfr']}}  "
+            f"{t(r['model'], w['model']):<{w['model']}}  {str(r['matter_node_id']):>{w['nid']}}  "
+            f"{t(r['thread_role'], w['role']):<{w['role']}}  {t(r['thread_network_name'], w['net']):<{w['net']}}  "
+            f"{str(r['thread_channel']):>{w['ch']}}  {t(ipv6, w['ipv6']):<{w['ipv6']}}"
         )
 
     print(f"{sep}\n\n{len(rows)} Matter device(s)\n")
@@ -399,45 +515,51 @@ def print_table(rows: list[dict]) -> None:
         print("└")
 
 
-def print_json(rows: list[dict]) -> None:
+def print_json(rows: list[dict[str, Any]]) -> None:
     export = [{k: v for k, v in r.items() if k != "_diag"} for r in rows]
     print(json.dumps(export, indent=2))
 
 
-def print_csv(rows: list[dict]) -> None:
+def print_csv(rows: list[dict[str, Any]]) -> None:
     """Write rows as CSV. Respects CSV_FILE: empty = stdout, otherwise write to file."""
     fields = [
-        ("name",                "Name"),
-        ("ha_device_id",        "HA Device ID"),
-        ("area_id",             "Area"),
-        ("manufacturer",        "Manufacturer"),
-        ("model",               "Model"),
-        ("sw_version",          "SW Version"),
-        ("hw_version",          "HW Version"),
-        ("matter_node_id",      "Matter Node ID"),
-        ("matter_unique_id",    "Matter Unique ID"),
-        ("fabric_id",           "Fabric ID"),
-        ("fabric_label",        "Fabric Label"),
-        ("network_type",        "Network Type"),
-        ("available",           "Available"),
-        ("mac_address",         "MAC Address"),
-        ("thread_role",         "Thread Role"),
+        ("name", "Name"),
+        ("ha_device_id", "HA Device ID"),
+        ("area_id", "Area"),
+        ("manufacturer", "Manufacturer"),
+        ("model", "Model"),
+        ("sw_version", "SW Version"),
+        ("hw_version", "HW Version"),
+        ("labels", "Labels"),
+        ("serial_number", "Serial Number"),
+        ("has_identify_button", "Has Identify Button"),
+        ("ambiguous_twin", "Ambiguous Twin"),
+        ("matter_node_id", "Matter Node ID"),
+        ("matter_unique_id", "Matter Unique ID"),
+        ("fabric_id", "Fabric ID"),
+        ("fabric_label", "Fabric Label"),
+        ("network_type", "Network Type"),
+        ("available", "Available"),
+        ("mac_address", "MAC Address"),
+        ("thread_role", "Thread Role"),
         ("thread_network_name", "Thread Network"),
-        ("thread_channel",      "Thread Channel"),
-        ("thread_pan_id",       "Thread PAN ID"),
-        ("thread_ext_pan_id",   "Thread Ext PAN ID"),
-        ("ipv6_addresses",      "IPv6 Addresses"),
+        ("thread_channel", "Thread Channel"),
+        ("thread_pan_id", "Thread PAN ID"),
+        ("thread_ext_pan_id", "Thread Ext PAN ID"),
+        ("ipv6_addresses", "IPv6 Addresses"),
     ]
-    keys    = [f[0] for f in fields]
+    keys = [f[0] for f in fields]
     headers = [f[1] for f in fields]
 
-    def cell(row: dict, key: str) -> str:
-        v = row.get(key)
+    def cell(row: dict[str, Any], key: str) -> str:
+        v: Any = row[key] if key in row else None
         if isinstance(v, list):
             return "; ".join(str(x) for x in v)
         if isinstance(v, bool):
             return "yes" if v else "no"
-        return "" if v is None else str(v)
+        if v is None:
+            return ""
+        return str(v)
 
     buf = io.StringIO()
     writer = csv.writer(buf, dialect="excel")
@@ -455,7 +577,7 @@ def print_csv(rows: list[dict]) -> None:
         sys.stdout.write(csv_text)
 
 
-def print_debug(rows: list[dict], thread_raw: Any = None) -> None:
+def print_debug(rows: list[dict[str, Any]], thread_raw: Any = None) -> None:
     """Dump raw diagnostics + thread dataset raw so you can see actual key names."""
     if thread_raw is not None:
         print("\n" + "=" * 60)
@@ -474,17 +596,35 @@ def print_debug(rows: list[dict], thread_raw: Any = None) -> None:
 
 async def run() -> None:
     ws_url = HA_URL.rstrip("/").replace("https://", "wss://").replace("http://", "ws://")
-    debug  = (OUTPUT == "debug")
+    debug = (OUTPUT == "debug")
 
     print("Connecting to Home Assistant…", file=sys.stderr)
     async with HAWebSocket(ws_url, HA_TOKEN, debug=debug) as ha:
-        matter_devices, device_diagnostics, thread_datasets = await collect(ha)
+        matter_devices, device_diagnostics, thread_datasets, label_names, devices_with_identify = \
+            await collect(ha)
 
         # Keep raw thread result for debug output
         thread_raw = await ha.try_call({"type": "thread/list_datasets"}, default=[]) \
             if debug else None
 
-    rows = build_rows(matter_devices, device_diagnostics, thread_datasets)
+    rows = build_rows(
+        matter_devices, device_diagnostics, thread_datasets,
+        label_names, devices_with_identify,
+    )
+
+    ambiguous = [r for r in rows if r.get("ambiguous_twin")]
+    if ambiguous:
+        print(
+            f"\n⚠  {len(ambiguous)} device(s) are ambiguous twins — same manufacturer/model, "
+            f"no label, no serial number, no custom name set:",
+            file=sys.stderr,
+        )
+        for r in ambiguous:
+            identify_hint = "has an Identify button" if r["has_identify_button"] else "no Identify button found"
+            print(f"    - {r['manufacturer']} {r['model']}  (device_id={r['ha_device_id']}, {identify_hint})",
+                  file=sys.stderr)
+        print("    → Trigger Identify (where available) and assign a label or rename now, "
+              "before it becomes unclear which physical unit is which.\n", file=sys.stderr)
 
     if OUTPUT == "debug":
         print_debug(rows, thread_raw)
