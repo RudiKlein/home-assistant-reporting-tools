@@ -26,8 +26,8 @@ from typing import Any
 
 # ── Configuration ─────────────────────────────────────────────────────────────
 
-HA_URL = "http://192.168.178.53:8123"
-HA_TOKEN = "YOUR_LONG-LIVED_HA_ACCESS_TOKNE_HERE"
+HA_URL = "YOUR_URL_HERE"  # Example http://192.168.178.53:8123"
+HA_TOKEN = "YOUR_HA_TOKEN_HERE"
 
 # Output mode: "table" | "csv" | "json" | "debug"
 OUTPUT = "csv"

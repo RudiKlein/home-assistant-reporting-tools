@@ -4,16 +4,16 @@ from influxdb_client import InfluxDBClient
 from pathlib import Path
 import shutil
 
-INFLUX_URL = "http://192.168.1.17:18086"
-INFLUX_TOKEN = "WYZywK9uhHLCroKYeWi__7cP5ErKcwm0LxFrvmMwPygBMghnJYIayh5gTV7B--OUPEI5cWerverjnSxdbGieXA=="
-INFLUX_ORG = "kleinorg"
-INFLUX_BUCKET = "homeassistant-live"
+INFLUX_URL = "YOUR_URL_HERE"  # Example http://192.168.1.17:18086"
+INFLUX_TOKEN = "YOUR_TOKEN_HERE"
+INFLUX_ORG = "YOUR_ORG_HERE"
+INFLUX_BUCKET = "YOUR_BUCKET_NAME_HERE"
 
 client = InfluxDBClient(url=INFLUX_URL, token=INFLUX_TOKEN, org=INFLUX_ORG)
 query_api = client.query_api()
 
-query = """
-from(bucket: "homeassistant-live")
+query = f"""
+from(bucket: "{INFLUX_BUCKET}")
   |> range(start: -1y)
   |> filter(fn: (r) => r["_field"] == "value")
   |> last()

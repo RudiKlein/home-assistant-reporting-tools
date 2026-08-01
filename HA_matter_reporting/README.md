@@ -1,4 +1,4 @@
-# matter_devices.py
+# HA Matter Reporting Tool
 
 A Home Assistant reporting tool that lists every Matter device on your
 system with Thread network details, HA registry metadata, and identifiers
@@ -21,6 +21,14 @@ node IDs, MAC addresses, Thread role/network info, serial numbers (where
 available), labels, and whether a device exposes an **Identify** button —
 plus it actively flags device pairs/groups that currently have *no*
 distinguishing information at all.
+
+```
+Important Note
+```
+* This script is **not** a Home Assistant add-on. It is a standalone Python script that runs on your local machine or server and connects to Home Assistant via the WebSocket API.
+* It is designed to be run periodically (e.g., via cron) to generate a snapshot of your Home Assistant labels and identify any gaps or inconsistencies.
+* It is intended for users who are comfortable with Python and command-line tools, and who have a working knowledge of Home Assistant's device and entity model.
+* It is provided as-is, with no warranty or support. Use at your own risk. Live on the edge.
 
 ## Requirements
 
@@ -62,11 +70,11 @@ python matter_devices.py > matter_devices.csv
 
 ## Output modes
 
-| Mode    | Description |
-|---------|-------------|
-| `table` | Human-readable summary table + detailed per-device blocks, printed to stdout |
-| `csv`   | Spreadsheet-friendly export (see column reference below) |
-| `json`  | Full structured export of all fields (excluding raw diagnostics) |
+| Mode    | Description                                                                                                                                                                                                      |
+|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `table` | Human-readable summary table + detailed per-device blocks, printed to stdout                                                                                                                                     |
+| `csv`   | Spreadsheet-friendly export (see column reference below)                                                                                                                                                         |
+| `json`  | Full structured export of all fields (excluding raw diagnostics)                                                                                                                                                 |
 | `debug` | Dumps the raw `thread/list_datasets` and `matter/node_diagnostics` payloads per device — useful when HA's diagnostics schema doesn't match what this script expects (it varies across HA/Matter server versions) |
 
 ## What it collects
@@ -86,26 +94,26 @@ For each Matter device in the HA device registry, the script cross-references:
 
 ## Column reference (CSV/JSON)
 
-| Column | Source | Notes |
-|---|---|---|
-| `name` | device registry | user-set name if present, else default |
-| `ha_device_id` | device registry | HA's internal device ID |
-| `area_id` | device registry | |
-| `manufacturer` / `model` | device registry | |
-| `sw_version` / `hw_version` | device registry | |
-| `labels` | label registry | comma-separated label names |
-| `serial_number` | device registry, falling back to a defensive scan of diagnostics | may be `—` if the device/integration doesn't report one |
-| `has_identify_button` | entity registry | `yes`/`no` — whether you can trigger a physical blink/beep to confirm identity |
-| `ambiguous_twin` | computed | see [below](#ambiguous-twin-detection) |
-| `matter_node_id` | diagnostics, falling back to parsed unique_id | |
-| `matter_unique_id` | device registry identifiers | raw HA Matter unique ID string |
-| `fabric_id` / `fabric_label` | parsed unique_id / active_fabrics | HA's own commissioning fabric |
-| `network_type` | diagnostics | `thread` or `wifi` |
-| `available` | diagnostics | current reachability |
-| `mac_address` | diagnostics | |
-| `thread_role` | diagnostics | Router / Router-ED / Sleepy-ED / End Device |
-| `thread_network_name` / `thread_channel` / `thread_pan_id` / `thread_ext_pan_id` | thread datasets | |
-| `ipv6_addresses` | diagnostics | semicolon-separated in CSV |
+| Column                                                                           | Source                                                           | Notes                                                                          |
+|----------------------------------------------------------------------------------|------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| `name`                                                                           | device registry                                                  | user-set name if present, else default                                         |
+| `ha_device_id`                                                                   | device registry                                                  | HA's internal device ID                                                        |
+| `area_id`                                                                        | device registry                                                  |                                                                                |
+| `manufacturer` / `model`                                                         | device registry                                                  |                                                                                |
+| `sw_version` / `hw_version`                                                      | device registry                                                  |                                                                                |
+| `labels`                                                                         | label registry                                                   | comma-separated label names                                                    |
+| `serial_number`                                                                  | device registry, falling back to a defensive scan of diagnostics | may be `—` if the device/integration doesn't report one                        |
+| `has_identify_button`                                                            | entity registry                                                  | `yes`/`no` — whether you can trigger a physical blink/beep to confirm identity |
+| `ambiguous_twin`                                                                 | computed                                                         | see [below](#ambiguous-twin-detection)                                         |
+| `matter_node_id`                                                                 | diagnostics, falling back to parsed unique_id                    |                                                                                |
+| `matter_unique_id`                                                               | device registry identifiers                                      | raw HA Matter unique ID string                                                 |
+| `fabric_id` / `fabric_label`                                                     | parsed unique_id / active_fabrics                                | HA's own commissioning fabric                                                  |
+| `network_type`                                                                   | diagnostics                                                      | `thread` or `wifi`                                                             |
+| `available`                                                                      | diagnostics                                                      | current reachability                                                           |
+| `mac_address`                                                                    | diagnostics                                                      |                                                                                |
+| `thread_role`                                                                    | diagnostics                                                      | Router / Router-ED / Sleepy-ED / End Device                                    |
+| `thread_network_name` / `thread_channel` / `thread_pan_id` / `thread_ext_pan_id` | thread datasets                                                  |                                                                                |
+| `ipv6_addresses`                                                                 | diagnostics                                                      | semicolon-separated in CSV                                                     |
 
 ## Ambiguous-twin detection
 

@@ -19,9 +19,7 @@ Requirements:
     pip install websockets
 
 Usage:
-    export HA_URL="ws://homeassistant.local:8123/api/websocket"
-    export HA_TOKEN="your-long-lived-access-token"
-    python3 ha_device_label_export.py
+    python3 ha_get_labels.py
 
 Notes:
   - Device/entity/label/area registries are only exposed via the
@@ -46,8 +44,8 @@ from collections import defaultdict
 
 import websockets
 
-HA_URL = "ws://192.168.178.53:8123/api/websocket"
-HA_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJmYTI2NDA1ZTA2NGI0YjI0YTk0OTgzZmVjNDkzMGRhZSIsImlhdCI6MTc3NzU1OTk1NywiZXhwIjoyMDkyOTE5OTU3fQ.E2dm2LhcCTqhbZhLM417hHR9rVfVaArjDGD9_rK9nKA"
+HA_URL = "YOUR_URL_HERE"  # Example ws://192.168.178.53:8123/api/websocket"
+HA_TOKEN = "YOUR_HA_TOKEN_HERE"
 
 OUTPUT_CSV_DEVICES = os.environ.get("OUTPUT_CSV_DEVICES", "ha_devices_labels.csv")
 OUTPUT_CSV_ENTITIES = os.environ.get("OUTPUT_CSV_ENTITIES", "ha_entities_labels.csv")
@@ -102,7 +100,6 @@ LABEL_CATEGORIES = {
     }
 
 REQUIRED_CATEGORIES = ["brand", "protocol", "function"]
-
 
 
 def check_label_categories(row):

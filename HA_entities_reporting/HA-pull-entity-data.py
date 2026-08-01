@@ -4,8 +4,8 @@ from datetime import datetime
 from pathlib import Path
 import shutil
 
-HA_URL = "http://192.168.178.53:8123"
-HA_TOKEN = "<ADD_YOUR_HA_TOKEN_HERE>"
+HA_URL = "YOUR_URL_HERE"  # Example http://192.168.178.53:8123"
+HA_TOKEN = "YOUR_HA_TOKEN_HERE"
 
 headers = {
     "Authorization": f"Bearer {HA_TOKEN}",
