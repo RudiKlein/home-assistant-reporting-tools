@@ -27,7 +27,7 @@ from typing import Any
 # ── Configuration ─────────────────────────────────────────────────────────────
 
 HA_URL = "http://192.168.178.53:8123"
-HA_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJmYTI2NDA1ZTA2NGI0YjI0YTk0OTgzZmVjNDkzMGRhZSIsImlhdCI6MTc3NzU1OTk1NywiZXhwIjoyMDkyOTE5OTU3fQ.E2dm2LhcCTqhbZhLM417hHR9rVfVaArjDGD9_rK9nKA"
+HA_TOKEN = "YOUR_LONG-LIVED_HA_ACCESS_TOKNE_HERE"
 
 # Output mode: "table" | "csv" | "json" | "debug"
 OUTPUT = "csv"
