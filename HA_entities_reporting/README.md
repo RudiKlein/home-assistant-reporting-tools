@@ -1,14 +1,23 @@
 # HA pull entity data
 
-A minimal Home Assistant export tool. Pulls the current state of every
-entity via the REST API (`/api/states`) and writes it to a timestamped
-CSV, plus a rolling `home_assistant_entities.csv` that always reflects
-the most recent run.
+A minimal Home Assistant export tool. Pulls the current state of every entity via the REST API (`/api/states`) and
+writes it to a timestamped CSV, plus a rolling `home_assistant_entities.csv` that always reflects the most recent run.
 
 Unlike the WebSocket-based tools in this repo (`matter_devices.py`,
 `ha_get_labels.py`), this one only needs the REST API — no `websockets`
-dependency, no persistent connection. It's a quick point-in-time
-snapshot of entity states rather than a registry/label audit.
+dependency, no persistent connection. It's a quick point-in-time snapshot of entity states rather than a registry/label
+audit.
+
+```
+Important Note
+```
+
+* This script is **not** a Home Assistant add-on. It is a standalone Python script that runs on your local machine or
+  server and connects to Home Assistant via the WebSocket API.
+* It is designed to be run periodically (e.g., via cron), or manually, to generate a snapshot of your Home Assistant entities.
+* It is intended for users who are comfortable with Python and command-line tools, and who have a working knowledge of
+  Home Assistant's device and entity model.
+* It is provided as-is, with no warranty or support. Use at your own risk. Live on the edge.
 
 ## Requirements
 
@@ -31,19 +40,16 @@ HA_TOKEN = "YOUR_HA_TOKEN_HERE"
 python3 ha_pull_entity_data.py
 ```
 
-On success, prints the number of entities exported and the timestamped
-filename. On failure (non-200 response), prints the HTTP status code and
-response body.
+On success, prints the number of entities exported and the timestamped filename. On failure (non-200 response), prints
+the HTTP status code and response body.
 
 ## Output
 
 Two files are written to the working directory on each run:
 
-- `home_assistant_entities_YYYYMMDD_HHMMSS.csv` — a timestamped snapshot,
-  never overwritten
-- `home_assistant_entities.csv` — a copy of the same data, overwritten
-  every run, useful if you always want "the latest export" at a fixed
-  path (e.g. for another tool or script to read)
+- `home_assistant_entities_YYYYMMDD_HHMMSS.csv` — a timestamped snapshot, never overwritten
+- `home_assistant_entities.csv` — a copy of the same data, overwritten every run, useful if you always want "the latest
+  export" at a fixed path (e.g. for another tool or script to read)
 
 Each row contains:
 
@@ -58,26 +64,22 @@ Each row contains:
 
 ## Notes on the data itself
 
-- `state` reflects each entity's state at request time — this is a
-  snapshot, not a history export. For historical data, HA's `/api/history`
+- `state` reflects each entity's state at request time — this is a snapshot, not a history export. For historical data,
+  HA's `/api/history`
   endpoint would be the right tool instead.
-- `friendly_name` falls back to an empty string when an entity doesn't
-  define one (e.g. some internal/diagnostic entities).
-- No filtering is applied — every entity in the system is exported,
-  including disabled/hidden ones, helpers, and internal domains like
+- `friendly_name` falls back to an empty string when an entity doesn't define one (e.g. some internal/diagnostic
+  entities).
+- No filtering is applied — every entity in the system is exported, including disabled/hidden ones, helpers, and
+  internal domains like
   `persistent_notification` or `zone`.
 
 ## Known limitations
 
-- **No pagination or size limiting** — `/api/states` returns the full
-  entity list in one response. Fine for a typical homelab instance; a
-  very large entity count means a correspondingly large single request/
-  response.
-- **No retry logic** — a single failed request (network blip, HA
-  restarting, token expiry) prints an error and exits; nothing is
-  retried automatically.
+- **No pagination or size limiting** — `/api/states` returns the full entity list in one response. Fine for a typical
+  homelab instance; a very large entity count means a correspondingly large single request/ response.
+- **No retry logic** — a single failed request (network blip, HA restarting, token expiry) prints an error and exits;
+  nothing is retried automatically.
 - **Timestamped files accumulate** — nothing here prunes old
-  `home_assistant_entities_*.csv` snapshots. If you run this on a
-  schedule (cron, systemd timer, etc.), add your own cleanup / retention
-  policy.
+  `home_assistant_entities_*.csv` snapshots. If you run this on a schedule (cron, systemd timer, etc.), add your own
+  cleanup / retention policy.
 
