@@ -8,17 +8,6 @@ Unlike the WebSocket-based tools in this repo (`matter_devices.py`,
 dependency, no persistent connection. It's a quick point-in-time snapshot of entity states rather than a registry/label
 audit.
 
-```
-Important Note
-```
-
-* This script is **not** a Home Assistant add-on. It is a standalone Python script that runs on your local machine or
-  server and connects to Home Assistant via the WebSocket API.
-* It is designed to be run periodically (e.g., via cron), or manually, to generate a snapshot of your Home Assistant entities.
-* It is intended for users who are comfortable with Python and command-line tools, and who have a working knowledge of
-  Home Assistant's device and entity model.
-* It is provided as-is, with no warranty or support. Use at your own risk. Live on the edge.
-
 ## Requirements
 
 - Python 3.x
@@ -83,3 +72,14 @@ Each row contains:
   `home_assistant_entities_*.csv` snapshots. If you run this on a schedule (cron, systemd timer, etc.), add your own
   cleanup / retention policy.
 
+## Important Note
+
+* These scripts are **not** Home Assistant add-ons. They are standalone Python scripts that run on your local machine or server and connect to Home Assistant via the HA websocket api.
+* These scripts are not affiliated with or endorsed by Home Assistant. They are independent tools created by someone who thinks he's a developer.
+* They are designed to be run periodically (e.g., via cron), or manually, to generate a snapshot of your Home Assistant for analysis and reporting.
+* They are intended for users who are comfortable with Python and command-line tools, and who have a working knowledge of Home Assistant's device and entity model.
+* They are provided as-is, with no warranty or support. Use at your own risk. Live on the edge.
+* However, if you find them useful, please consider contributing back to the project by submitting issues, pull requests, or comforting compliments.
+* I want to extend my gratitude to my friend Claude for its support, inspiration, its context drift, hallucination loops, erratic behavior, and false outputs.
+```
+```

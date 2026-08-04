@@ -7,18 +7,6 @@ Beyond simply exporting data, this tool acts as a **label auditor**. It checks y
 find devices and entities missing labels, and validates your existing labels against a customizable strict taxonomy
 (e.g., requiring every device to have a Brand, Protocol, and Function label).
 
-```
-Important Note
-```
-
-* This script is **not** a Home Assistant add-on. It is a standalone Python script that runs on your local machine or
-  server and connects to Home Assistant via the WebSocket API.
-* It is designed to be run periodically (e.g., via cron), or manually, to generate a snapshot of your Home Assistant labels and
-  identify any gaps or inconsistencies.
-* It is intended for users who are comfortable with Python and command-line tools, and who have a working knowledge of
-  Home Assistant's device and entity model.
-* It is provided as-is, with no warranty or support. Use at your own risk. Live on the edge.
-
 ## Features
 
 * **Comprehensive Entity Export:** Captures standard entities alongside automations (`automation.*`), scripts
@@ -149,6 +137,16 @@ This script exposes a specific Home Assistant behavior regarding labels: **Label
 * I have included a few sample CSV files in this repository to illustrate the output format.
 * The Excel file `ha_labels_audit.xlsx` is a sample of what you see when you import the CSVs in Excel by using a query,
   into a single workbook with multiple sheets.
+
+## Important Note
+
+* These scripts are **not** Home Assistant add-ons. They are standalone Python scripts that run on your local machine or server and connect to Home Assistant via the HA websocket api.
+* These scripts are not affiliated with or endorsed by Home Assistant. They are independent tools created by someone who thinks he's a developer.
+* They are designed to be run periodically (e.g., via cron), or manually, to generate a snapshot of your Home Assistant for analysis and reporting.
+* They are intended for users who are comfortable with Python and command-line tools, and who have a working knowledge of Home Assistant's device and entity model.
+* They are provided as-is, with no warranty or support. Use at your own risk. Live on the edge.
+* However, if you find them useful, please consider contributing back to the project by submitting issues, pull requests, or comforting compliments.
+* I want to extend my gratitude to my friend Claude for its support, inspiration, its context drift, hallucination loops, erratic behavior, and false outputs.
 
 ```
 ```

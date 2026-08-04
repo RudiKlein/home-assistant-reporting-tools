@@ -28,15 +28,14 @@ if response.status_code == 200:
 
         for e in entities:
             entity_id = e["entity_id"]
+            state = e.get("state", "")
             domain = entity_id.split(".")[0]
             friendly_name = e.get("attributes", {}).get("friendly_name", "")
 
             writer.writerow([
                 entity_id,
-                e["state"],
+                state,
                 domain,
-                e["last_changed"],
-                e["last_updated"],
                 friendly_name,
             ])
 

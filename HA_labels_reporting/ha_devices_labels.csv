@@ -1,283 +1,283 @@
 device_id,name,manufacturer,model,area,label_names,labels_direct_on_device,labels_inherited_from_entities,label_count,missing_labels,rule_failures,disabled_by,entry_type,entity_count,config_entries
-d468ff9d4bff4ab9b27ef0d6e96ba409,Home Assistant Core,Home Assistant,Home Assistant Core,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,3,fa264e9a222c46061a3386896775c494
-8d841865a1f5d4ffd9f07f96658ba8a7,Home Assistant Supervisor,Home Assistant,Home Assistant Supervisor,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,3,fa264e9a222c46061a3386896775c494
-a37858a04641a1351e9339f64236afa9,Home Assistant Host,Home Assistant,Home Assistant Host,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,5,fa264e9a222c46061a3386896775c494
-001e30362eaf0181dd13090363accffa,Home Assistant Operating System,Home Assistant,Home Assistant Operating System,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,3,fa264e9a222c46061a3386896775c494
-a66c287ff047282bbf1948cc3563b7f7,Sun,,,Digital only,"Digital only, Sensor",Digital only,"Digital only, Sensor",2,False,"missing category: brand, protocol",,service,9,1feb363dadb26d213e9ea41838943e48
-8361f310e6a813efd416913adc772ae9,KleinCastNew,Google Inc.,Chromecast,Woonkamer,"WiFi, haghs_ignore","WiFi, haghs_ignore",,2,False,missing category: brand,,,1,1d8ab12f52466109aeec8c1c01fbaca8
+d468ff9d4bff4ab9b27ef0d6e96ba409,Home Assistant Core,Home Assistant,Home Assistant Core,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,3,fa264e9a11c46069a3386896775c494
+8d849865a9f5d4ffd9f07f96658ba8a7,Home Assistant Supervisor,Home Assistant,Home Assistant Supervisor,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,3,fa264e9a11c46069a3386896775c494
+a37858a04649a9359e9339f64236afa9,Home Assistant Host,Home Assistant,Home Assistant Host,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,5,fa264e9a11c46069a3386896775c494
+009e30362eaf0989dd93090363acc001,Home Assistant Operating System,Home Assistant,Home Assistant Operating System,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,3,fa264e9a11c46069a3386896775c494
+a66c287ff047282bbf9948cc3563b7f7,Sun,,,Digital only,"Digital only, Sensor",Digital only,"Digital only, Sensor",2,False,"missing category: brand, protocol",,service,9,9feb363dadb26d293e9ea49838943e48
+8369f390e6a893efd496993adc772ae9,KleinCastNew,Google Inc.,Chromecast,Woonkamer,"WiFi, haghs_ignore","WiFi, haghs_ignore",,2,False,missing category: brand,,,9,9d8ab92f52466909aeec8c9c09fbaca8
 5f2e3248787deec66fd5e35ca0f3e700,Watermeter,HomeWizard,Wi-Fi Watermeter,Meterkast,"Sensor, Switch, WiFi","Sensor, Switch, WiFi",Sensor,3,False,missing category: brand,,,7,64560e784ce486735e70ca8d49f3dfb5
-053915546e1054c56f0d8ffbc792f7b2,MariaDB,Official apps,Home Assistant App,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,7,fa264e9a222c46061a3386896775c494
-31aa57d8a24c65fe1f89c000f12bbf15,Advanced SSH & Web Terminal,Home Assistant Community Apps,Home Assistant App,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,7,fa264e9a222c46061a3386896775c494
-724653b129153fad51b38581abdbd030,Klein tablet,LENOVO,Lenovo TB-X306F,Woonkamer,"Digital only, Sensor, Tablet, WiFi","Digital only, Tablet, WiFi",Sensor,4,False,missing category: brand; uncategorized label(s): Tablet,,,93,01K57GQWPDGSEHMYQRGGFEH9HG
-d3d4a1e564cde98d93cd13e634221160,Julius smartphone,samsung,SM-G781B,Mobiel,"Mobile, Samsung, Sensor, Smartphone, WiFi","Mobile, Samsung, Smartphone, WiFi",Sensor,5,False,uncategorized label(s): Smartphone,,,106,7d65fa2ea43fe6cae1bcc56c26a78894
-66d0b68387f12a5a4d325bbc9c4f0574,Studio Code Server,Home Assistant Community Apps,Home Assistant App,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,7,fa264e9a222c46061a3386896775c494
-df008cdfd9cf649c727d8e7fda2ebdc2,File editor,Official apps,Home Assistant App,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,7,fa264e9a222c46061a3386896775c494
-fd4ec006a2ea1c62002c6b6b5a624173,Rolien smartphone prive,samsung,SM-G780F,Mobiel,"Mobile, Samsung, Sensor, Smartphone, WiFi","Mobile, Samsung, Smartphone, WiFi","Mobile, Sensor, WiFi",5,False,uncategorized label(s): Smartphone,,,106,799a51f930bc46005e348e0d284ab4cd
-ea9c6469336707f63b9bdaa544a9218a,HACS,hacs.xyz,,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-5b7c8ea8b42463957074f5c51d2bacab,Samba share,Official apps,Home Assistant App,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,7,fa264e9a222c46061a3386896775c494
-52357a981d33b3bdb7d00c7509609f5e,KleinUnifi,Ubiquiti,UCK G2 Plus,Meterkast,"Sensor, WiFi",WiFi,Sensor,2,False,missing category: brand,,,14,3785398f726ec15f42a2f85273340d6b
-58b2b81b9aa033a7291a0ec1e59f7be1,Rudi tablet,samsung,SM-X200,Mobiel,"Mobile, Samsung, Tablet, WiFi","Mobile, Samsung, Tablet, WiFi",,4,False,missing category: function; uncategorized label(s): Tablet,,,114,01KSN9S0D1B7GP8NGGMJ24ETRY
-ff8fa61dd834894006d836aef4eeb639,KleinTV,Samsung Electronics,UE55MU7000,Woonkamer,"WiFi, haghs_ignore","WiFi, haghs_ignore",,2,False,missing category: brand,user,,0,01KGMS7SYHEEGCJ0QZGTV7HA2H
-51fe92171c788b79d42413677f07a934,Mosquitto broker,Official apps,Home Assistant App,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,7,fa264e9a222c46061a3386896775c494
-b6c4f46ebbab1bae7ef684418fd4c2a7,TV knop,IKEA,TRADFRI on/off switch,Woonkamer,"Button, IKEA, Sensor, Zigbee","Button, IKEA, Zigbee",Sensor,4,False,,,,11,d914edb87f840a427d90c7967f1290af
-bf401b29948cfe956b33949537038c7f,Repeater schuur,IKEA,TRADFRI signal repeater,Achtertuin,"IKEA, Node, Repeater, Sensor, Zigbee","IKEA, Node, Repeater, Zigbee","Sensor, Zigbee",5,False,,,,9,d914edb87f840a427d90c7967f1290af
-cc3d1aaec33b1f095e4ae3ebfa88fd9d,Gordijn J/D,Aqara,Roller shade driver E1,Slaapkamer D/J,"Sensor, Zigbee, haghs_ignore","Sensor, Zigbee, haghs_ignore",Sensor,3,False,missing category: brand,,,14,d914edb87f840a427d90c7967f1290af
-202373e9491d4aa24ca937cec240ad86,Lichtsensor J/D,Xiaomi,Mi light sensor,Slaapkamer D/J,"Sensor, Zigbee","Sensor, Zigbee",Sensor,2,False,missing category: brand,,,7,d914edb87f840a427d90c7967f1290af
-cab145732fe2e0e51ca519890a7a134c,Rolluik knop J/D,IKEA,TRADFRI on/off switch,Slaapkamer D/J,"Button, IKEA, Sensor, Zigbee","Button, IKEA, Zigbee",Sensor,4,False,,,,8,d914edb87f840a427d90c7967f1290af
-92af3f56870153cbc2aa28a014c0b480,Darius knop,IKEA,TRADFRI on/off switch,Slaapkamer D/J,"Button, Sensor, Zigbee","Button, Zigbee",Sensor,3,False,missing category: brand,,,8,d914edb87f840a427d90c7967f1290af
-1e623be1603b93cc8eee2ca7e9045481,Poort bewegingssensor,IKEA,TRADFRI motion sensor,Achtertuin,"IKEA, Sensor, Zigbee","IKEA, Sensor, Zigbee","Sensor, Zigbee",3,False,,,,19,d914edb87f840a427d90c7967f1290af
-57ec426c1acd0ef4659e3dda21a0bf9e,Veranda bewegingssensor,IKEA,TRADFRI motion sensor,Veranda,"IKEA, Presence, Sensor, Zigbee","IKEA, Presence, Zigbee",Sensor,4,False,,,,19,d914edb87f840a427d90c7967f1290af
-96439bdc7d74f5394f4eccb4c0b5ab06,Rolien knop,IKEA,TRADFRI on/off switch,Slaapkamer R/R,"Button, IKEA, Sensor, Zigbee","Button, IKEA, Zigbee",Sensor,4,False,,,,11,d914edb87f840a427d90c7967f1290af
-0afb2a914a6722015c6280c9ddef3aca,Woonkamer luchtsensor,IKEA,VINDSTYRKA air quality and humidity sensor,Woonkamer,"IKEA, Node, Repeater, Sensor, Zigbee","IKEA, Node, Repeater, Sensor, Zigbee",Sensor,5,False,,,,16,d914edb87f840a427d90c7967f1290af
-1349810e6ea19da11b77d2d28e827a59,Rolluik knop R/R,IKEA,TRADFRI on/off switch,Slaapkamer R/R,"Button, IKEA, Sensor, Zigbee","Button, IKEA, Zigbee",Sensor,4,False,,,,11,d914edb87f840a427d90c7967f1290af
-e01bdca3fa69a22843758d064b2fca4c,Slaapkamer raamsensor R/R,SONOFF,Contact sensor,Slaapkamer R/R,"Sensor, Zigbee, haghs_ignore","Sensor, Zigbee, haghs_ignore",Sensor,3,False,missing category: brand,user,,10,d914edb87f840a427d90c7967f1290af
-ee31a493c77063188454f5f50a4fbfcd,Woonkamer rookmelder,FireAngel,CO alarm,Woonkamer,"Sensor, Zigbee, haghs_ignore","Sensor, Zigbee, haghs_ignore",Sensor,3,False,missing category: brand,,,7,d914edb87f840a427d90c7967f1290af
-3388eb1f4a3c311e039a5cf21b2acb84,P1 meter,HomeWizard,Wi-Fi P1 Meter,Meterkast,"Energy meter, Sensor, Switch, WiFi","Energy meter, Sensor, Switch, WiFi",Sensor,4,False,missing category: brand,,,39,a2bd0c890b5698b9cfa77623f7648cf6
-ad134a618bd0ea6925f2db7c98b2b6e6,Home Assistant Google Drive Backup,Home Assistant Google Drive Backup Repository,Home Assistant App,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,7,fa264e9a222c46061a3386896775c494
-ab278773131c1fbeef693f1c7fa1a62d,KleinSpy2 (voordeur),Ubiquiti,G3 Instant,Hal beneden,"Camera, Sensor, WiFi","Camera, WiFi",Sensor,3,False,missing category: brand,,,24,3785398f726ec15f42a2f85273340d6b
-1f128c97dd742c9aae52c305001e71f3,KleinSpy1 (veranda),Ubiquiti,G3 Instant,Veranda,"Camera, Sensor, WiFi","Camera, WiFi",Sensor,3,False,missing category: brand,,,24,3785398f726ec15f42a2f85273340d6b
-d22faeecf748a8e11ebc72e0730a9f0e,Rudi knop,IKEA,TRADFRI on/off switch,Woonkamer,"Button, IKEA, Sensor, Zigbee","Button, IKEA, Zigbee",Sensor,4,False,,,,11,d914edb87f840a427d90c7967f1290af
-d0bf97e976e09a07ab9df86a05c8d47a,Rudi smartwatch,samsung,SM-R870,Mobiel,"Mobile, Samsung, Sensor, Smartwatch, WiFi","Mobile, Samsung, Smartwatch, WiFi",Sensor,5,False,uncategorized label(s): Smartwatch,,,77,6d165d80dc770ad78520f1e28f47c3a6
-d4524e341fb0202864d2fea0162c4768,Forecast,Met.no,Forecast,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,1,7b5d406d8c112b52e1bdbc5bd5f7327c
-ab8f9b0174393bf77681a3cea7f94146,Rudi smartphone (S10),samsung,SM-G975F,Mobiel,"Mobile, Samsung, Sensor, Smartphone, WiFi","Mobile, Samsung, Smartphone, WiFi",Sensor,5,False,uncategorized label(s): Smartphone,,,98,698e534b6e38d97b4811e0e376455562
-4cb78d3d06048d2097d7b0f9bc4078e2,Repeater zolder,IKEA,TRADFRI signal repeater,Zolder,"IKEA, Node, Repeater, Zigbee","IKEA, Node, Repeater, Zigbee",,4,False,,,,9,d914edb87f840a427d90c7967f1290af
-4c6b08aaed0263fc350ca82c71c0dc61,EPL Living room,EverythingSmartTechnology,Everything Presence Lite,Woonkamer,"Bluetooth, Presence, Sensor, haghs_ignore","Bluetooth, Presence, Sensor, haghs_ignore","Bluetooth, Presence, Sensor",4,False,missing category: brand,,,103,745c022daa10dd4ebc5ee8ea0886314e
-0ca7b437feb296ae8e3431cf690c52ed,hci0 (D8:3A:DD:DF:6C:4A),Raspberry Pi Trading Ltd,bcm43438-bt,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,,0,2f2c533ad31c38880f0ae3a1862a7787
-7624c6c55f5be1c922bc2235f4a08821,Deken Julius,IKEA,TRADFRI control outlet,Slaapkamer D/J,"Button, Zigbee","Button, Zigbee",,2,False,missing category: brand,,,10,d914edb87f840a427d90c7967f1290af
-0b2632e86ca7d695138f9036623290bd,Gasmeter  (P1: 3c39e7285f8c),HomeWizard,HWE-P1,Meterkast,,,,0,True,no labels at all,user,,0,a2bd0c890b5698b9cfa77623f7648cf6
-13e677b853ad797b8e7bca9f9fb8f627,ESPHome Device Builder,ESPHome,Home Assistant App,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,7,fa264e9a222c46061a3386896775c494
-4c668be435eb5ac5eae8b29e160000f2,Rudi smartphone,samsung,SM-A556B,Mobiel,"Mobile, Samsung, Smartphone, WiFi","Mobile, Samsung, Smartphone, WiFi",,4,False,missing category: function; uncategorized label(s): Smartphone,,,133,01KXGSJJTBR2NC5QVTSWSMM8J5
-2df51c1a0cfc17ab0543590e121ac568,Slaapkamer raamsensor J/D,SONOFF,Contact sensor,Slaapkamer D/J,"IKEA, Sensor, Zigbee","IKEA, Sensor, Zigbee",Sensor,3,False,,,,7,d914edb87f840a427d90c7967f1290af
-e4c2965f79fc6632c414aa8f62928f4b,Gasmeter (P1: 3c39e7285f8c),HomeWizard,HWE-P1,Meterkast,,,,0,True,no labels at all,user,,1,a2bd0c890b5698b9cfa77623f7648cf6
-27a3f1522489f64e08f86a3baede3af2,Slaapkamer j/d temp,Aqara,Temperature and humidity sensor,Slaapkamer D/J,"Sensor, Thermostat, Zigbee","Sensor, Thermostat, Zigbee",Sensor,3,False,missing category: brand,,,8,d914edb87f840a427d90c7967f1290af
-172896146672ae8a8c01012ee4ba1efe,ikea parasol 2,IKEA,PARASOLL door/window sensor,Slaapkamer D/J,"IKEA, Sensor, Zigbee, haghs_ignore","IKEA, Sensor, Zigbee, haghs_ignore",Sensor,4,False,,,,10,d914edb87f840a427d90c7967f1290af
-203496af6ab20593fa844e3fa240ef57,A55 van Rudi,,,Mobiel,"Mobile, Samsung, Sensor, Smartphone, WiFi","Mobile, Samsung, Smartphone, WiFi",Sensor,5,False,uncategorized label(s): Smartphone,,,1,01J73XBJCBC5W5X0AHEDE83QFT
-047c8dd81770128626aff874085d31e6,Darius's Galaxy S20 FE 5G,,,Mobiel,"Mobile, Samsung, Sensor, Smartphone, WiFi","Mobile, Samsung, Smartphone, WiFi",Sensor,5,False,uncategorized label(s): Smartphone,,,1,01J73XBJCBC5W5X0AHEDE83QFT
-717962df10e0243fe377419448952aeb,Blackius,,,Mobiel,"Smartthings, Tag","Smartthings, Tag",,2,False,"missing category: brand, protocol",,,1,01J73XBJCBC5W5X0AHEDE83QFT
-0dd14c9adb843475c9d8a62671a6359a,Groenius,,,Mobiel,"Smartthings, Tag","Smartthings, Tag",,2,False,"missing category: brand, protocol",,,0,01J73XBJCBC5W5X0AHEDE83QFT
-df4f85f753adad34860936cff1f2d188,Blackius,,,Mobiel,"Smartthings, Tag","Smartthings, Tag",,2,False,"missing category: brand, protocol",,,0,01J73XBJCBC5W5X0AHEDE83QFT
-6b91a59ce9f7dbebce06dcc71124b5f6,KleinTagSkippy,,,Mobiel,"Smartthings, Tag","Smartthings, Tag",,2,False,"missing category: brand, protocol",,,0,01J73XBJCBC5W5X0AHEDE83QFT
-5bc4d7566fad0e8274a54cde72af7c39,Pinkius,,,Mobiel,"Smartthings, Tag","Smartthings, Tag",,2,False,"missing category: brand, protocol",,,0,01J73XBJCBC5W5X0AHEDE83QFT
-d8508cbbf0d4be4a3c98ffd55b2ff0d0,KleinTV,Samsung Electronics,QE55Q80CATXXN,Woonkamer,"Sensor, Smartthings, haghs_ignore","Smartthings, haghs_ignore",Sensor,3,False,"missing category: brand, protocol",,,11,01J73XBJCBC5W5X0AHEDE83QFT
-e2a8f55a8dafee1a6d77bc8f5ed6eb76,KleinTagRudi,,,Mobiel,"Smartthings, Tag","Smartthings, Tag",,2,False,"missing category: brand, protocol",,,0,01J73XBJCBC5W5X0AHEDE83QFT
-b7d7b772718d01207d0275ceb8ba7314,KleinTagDarius,,,Mobiel,"Smartthings, Tag","Smartthings, Tag",,2,False,"missing category: brand, protocol",,,0,01J73XBJCBC5W5X0AHEDE83QFT
-f557bfe0172b60b99fd758b079ce468b,Grijzius,,,Mobiel,"Smartthings, Tag","Smartthings, Tag",,2,False,"missing category: brand, protocol",,,0,01J73XBJCBC5W5X0AHEDE83QFT
-71d3be0dfe474c7187969b04eacc5b85,KleinTV,Samsung,QE55Q80CATXXN,Woonkamer,"WiFi, haghs_ignore","WiFi, haghs_ignore",,2,False,missing category: brand,,,3,"01KRE208ASH9MYDEZAGB58ZNNA, 01KGMS7SYHEEGCJ0QZGTV7HA2H"
-40d24259d5bbb6ccf9424722be2e70b6,Zolder t/h,Aqara,Temperature and humidity sensor,Zolder,"Sensor, Thermostat, Zigbee","Sensor, Thermostat, Zigbee",Sensor,3,False,missing category: brand,,,12,d914edb87f840a427d90c7967f1290af
-b1a6113b89d11e54353b80dbf3015f35,Rolien bureau t/h,Aqara,Temperature and humidity sensor,Slaapkamer R/R,"Sensor, Thermostat, Zigbee","Sensor, Thermostat, Zigbee",Sensor,3,False,missing category: brand,,,12,d914edb87f840a427d90c7967f1290af
-8bce628eaed27821580afa641892415f,Energy Socket Julius,HomeWizard,Wi-Fi Energy Socket,Zolder,"Energy meter, HomeWizard, Sensor, Switch, WiFi","Energy meter, HomeWizard, Sensor, Switch, WiFi",Sensor,5,False,,,,15,01JK18YHWQN35PJPY36026JSWS
-df50cbd084fb122fd8ff1ef0439bbaf1,Energy kWh meter KleinBoil,HomeWizard,Wi-Fi kWh Meter 1-phase,Zolder,"Energy meter, HomeWizard, Sensor, Switch, WiFi","Energy meter, HomeWizard, Sensor, Switch, WiFi",Sensor,5,False,,,,18,01JK8BZ54ZG2CWDSN4695XNVDN
-b31a249b76065e82df3fb38bef2fcc22,Material 3 Dark & Light Theme 07: DarkOliveGreen,AmoebeLabs,theme,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-2ac9bdc8e82027a923d00df377c1c653,Keep Texts in Tabs,elchininet,plugin,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-361e3da4f0cdcc3cb78def91e95c3141,Spook 👻 Your homie,frenck,integration,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-d55d7f7f00b40053bd6c60ec9c883377,Google Dark Theme,JuanMTech,theme,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-003ea8e91cf026222aa9c017c5d8bbde,card-mod,thomasloven,plugin,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-72986c8b06680a92219c73471923758c,layout-card,thomasloven,plugin,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-8af0951407ab82b254a66d4fc3ea7873,Everything Presence Lite 20b1c8 (08:D1:F9:20:B1:CA),Espressif Inc. (esphome),esp32dev,Woonkamer,"Bluetooth, Presence, Sensor","Bluetooth, Presence, Sensor",,3,False,missing category: brand,,,0,01JM79XJZYDEV0EX4EAJV9TRQN
-3b3cf38a8824059a11a71054e95bdafd,Sound Sensor - KleinTV,Samsung Electronics,QE55Q80CATXXN,Woonkamer,"Sensor, Smartthings, haghs_ignore","Sensor, Smartthings, haghs_ignore",,3,False,"missing category: brand, protocol",,,2,01J73XBJCBC5W5X0AHEDE83QFT
-27120f56e4661e7e3c62b6eed5ade1cb,Light Sensor - KleinTV,Samsung Electronics,QE55Q80CATXXN,Woonkamer,"Sensor, Smartthings, haghs_ignore","Sensor, Smartthings, haghs_ignore",Sensor,3,False,"missing category: brand, protocol",,,3,01J73XBJCBC5W5X0AHEDE83QFT
-2d38226c65c3fb3e92b4be762edc1b92,EPSON ET-2860 Series,EPSON,ET-2860 Series,Woonkamer,Sensor,,Sensor,1,False,"missing category: brand, protocol",,,2,01JPFC0ESH3X1HTX7SBVNHR1F5
-051f869cd87ede50f46442a6ea030f43,Energy Socket Rolien,HomeWizard,Wi-Fi Energy Socket,Slaapkamer R/R,"Energy meter, HomeWizard, Sensor, Switch, WiFi","Energy meter, HomeWizard, Sensor, Switch, WiFi",,5,False,,config_entry,,0,01JQS2C02CVF9VEPVAXGRYCYCT
-08eb885d40265dd7d7a5e520b75ccac9,Energy Socket Vaatwasser,HomeWizard,Wi-Fi Energy Socket,Keuken,"Energy meter, HomeWizard, Sensor, Switch, WiFi","Energy meter, HomeWizard, Sensor, Switch, WiFi",Sensor,5,False,,,,15,01JQS2D11J9V1MH9SVH1B4BSS8
-38861148e7e16e0f8c0ea265e2c35239,Energy Socket Serverkast,HomeWizard,Wi-Fi Energy Socket,Meterkast,"Energy meter, HomeWizard, Sensor, Switch, WiFi","Energy meter, HomeWizard, Sensor, Switch, WiFi",,5,False,,,,15,01JQS2EBYMGNWTQ7NPBPEFE6VF
-03c05701d5b4d88917cc84063853e35d,Backup,Home Assistant,Home Assistant Backup,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,service,5,01JRF70HMG9H9TQ66WK9MCJ25S
-8e80539e86dd430319b9e31ea6311a96,Kia Uvo / Hyundai Bluelink,fuatakgun,integration,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-a6208ccc2c783ccb8c28649eb60df6b6,EV3,Kia Europe,EV3,Digital only,"Digital only, Sensor, WiFi, haghs_ignore","Digital only, Sensor, WiFi, haghs_ignore","Sensor, WiFi, haghs_ignore",4,False,missing category: brand,,,117,01JRXDFHN1QXNTEK1A3H8H3RDM
-a37540673602520df8ea167a6e893ee8,Solar production forecast,Forecast.Solar,personal,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,service,11,01JTGQDT5FCAVFRMVTBTGB61A5
-2851cc031693725570d64657bc5df5b9,Solar production forecast,Forecast.Solar,personal,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,service,11,01JWBR7KRFRNB6317N0GGK865E
-dfeda205c5c646fcd920c1a883abfc37,Solar production forecast,Forecast.Solar,personal,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,service,11,01JWBR9A0CK5M84TDAT8PJ54V0
-0720393e8b4e1c3ebbfae83a247c5f96,IKEA energy meter 3 - Droger,IKEA,INSPELNING smart plug,Zolder,"Energy meter, IKEA, Node, Repeater, Sensor, Switch, Zigbee","Energy meter, IKEA, Node, Repeater, Switch, Zigbee","IKEA, Repeater, Sensor, Switch, Zigbee",7,False,,,,19,d914edb87f840a427d90c7967f1290af
-d34d9367d55fa61018118b1f36f9cfca,IKEA energy meter 4 Wasmachine,IKEA,INSPELNING smart plug,Zolder,"Energy meter, IKEA, Node, Repeater, Sensor, Switch, Zigbee","Energy meter, IKEA, Node, Repeater, Switch, Zigbee","IKEA, Repeater, Sensor, Switch, Zigbee",7,False,,,,20,d914edb87f840a427d90c7967f1290af
-e1b8cdac1e9971270ad222c1a5fab835,IKEA energy meter 1 - Darius,IKEA,INSPELNING smart plug,Slaapkamer D/J,"Energy meter, IKEA, Node, Repeater, Sensor, Switch, Zigbee","Energy meter, IKEA, Node, Repeater, Switch, Zigbee","IKEA, Repeater, Sensor, Switch, Zigbee",7,False,,,,14,d914edb87f840a427d90c7967f1290af
-8466c8b969c827dc22abaeecc2967e92,IKEA energy meter 2 - Server,IKEA,INSPELNING smart plug,Zolder,"Energy meter, IKEA, Node, Repeater, Sensor, Switch, Zigbee","Energy meter, IKEA, Node, Repeater, Switch, Zigbee","IKEA, Repeater, Sensor, Switch, Zigbee",7,False,,,,20,d914edb87f840a427d90c7967f1290af
-08912e06ee6a9f724bc08a830122369c,IKEA energy meter 6 Minikoelkast,IKEA,INSPELNING smart plug,Keuken,"Energy meter, IKEA, Node, Repeater, Sensor, Switch, Zigbee","Energy meter, IKEA, Node, Repeater, Switch, Zigbee","IKEA, Repeater, Sensor, Switch, Zigbee",7,False,,,,20,d914edb87f840a427d90c7967f1290af
-2d49907e0b4c47657f27b0b3ac719ea0,IKEA energy meter 7 Miniboiler,IKEA,INSPELNING smart plug,Keuken,"Energy meter, IKEA, Node, Repeater, Sensor, Switch, Zigbee","Energy meter, IKEA, Node, Repeater, Switch, Zigbee","IKEA, Repeater, Sensor, Switch, Zigbee",7,False,,,,20,d914edb87f840a427d90c7967f1290af
-feff230dd13f16505adc40aaffa5486a,IKEA energy meter 8 Airfryer,IKEA,INSPELNING smart plug,Keuken,"Energy meter, IKEA, Node, Repeater, Sensor, Switch, Zigbee","Energy meter, IKEA, Node, Repeater, Switch, Zigbee","IKEA, Repeater, Sensor, Switch, Zigbee",7,False,,,,17,d914edb87f840a427d90c7967f1290af
-20a3156486ce43614bec5f83d06a87f7,Energy kWh Meter Charger,HomeWizard,Wi-Fi kWh Meter 3-phase,Meterkast,"Energy meter, HomeWizard, Sensor, Switch, WiFi","Energy meter, HomeWizard, Sensor, Switch, WiFi",Sensor,5,False,,,,34,01K0M1BAXYDP87A217HZ7YG7JY
-4b2cd087a31250102914bd90598b1cc8,MQTT Explorer,Gollum add-on repository for Home Assistant,Home Assistant App,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,7,fa264e9a222c46061a3386896775c494
-b385870eef61913686305f8ddc730ab9,Energy kWh meter Fornuis,HomeWizard,Wi-Fi kWh Meter 3-phase,Meterkast,"Energy meter, HomeWizard, Sensor, Switch, WiFi","Energy meter, HomeWizard, Sensor, Switch, WiFi",Sensor,5,False,,,,34,01K0PMRKGYQ54VE2SJBJ840SJQ
-54c64bbf242e59e680b1c9f24fc91790,Energy Socket Rudi,HomeWizard,Wi-Fi Energy Socket,Woonkamer,"Energy meter, HomeWizard, Sensor, Switch, WiFi","Energy meter, HomeWizard, Sensor, Switch, WiFi",Sensor,5,False,,,,15,01K0PMSFY96937P0B4BHP6S4SV
-9d1c1a41336a2c11b4fbc6fcb70d9dc8,Energy kWh meter Airco,HomeWizard,Wi-Fi kWh Meter 1-phase,Meterkast,"Energy meter, HomeWizard, Sensor, Switch, WiFi","Energy meter, HomeWizard, Sensor, Switch, WiFi",Sensor,5,False,,,,18,01K13QQFEHPWWV662NX7GZ2ZJF
-055b4361a9023ba300937a988769e38f,Energy kWh meter KleinFloor,HomeWizard,Wi-Fi kWh Meter 1-phase,Meterkast,"Energy meter, HomeWizard, Sensor, Switch, WiFi","Energy meter, HomeWizard, Sensor, Switch, WiFi",Sensor,5,False,,,,18,01K13QWVQZDDD92JGB0D6BSS8B
-d659183a0ba205bcf7534bcbbffc4d4f,Energy kWh meter KleinShed,HomeWizard,Wi-Fi kWh Meter 1-phase,Meterkast,"Energy meter, HomeWizard, Sensor, Switch, WiFi","Energy meter, HomeWizard, Switch, WiFi",Sensor,5,False,,,,18,01K13R8M64HCBAA2XGE5GFNQBP
-1353dcf87d9c8f1f19f6b11953f941ca,Echo (vloerverwarming),Tuya,VH Control Echo,Woonkamer,"Sensor, Thermostat, WiFi","Sensor, Thermostat, WiFi",,3,False,missing category: brand,,,3,01K2QDQDFFYWSMGHEPJ8SMF097
-ad7437b19f3c03c3d637ce8ea1e2105d,Local Tuya,"rospogrigio, postlund",integration,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-e5adaefad23c4312d55d955ed089f589,Scheduler Card,nielsfaber,plugin,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-092953c029a484a15cfb0a549bcc7105,Mushroom,piitaya,plugin,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-b9db7b75138fb7d7b5ed27b04fa3caaa,Floor surface thermostat,SONOFF,Waterproof (IP65) sensor with screen and probe temperature detection,Woonkamer,"Sensor, Thermostat, Zigbee","Sensor, Thermostat, Zigbee",Sensor,3,False,missing category: brand,,,11,d914edb87f840a427d90c7967f1290af
-19c9d028623cc3b47d69b3da033d581e,Tuya Local,make-all,integration,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-beb9b8be71bd5953fd67b06d4d82a5bc,Repairs,Home Assistant,,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,,6,01K8E88FWP46BK3STD4T9M6SW4
-4e919f059b0251bfefa4b97c90f76ec4,Home Assistant,Home Assistant,,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,,52,01K8E88FWP46BK3STD4T9M6SW4
-40903cc08a494e0e3f490ad7f380b523,Home Assistant Cloud,Nabu Casa Inc.,,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,,5,01K8E88FWP46BK3STD4T9M6SW4
-f19c694052521a4091395ab381778770,IKEA energy meter 11 Bureau Rolien,IKEA,INSPELNING smart plug,Slaapkamer R/R,"Energy meter, IKEA, Node, Repeater, Sensor, Switch, Zigbee","Energy meter, IKEA, Node, Repeater, Switch, Zigbee","IKEA, Repeater, Sensor, Switch, Zigbee",7,False,,,,20,d914edb87f840a427d90c7967f1290af
-73269d10795867a8b492959d0839b9fa,IKEA energy meter 9 Plafond verwarming,IKEA,INSPELNING smart plug,Slaapkamer R/R,"Energy meter, IKEA, Node, Repeater, Sensor, Switch, Zigbee","Energy meter, IKEA, Node, Repeater, Switch, Zigbee","IKEA, Repeater, Sensor, Switch, Zigbee",7,False,,,,20,d914edb87f840a427d90c7967f1290af
-d6007fdcd8736cf4b645d8d4d99ee1b8,System Monitor,System Monitor,,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,service,101,01K8K8FRDAEK5DNHXN4VVP7N0V
-ec43a84d21c945b9921a1ad1052bef90,IKEA energy meter 12 - Voetverwarmer,IKEA,INSPELNING smart plug,Zolder,"Energy meter, IKEA, Node, Repeater, Sensor, Switch, Zigbee","Energy meter, IKEA, Node, Repeater, Switch, Zigbee","IKEA, Repeater, Sensor, Switch, Zigbee",7,False,,,,20,d914edb87f840a427d90c7967f1290af
-bf1d1779f7eda53eaa7959771b3cce23,IKEA energy meter 5 Badkamer verwarming,IKEA,INSPELNING smart plug,Badkamer,"Energy meter, IKEA, Node, Repeater, Sensor, Switch, Zigbee","Energy meter, IKEA, Node, Repeater, Switch, Zigbee","IKEA, Repeater, Sensor, Switch, Zigbee",7,False,,,,20,d914edb87f840a427d90c7967f1290af
-1cb2017be7d8e8c898c756e4e6879cbf,Achterdeur magneetsensor,Trust,Wireless contact sensor,Woonkamer,"Sensor, Zigbee","Sensor, Zigbee",Sensor,2,False,missing category: brand,,,6,d914edb87f840a427d90c7967f1290af
-133e87235534d5a21b48c28ac2338cd2,Scheduler component,nielsfaber,integration,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-d1d4ad3cd44fd7b877eb75da53a2a0f1,Scheduler,@nielsfaber,Scheduler,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,,1,01K9FJ20NFGQP918CHEDHZ53J1
-da1002520eac9114fbba03c762808491,Watchman,dummylabs,integration,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-2829dcd3820305a65708d5493e3b1505,Daikin Onecta,jwillemsen,integration,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-8b5087d36d7c30901337f483d8b42570,Zolder,Daikin,BRP069C4x,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,,2,01K9QCMYEE1Q0XV9ZT1KXTP2JC
-d30920201111ad7197aa5016077b1a49,Huiskamer,Daikin,BRP069C4x,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,,2,01K9QCMYEE1Q0XV9ZT1KXTP2JC
-9e0914f40e3e0c05867395d3289ccd21,Knop badkamer IR slaapkamer,IKEA,TRADFRI on/off switch,Slaapkamer R/R,"Button, IKEA, Sensor, Zigbee","Button, IKEA, Zigbee",Sensor,4,False,,,,7,d914edb87f840a427d90c7967f1290af
-4fe5da3d0b6a0ec9145a971d3f1c6e6d,Bedroom IR panel thermostat,SONOFF,Waterproof (IP65) sensor with screen and probe temperature detection,Slaapkamer R/R,"Sensor, Thermostat, Zigbee","Sensor, Thermostat, Zigbee",Sensor,3,False,missing category: brand,,,11,d914edb87f840a427d90c7967f1290af
-450a8b4c324c15317d988bb379f44afb,ZBT-2 - Zigbee Coordinator,Nabu Casa,Home Assistant Connect ZBT-2,Woonkamer,"Coordinator, Node, Zigbee","Coordinator, Node, Zigbee",,3,False,missing category: brand,,,2,01KR3QR2PJX028ZJ50SDR5K8SJ
-1dfbdcdabc6cabe414d05f68838ea593,Zigbee2MQTT,Home Assistant App: Zigbee2MQTT,Home Assistant App,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,7,fa264e9a222c46061a3386896775c494
-0bb5634afb46a51da458573483b8813f,Zigbee2MQTT Bridge,Zigbee2MQTT,Bridge,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,,8,d914edb87f840a427d90c7967f1290af
-86380d70bdd694ded30ee75932b40c3a,Keuken - aanrechtlicht,IKEA,RODRET wireless dimmer/power switch,,"Button, Sensor, Zigbee","Button, Zigbee",Sensor,3,False,missing category: brand,,,5,d914edb87f840a427d90c7967f1290af
-320c49f1fe44436cf8a096362d867f56,IKEA energy meter 13 Waterleiding,IKEA,INSPELNING smart plug,Meterkast,"Digital only, Energy meter, Helper, IKEA, Node, Repeater, Sensor, Switch, Zigbee","Energy meter, IKEA, Node, Repeater, Switch, Zigbee","Digital only, Helper, IKEA, Repeater, Sensor, Switch, Zigbee",9,False,,,,12,d914edb87f840a427d90c7967f1290af
-12751a7967794c2b2631710906071d96,Zolder Gateway,Daikin,BRP069C4x,Digital only,"Digital only, Sensor, Switch","Digital only, Switch",Sensor,3,False,"missing category: brand, protocol",,,8,01K9QCMYEE1Q0XV9ZT1KXTP2JC
-4371a95c3dcc610faf921359a576e33a,Zolder ClimateControl,Daikin,,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,,18,01K9QCMYEE1Q0XV9ZT1KXTP2JC
-d600fca162d79fd626c8f4f190bc162c,Zolder OutdoorUnit,Daikin,,Digital only,"Digital only, Sensor, Switch","Digital only, Switch",Sensor,3,False,"missing category: brand, protocol",,,4,01K9QCMYEE1Q0XV9ZT1KXTP2JC
-bc5878902adb06b9495282dec05a98de,Huiskamer Gateway,Daikin,BRP069C4x,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,,8,01K9QCMYEE1Q0XV9ZT1KXTP2JC
-c6e7ff05d603c4f6b5910ba34a27d47f,Huiskamer ClimateControl,Daikin,,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,,18,01K9QCMYEE1Q0XV9ZT1KXTP2JC
-6e43b9875e42cbf80c16de026b0be27f,Huiskamer OutdoorUnit,Daikin,,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,,4,01K9QCMYEE1Q0XV9ZT1KXTP2JC
-7f8b309e1e9d9f73e7030311d3d0c5a2,Tumble dryer,Miele,Tumble dryer,Zolder,"Sensor, WiFi",WiFi,Sensor,2,False,missing category: brand,,,22,01KBJDFGESS3MA235Y9N4Z1M5Y
-10b88464310a7fd866fec01fe99d7626,OMV_backup,Home Assistant,Home Assistant Mount,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,1,fa264e9a222c46061a3386896775c494
-24cc02811e651aa5dbaf06e13b6f376e,Ikea raamsensor J/D,IKEA,PARASOLL door/window sensor,Slaapkamer D/J,"IKEA, Sensor, Zigbee, haghs_ignore","IKEA, Sensor, Zigbee, haghs_ignore",Sensor,4,False,,,,6,d914edb87f840a427d90c7967f1290af
-6c8bf0e34296a2caa85784baaa4a2955,button-card,custom-cards,plugin,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-60a0d48de159372bcdd2728bb8f3cf3b,Sonoff ZBdongle-P router,Custom devices (DiY),Texas Instruments router,Slaapkamer R/R,"Node, Router, Zigbee","Node, Router, Zigbee",,3,False,missing category: brand,,,2,d914edb87f840a427d90c7967f1290af
-6990f92febdc46c1cc07c95d6f492a5e,auto-entities,thomasloven,plugin,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-e0dd02f34c92058fc1df087dddcb7100,Rolien smartphone werk,samsung,SM-A536B,Mobiel,"Mobile, Samsung, Sensor, Smartphone, WiFi","Mobile, Samsung, Smartphone, WiFi","Mobile, Sensor",5,False,uncategorized label(s): Smartphone,,,133,01KDD1KCH6EHB8YCXYTTZSWYTV
-0ccc1bb75942979c3d66eb28db23b8cc,Uptime,,,Digital only,,,,0,True,no labels at all,,service,1,01KE7KC5QJJ7ARPQXGHV7XH675
-1e7bb59f20100efcc63d8194ede54072,C.A.F.E.,FezVrasta,integration,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-1bbfbeba8a3ebb048db6e09b27ca711f,Enphase Energy,barneyonline,integration,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-c83e372daa11096665ce3839a420b4f8,Enphase Envoy (Installer),"vincentwolsink, mnederlof",integration,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-a6733811333c68ac35074e70c86098dd,Envoy 122428000926,Enphase,Envoy-S Metered (with CT),Meterkast,"Energy meter, Enphase, Sensor, Solar","Energy meter, Enphase, Solar",Sensor,4,False,missing category: protocol,,,46,01KF8VBXFEZKV2R99JPAPXPP7B
-6237a06b90d0a1fb71463f90592c2526,Inverter 122403000786,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,30,01KF8VBXFEZKV2R99JPAPXPP7B
-30008ab987eeb5f3476bec81d9544e69,Inverter 122403011963,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,30,01KF8VBXFEZKV2R99JPAPXPP7B
-d92b4a6e828a2d584cfee5381ba96a28,Inverter 122403013390,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,19,01KF8VBXFEZKV2R99JPAPXPP7B
-52b3d87307cd8c9624c1c60e6fa7a67a,Inverter 122403013624,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,30,01KF8VBXFEZKV2R99JPAPXPP7B
-202fd8a8d9a2824227b6dd037a3179a6,Inverter 122403017296,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,30,01KF8VBXFEZKV2R99JPAPXPP7B
-2437ba09120f0e91a1b9399f639182a1,Inverter 122403017303,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,30,01KF8VBXFEZKV2R99JPAPXPP7B
-2d192c1d2ea26b12af046be9b8752972,Inverter 122403017394,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,30,01KF8VBXFEZKV2R99JPAPXPP7B
-9591384282d7dc4187c73745a09b8168,Inverter 122403017400,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,30,01KF8VBXFEZKV2R99JPAPXPP7B
-48dc820750e3048f52bccd8e78160268,Inverter 122403017402,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,30,01KF8VBXFEZKV2R99JPAPXPP7B
-b88cc0820509cf9bf848fce8f3a4958f,Inverter 122403017544,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,30,01KF8VBXFEZKV2R99JPAPXPP7B
-acf62dd6b1840699333a4a5650c05464,Inverter 122403017575,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,30,01KF8VBXFEZKV2R99JPAPXPP7B
-aeca64bff9ab1ca51e5eff3e4c7cfbd3,Inverter 122403017626,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,30,01KF8VBXFEZKV2R99JPAPXPP7B
-b820f81feaaf20eadb9f16b15fa1a43c,Inverter 122403017701,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,30,01KF8VBXFEZKV2R99JPAPXPP7B
-04bd84b50c405bc77ab9fd95ec18305b,Relay 122315065630,Enphase,Envoy-S Metered (with CT),Meterkast,"Bridge, Enphase, Solar","Bridge, Enphase, Solar",,3,False,missing category: protocol,,,10,01KF8VBXFEZKV2R99JPAPXPP7B
-bcb097c35263d2a48844a2286b06586d,Kleinpaal,Enphase,Kleinpaal (IQ-EVSE-EU-3032),Voortuin,"Enphase, haghs_ignore","Enphase, haghs_ignore",,2,False,missing category: protocol,,,34,01KF8Z4PPRWVW0Y5176TAS3B67
-7e478599f031587fe9a2c24b7c260f90,Custom Features for Home Assistant Cards,Nerwyn,plugin,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-9ff98c8928f543abf15cfa6ed2d44d68,Universal Notifier,jumping2000,integration,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-ce491f5154c37a823a5a838838444b2f,ZBT-2 - Thread Border Router,Nabu Casa,Home Assistant Connect ZBT-2,Woonkamer,"Node, Router, Thread","Node, Router, Thread",,3,False,missing category: brand,,,2,01KRRZQ48EFQQQG0B14HBQ6MZR
-76b52f3606b9e4a84ebfe6d54e76dc69,OpenThread Border Router,Official apps,Home Assistant App,Digital only,,,,0,True,no labels at all,,service,7,fa264e9a222c46061a3386896775c494
-c8d1554c0b65bf5eae29bf3207b107a7,Matter Server,Official apps,Home Assistant App,Digital only,,,,0,True,no labels at all,,service,7,fa264e9a222c46061a3386896775c494
-470fc37ac146f9ab82cf89cd3e30918b,Badkamerlicht,IKEA of Sweden,KAJPLATS E27 CWS globe 1055lm,Badkamer,"IKEA, Light, Matter, Thread","IKEA, Light, Matter, Thread",,4,False,,,,18,01KGJC3CYHAJMT00H6CKK3M3BR
-2f4c636879199e19f1bc8e7902d1ec70,Tuindeur,IKEA of Sweden,MYGGBETT door/window sensor,Woonkamer,"IKEA, Matter, Sensor, Thread","IKEA, Matter, Sensor, Thread",,4,False,,,,15,01KGJC3CYHAJMT00H6CKK3M3BR
-43c258f66beb2c1ff8ca336fa3e9d7a4,Bedroom IR panel thermostat,IKEA,RODRET wireless dimmer/power switch,Slaapkamer R/R,Zigbee,Zigbee,,1,False,"missing category: brand, function",,,5,d914edb87f840a427d90c7967f1290af
-286cce140df7ccfc57a7c5a54e0fc755,0x84ba20fffe3217f5,IKEA,TRADFRI on/off switch,,,,,0,True,no labels at all,,,4,d914edb87f840a427d90c7967f1290af
-5ed45db28ae98d9837ca3890135a9434,Rudi Klein,Immich,,Digital only,Sensor,,Sensor,1,False,"missing category: brand, protocol",,service,9,01KH1GARPEXHQF0VR20Z3NE5QX
-91cfaea656c580648ac873f9e91dabf6,Unassigned,IKEA of Sweden,MYGGBETT door/window sensor,Unknown,"IKEA, Matter, Sensor, Thread","IKEA, Matter, Sensor, Thread",,4,False,,,,15,01KGJC3CYHAJMT00H6CKK3M3BR
-e17056e82687d602bb61f09769e79574,Huiskamerdeur,IKEA of Sweden,MYGGBETT door/window sensor,Woonkamer,"IKEA, Matter, Sensor, Thread","IKEA, Matter, Sensor, Thread",,4,False,,,,15,01KGJC3CYHAJMT00H6CKK3M3BR
-113bfaed9b050ba9e47d2a340081d3ad,Voordeur,IKEA of Sweden,MYGGBETT door/window sensor,Hal beneden,"IKEA, Matter, Sensor, Thread","IKEA, Matter, Sensor, Thread",,4,False,,,,15,01KGJC3CYHAJMT00H6CKK3M3BR
-21ab8b018b65f98b2c6b45b17a9b458e,Bollamp,IKEA of Sweden,KAJPLATS E27 CWS globe 1055lm,Woonkamer,"IKEA, Light, Matter, Thread","IKEA, Light, Matter, Thread",,4,False,,,,18,01KGJC3CYHAJMT00H6CKK3M3BR
-2f86fd9f4ba9aed7f980bd7b537b61e4,Keukenlicht,IKEA,RODRET wireless dimmer/power switch,Keuken,"Button, IKEA, Light, Zigbee","Button, IKEA, Light, Zigbee",,4,False,,,,5,d914edb87f840a427d90c7967f1290af
-f6d2bdd15e5425e596f7c4d5e0d63c9f,Red Robin,COOLO,Soil moisture sensor,Woonkamer,"Sensor, Thermostat, Zigbee","Sensor, Thermostat, Zigbee",,3,False,missing category: brand,,,13,d914edb87f840a427d90c7967f1290af
-966f5d5bd05252bd7dca7dfffad6659a,OpenPlantbook,Olen,integration,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-52aaf03d14873f7e94c61581200c9a8f,Home Assistant Plant,Olen,integration,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-6318e9c8bcb76a195ed57213e67789b9,Flower Card,Olen,plugin,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-b57b456fbcb7f2130dba90a280762d08,Red Robin (voortuin),,Photinia x fraseri,Voortuin,,,,0,True,no labels at all,,,32,01KHC09AW7CXKKEZ36RVQZXG9J
-e20ddb254fb2af305e8fb510947943a9,Bamboe (achtertuin),COOLO,Soil moisture sensor,Achtertuin,"Sensor, Thermostat, Zigbee","Sensor, Thermostat, Zigbee",,3,False,missing category: brand,,,13,d914edb87f840a427d90c7967f1290af
-159d67d455ae63b9665094b12a0201bc,Bruidsplant (achtertuin),,Deutzia gracilis,Achtertuin,,,,0,True,no labels at all,,,32,01KHGPX4YQQGRVQ9X1HRDKRXRS
-2c3b0ce9d5efcab5839143ee536ff696,Bamboo (achtertuin),,Bambusa oldhamii,Achtertuin,,,,0,True,no labels at all,,,32,01KHGQEVHQDKSAF49CTYZJP5KY
-512cdd82f1fe1afa8bf0ffb3d56d3c8c,home-assistant_v2.db,,,Digital only,,,,0,True,no labels at all,,service,4,01KHH43RW6EJ6Q1VF5F985QJTT
-450842f3107021ac37293114096b06f6,HAGHS,d-n91,integration,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-302375777dfc42619a19124d4cda57b7,Schemerlamp,IKEA of Sweden,KAJPLATS E27 CWS globe 1055lm,Woonkamer,"IKEA, Light, Matter, Thread","IKEA, Light, Matter, Thread",,4,False,,,,18,01KGJC3CYHAJMT00H6CKK3M3BR
-3ac7e127c2849814044c5f4abbdb76b4,Verandalamp-links,IKEA,TRETAKT smart plug,Veranda,"IKEA, Light, Switch, Zigbee","IKEA, Light, Switch, Zigbee",,4,False,,,,7,d914edb87f840a427d90c7967f1290af
-a0ba24ef749d915f85d940c40a7b420f,Verandalamp-rechts,IKEA,TRETAKT smart plug,Veranda,"IKEA, Light, Switch, Zigbee","IKEA, Light, Switch, Zigbee",,4,False,,,,7,d914edb87f840a427d90c7967f1290af
-9bc296d31a25b042eede679299c912c1,Veranda-ventilator,IKEA,TRETAKT smart plug,Veranda,"IKEA, Zigbee","IKEA, Zigbee",,2,False,missing category: function,,,7,d914edb87f840a427d90c7967f1290af
-437b650be2ddb2c06f313e8c5033c366,TV,IKEA,TRETAKT smart plug,Woonkamer,"IKEA, Switch, Zigbee","IKEA, Switch, Zigbee",,3,False,,,,7,d914edb87f840a427d90c7967f1290af
-0f1c26b27d08d7ee8601b7d085faa4df,Bureaulamp Rudi,IKEA,TRETAKT smart plug,Woonkamer,"IKEA, Light, Switch, Zigbee","IKEA, Light, Switch, Zigbee",,4,False,,,,7,d914edb87f840a427d90c7967f1290af
-5f0d47606fe1a021b007d901fe89d6ee,Bureau Rudi,IKEA,TRETAKT smart plug,Woonkamer,"IKEA, Light, Switch, Zigbee","IKEA, Light, Switch, Zigbee",,4,False,,,,7,d914edb87f840a427d90c7967f1290af
-63b676221e5687a5fc0a47eb0bd0d47b,Voordeur bewegingssensor,IKEA,TRADFRI motion sensor,Hal beneden,"IKEA, Presence, Sensor, Zigbee","IKEA, Presence, Sensor, Zigbee",,4,False,,,,8,d914edb87f840a427d90c7967f1290af
-a9fcfd899c59485dc2b43efc0aa1c3a7,Wijnrek lamp,IKEA of Sweden,KAJPLATS E27 CWS globe 1055lm,Woonkamer,"IKEA, Light, Matter, Thread","IKEA, Light, Matter, Thread",,4,False,,,,18,01KGJC3CYHAJMT00H6CKK3M3BR
-e4d2b3edc9cc36db21397460de23ccf4,Zigbee Map,dan-danache,integration,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-61e2ea981e6afbd050d73be31cfc3bd1,Hal boven - plafondlamp 1,IKEA of Sweden,KAJPLATS E27 CWS globe 1055lm,Hal boven,"IKEA, Light, Matter, Thread, haghs_ignore","IKEA, Light, Matter, Thread, haghs_ignore",,5,False,,,,18,01KGJC3CYHAJMT00H6CKK3M3BR
-acb9ecb40a9127df19dc923deea3e47f,Hal boven - plafondlamp 2,IKEA of Sweden,KAJPLATS E27 CWS globe 1055lm,Hal boven,"IKEA, Light, Matter, Thread, haghs_ignore","IKEA, Light, Matter, Thread, haghs_ignore",,5,False,,,,18,01KGJC3CYHAJMT00H6CKK3M3BR
-97e5a7b923135aac9a34277d3ffbb2cc,Hal boven - plafondlamp 3,IKEA of Sweden,KAJPLATS E27 CWS globe 1055lm,Hal boven,"IKEA, Light, Matter, Thread, haghs_ignore","IKEA, Light, Matter, Thread, haghs_ignore",,5,False,,,,18,01KGJC3CYHAJMT00H6CKK3M3BR
-5120e261fa50ace375f7dd89fe57abc6,Adaptive Lighting,"basnijholt, RubenKelevra, th3w1zard1, protyposis",integration,Unknown,,,,0,True,no labels at all,,service,2,e0a6c4b465ceb87ead43206b08d64131
-93d6b1376cde1cd56216e051984c2e81,Deken R/R,IKEA,TRETAKT smart plug,,"IKEA, Switch, Zigbee","IKEA, Switch, Zigbee",,3,False,,,,7,d914edb87f840a427d90c7967f1290af
-9b8027c862b86e8c5fa57df578ffd0d5,Watchman,dummylabs,Watchman,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,service,9,01KHY31YHS7MP6XPT3Y9Q6B70P
-92e0d3ebd2e85ccad6324e9838ebd4e6,Oude schuur - buitenlamp,IKEA,TRETAKT smart plug,Achtertuin,"IKEA, Light, Switch, Zigbee","IKEA, Light, Switch, Zigbee","IKEA, Light, Zigbee",4,False,,,,7,d914edb87f840a427d90c7967f1290af
-bcb51227a88e5fcb5fc68c6ac3face21,Toilet beneden - plafondlamp 1,IKEA of Sweden,KAJPLATS E27 CWS globe 1055lm,Toilet beneden,"IKEA, Light, Matter, Thread","IKEA, Light, Matter, Thread",,4,False,,,,18,01KGJC3CYHAJMT00H6CKK3M3BR
-dd1a6c9ae25871e9cea091613554ee39,IQ Gateway,Enphase,Envoy-S-Metered-EU,Unknown,,,,0,True,no labels at all,,,5,01KF8Z4PPRWVW0Y5176TAS3B67
-50769daac1b4ac41a33ea76a050ae5d6,Q Relay,Enphase,Q-RELAY-3P-INT,Unknown,,,,0,True,no labels at all,,,1,01KF8Z4PPRWVW0Y5176TAS3B67
-7a3dd62eb0b34976710c49299b847d9c,IQ Microinverters,Enphase,IQ8AC-72-M-INT,Unknown,,,,0,True,no labels at all,,,29,01KF8Z4PPRWVW0Y5176TAS3B67
-0e6434e4a2f6fd184573d242d37e6f23,Enphase Cloud,Enphase,Cloud Service,Unknown,,,,0,True,no labels at all,,service,17,01KF8Z4PPRWVW0Y5176TAS3B67
-9ccb5bf2af22c184fb0533f644bbced2,Buitenlamp - nieuwe schuur,IKEA,TRETAKT smart plug,,,,,0,True,no labels at all,,,7,d914edb87f840a427d90c7967f1290af
-b60c3467a8aa438f00b9a4bb28d3a9bb,Home Assistant Editor,Saihgupr's Add-ons Repository,Home Assistant App,Unknown,,,,0,True,no labels at all,,service,7,fa264e9a222c46061a3386896775c494
-fe9203d2cc609d0a3f8374dab3cc1507,Button Builder,aspenrt78,integration,Unknown,,,,0,True,no labels at all,,service,2,e0a6c4b465ceb87ead43206b08d64131
-67b88de9adbdd1160cfd6ca6ee3be467,AccuSaver,Tasmota,AccuSaver,Oude schuur,"Charger, WiFi",WiFi,"Charger, WiFi",2,False,missing category: brand,,,22,01KJT9R8N7W0QH72RDF2NRMD92
-a733afac6d56b20a8c5c567586b8a937,Toilet beneden - plafondlamp 2,IKEA of Sweden,KAJPLATS E27 CWS globe 1055lm,Toilet beneden,"IKEA, Light, Matter, Thread","IKEA, Light, Matter, Thread","IKEA, Light, Matter, Thread",4,False,,,,18,01KGJC3CYHAJMT00H6CKK3M3BR
-83a73cd56543655dad2589843cca3d94,Keuken - aanrecht,IKEA,TRETAKT smart plug,,,,,0,True,no labels at all,,,7,d914edb87f840a427d90c7967f1290af
-3a8873143e8cbb7fae6ff23070a65cf5,Site: 5850163,Enphase,,Unknown,,,,0,True,no labels at all,,,0,01KF8Z4PPRWVW0Y5176TAS3B67
-2e053236192af123e89c4179b1438288,Site: 5850163,Enphase,,Unknown,,,,0,True,no labels at all,,,0,01KF8Z4PPRWVW0Y5176TAS3B67
-4889dbae43b9ec5d7849966fd5007d25,Nachtkastjelamp,IKEA of Sweden,KAJPLATS E27 CWS globe 1055lm,Slaapkamer R/R,"IKEA, Light, Matter, Thread","IKEA, Light, Matter, Thread",,4,False,,,,18,01KGJC3CYHAJMT00H6CKK3M3BR
-fafcee1b4844a2b1d5bc7176033d9750,WashData,3dg1luk43,integration,Unknown,,,,0,True,no labels at all,,service,2,e0a6c4b465ceb87ead43206b08d64131
-369135bc288deeb3e126025bd58239b8,Wasmachine,WashData,,Zolder,"Digital only, Sensor","Digital only, Sensor",,2,False,"missing category: brand, protocol",,,19,01KNCXZ0YQHJ0N3VBXEXMM6XVF
-f216e37629dad992fa362f7ab58b7e15,KAJPLATS E27 CWS globe 1055lm,IKEA of Sweden,KAJPLATS E27 CWS globe 1055lm,Unknown,,,,0,True,no labels at all,,,18,01KGJC3CYHAJMT00H6CKK3M3BR
-77dadfcf6e74c3b26e957a773a27acf3,Donut,IKEA of Sweden,VARMBLIXT table/wall lamp,Woonkamer,"IKEA, Light, Matter, Thread","IKEA, Light, Matter, Thread",,4,False,,,,18,01KGJC3CYHAJMT00H6CKK3M3BR
-2ed03c9a3bf1f0b469138ed2a66ef287,BILRESA scroll wheel,IKEA of Sweden,BILRESA scroll wheel,Unknown,"Button, IKEA, Matter, Thread","Button, IKEA, Matter, Thread",,4,False,,,,27,01KGJC3CYHAJMT00H6CKK3M3BR
-ec5d7f9725948bdc9bcd0f01c3be2384,BILRESA scroll wheel,IKEA of Sweden,BILRESA scroll wheel,Unknown,"Button, IKEA, Matter, Thread","Button, IKEA, Matter, Thread",,4,False,,,,29,01KGJC3CYHAJMT00H6CKK3M3BR
-93e774a7b822d4efecf15128f8796177,BILRESA dual button,IKEA of Sweden,BILRESA dual button,Unknown,"Button, IKEA, Matter, Thread","Button, IKEA, Matter, Thread",,4,False,,,,15,01KGJC3CYHAJMT00H6CKK3M3BR
-5a021eb1e359c44cadb2de7c3ac459fd,Gas market price,EnergyZero,,Unknown,,,,0,True,no labels at all,,service,2,01KPBQQD64EGX66BPMXXRMWTGE
-6a69bc94a6047a3705b1db9c2339f6be,Energy market price,EnergyZero,,Unknown,,,,0,True,no labels at all,,service,9,01KPBQQD64EGX66BPMXXRMWTGE
-94d1aadceae8191a81d8071775acadc0,AlertTicker Card,djdevil,plugin,Unknown,,,,0,True,no labels at all,,service,2,e0a6c4b465ceb87ead43206b08d64131
-5a141da697ec8522b78aa303e760b1fd,Droger,WashData,,Zolder,,,,0,True,no labels at all,,,19,01KQWPCGW2VVQJ5QPXFBWM1P2E
-a6114b1064027ac6ecc2e1e52413f6c1,Vaatwasser,WashData,,Keuken,,,,0,True,no labels at all,,,20,01KQWPHEVK74DJA6WJQZGXW563
-6aec27084b51b43c2abe566b97a11f5e,Slaapkamerraam RR,IKEA of Sweden,MYGGBETT door/window sensor,Slaapkamer R/R,"IKEA, Matter, Sensor, Thread","IKEA, Matter, Sensor, Thread",,4,False,,,,15,01KGJC3CYHAJMT00H6CKK3M3BR
-4c304f9241cd69109b0f78d443127816,Filebrowser,HA Add-ons by alexbelgium,Home Assistant App,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,7,fa264e9a222c46061a3386896775c494
-c8d30327dd01d8def45fdfc237fdb3ac,FileBrowser Quantum,HA Add-ons by alexbelgium,Home Assistant App,Unknown,,,,0,True,no labels at all,,service,7,fa264e9a222c46061a3386896775c494
-a1f92356e33443fed70569562c57f39c,kleinlink-1,Broadlink,RM4 pro,Woonkamer,Sensor,,Sensor,1,False,"missing category: brand, protocol",,,5,01KSG3SWW0N6SGZRAZ953VCJHS
-433f328e94643fb62a7e830f43f23105,Rozius,,,On the go,,,,0,True,no labels at all,,,0,01J73XBJCBC5W5X0AHEDE83QFT
-d690cf35a22a732a1393cf5df302a784,Immich Picture,remy,integration,Unknown,,,,0,True,no labels at all,,service,2,e0a6c4b465ceb87ead43206b08d64131
-0760d78395da62b99e2a35f3039fc87f,Immich Picture,Immich,Photo Server,Woonkamer,,,,0,True,no labels at all,,,2,01KSJW687TT1SWWEVT35E03RRG
-680da5c1352fa45e5afbf416f82289e6,Kiosk Mode,NemesisRE,plugin,Unknown,,,,0,True,no labels at all,,service,2,e0a6c4b465ceb87ead43206b08d64131
-1bc893fe933889c033afd7a6523fb86b,ESPSomfy RTS,rstrouse,integration,Unknown,,,,0,True,no labels at all,,service,2,e0a6c4b465ceb87ead43206b08d64131
-bcab125f326606eca0e56fc407ab1c5f,Zonnescherm,rstrouse,ESPSomfy RTS Integration v2.4.7,Veranda,RF device,RF device,RF device,1,False,"missing category: brand, function",,,17,01KSQZKPDK2MV0AJWMGTTKA0AR
-3b4e392bd258f3028851ab8f6053e357,Custom Sidebar,elchininet,plugin,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64131
-98ef5dc18faf04dce8e1c8d72bfde9ef,Home Assistant RFLink UI,guanaco0403,integration,Unknown,,,,0,True,no labels at all,,service,2,e0a6c4b465ceb87ead43206b08d64131
-1e1976649e7c1df4a78153cc491e88c6,Scroll wheel nachtkastje,IKEA of Sweden,BILRESA scroll wheel,Slaapkamer R/R,"IKEA, Matter, Switch, Thread","IKEA, Matter, Switch, Thread",,4,False,,,,29,01KGJC3CYHAJMT00H6CKK3M3BR
-f48878a18012e396fe443f6b8754dc2c,Zolder IndoorUnit,Daikin,,,,,,0,True,no labels at all,,,1,01K9QCMYEE1Q0XV9ZT1KXTP2JC
-8d8a3157394454d385a36b4720294225,Huiskamer IndoorUnit,Daikin,,,,,,0,True,no labels at all,,,1,01K9QCMYEE1Q0XV9ZT1KXTP2JC
-a02dd435c181b8dcf0565745239ab58d,Bubble Card,Clooos,plugin,Unknown,,,,0,True,no labels at all,,service,2,e0a6c4b465ceb87ead43206b08d64131
-8ef876d1c50a2814daca23105642ba9b,OpenAI AI Task,OpenAI,gpt-4o-mini,Unknown,,,,0,True,no labels at all,,service,1,01KWABB0CJNQDXC85SJAWZVRWS
-a8ab3ebdea45f820d0e3b9728ea7e3b0,OpenAI Conversation,OpenAI,gpt-4o-mini,Unknown,,,,0,True,no labels at all,,service,1,01KWABB0CJNQDXC85SJAWZVRWS
-b74821c6b111c4e45c411f704303223b,OpenAI STT,OpenAI,gpt-4o-mini-transcribe,Unknown,,,,0,True,no labels at all,,service,1,01KWABB0CJNQDXC85SJAWZVRWS
-6cd2966fd17ab8fcb1e4eb45b18cc0ab,OpenAI TTS,OpenAI,gpt-4o-mini-tts,Unknown,,,,0,True,no labels at all,,service,1,01KWABB0CJNQDXC85SJAWZVRWS
-13b43ff2edbdd06034356fa93d7751b7,OpenAI AI Task,OpenAI,gpt-4o-mini,Unknown,,,,0,True,no labels at all,,service,1,01KWABB0CJNQDXC85SJAWZVRWS
-b679eafef112288e2a9e2b340dfbdf54,Google AI Task,Google,gemini-3.1-flash-lite,Unknown,,,,0,True,no labels at all,,service,1,01KWADWBKE483AFT8GBPX0RZ36
-700ce7a14b3f00d0d27aa837f5d8f93b,Google AI Conversation,Google,gemini-3.1-flash-lite,Unknown,,,,0,True,no labels at all,,service,1,01KWADWBKE483AFT8GBPX0RZ36
-0e6ee20e77806ac9afd3c47a41f61de7,Google AI STT,Google,gemini-3.1-flash-lite,Unknown,,,,0,True,no labels at all,,service,1,01KWADWBKE483AFT8GBPX0RZ36
-54d70a1a452511d61f899a98515b4e14,Google AI TTS,Google,gemini-3.1-flash-tts-preview,Unknown,,,,0,True,no labels at all,,service,1,01KWADWBKE483AFT8GBPX0RZ36
-1eb2066a8d612e0a1fea11e9737afde2,Home Assistant Voice Woonkamer,Nabu Casa,Home Assistant Voice PE,Woonkamer,"Nabu Casa, Voice Assistant, WiFi","Nabu Casa, Voice Assistant, WiFi",,3,False,,,,15,01KWCK04F8X0JKAKSMMZNRZFEZ
-3de9a6b9bfd404a98be2793ad6f1b20a,Piper,Official apps,Home Assistant App,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,7,fa264e9a222c46061a3386896775c494
-6082603402fb2bcc35d294f2a5802bd8,Speech-to-Phrase,Official apps,Home Assistant App,Unknown,,,,0,True,no labels at all,,service,7,fa264e9a222c46061a3386896775c494
-55b9206903effdc169a2bf563ca65093,Raspberry Pi,Raspberry Pi,,Unknown,Sensor,,Sensor,1,False,"missing category: brand, protocol",,,1,d98092ebdc23f0d0a45ced3b1772468a
-68e4147cd06057815ccaaccf033a48d8,Raspberry Pi 5,Raspberry Pi,5,Unknown,,,,0,True,no labels at all,,,1,05f879d18bfc410fe0a93cc16ecf608e
-eae9fc7744239463afe2bc506399567b,Zonnescherm stroom,IKEA,TRETAKT smart plug,,,,,0,True,no labels at all,,,7,d914edb87f840a427d90c7967f1290af
-8fe80584eb33dae33b0ef4280e6058a6,Vijverpompen,IKEA,TRETAKT smart plug,Veranda,"IKEA, Switch, Zigbee","IKEA, Switch, Zigbee",,3,False,,,,7,d914edb87f840a427d90c7967f1290af
-51590876446f2a4f434270c166d9eba8,Luchtpomp,IKEA,TRETAKT smart plug,Veranda,"IKEA, Zigbee","IKEA, Zigbee",,2,False,missing category: function,,,7,d914edb87f840a427d90c7967f1290af
-60838264a8f30cc7b6beb0cf2580cd72,Notify Studio,pqpxo,integration,,,,,0,True,no labels at all,,service,2,e0a6c4b465ceb87ead43206b08d64131
-da82ff5dbdc636b76e851045d5935122,RFlink,RFLink,Gateway,Woonkamer,RF device,RF device,,1,False,"missing category: brand, function",,,2,01KXRE5F78QNB5EZZ69FVDXGBS
-e7d9ee0ca461b3dc94e7abdf41d27f86,Keuken - plafondlicht (ui),RFLink,newkaku,Keuken,"Light, RF device, Switch","Light, RF device, Switch",,3,False,missing category: brand,,,1,01KXRE5F78QNB5EZZ69FVDXGBS
-03baee986391ece45d53bc1a7ffed9f6,Tafel (ui),RFLink,newkaku,,,,,0,True,no labels at all,,,1,01KXRE5F78QNB5EZZ69FVDXGBS
-6c1dba942237f613ea480b75609476ec,Deken RR (ui),RFLink,newkaku,Slaapkamer R/R,"RF device, Switch","RF device, Switch",,2,False,missing category: brand,,,1,01KXRE5F78QNB5EZZ69FVDXGBS
-3a3b23ea312bcce0a5da4b0cd7c90c16,Deken - knop (ui),RFLink,newkaku,,,,,0,True,no labels at all,,,1,01KXRE5F78QNB5EZZ69FVDXGBS
-820e624c20dc5f2a3182a672e5544a6d,Rolluik J/D (ui),RFLink,newkaku,,,,,0,True,no labels at all,,,1,01KXRE5F78QNB5EZZ69FVDXGBS
-06efa07857884779ff6c9ec772642c5c,Rolluik R/R (ui),RFLink,newkaku,,,,,0,True,no labels at all,,,1,01KXRE5F78QNB5EZZ69FVDXGBS
-d8d1686895cf260f0071af4376630054,Vijver (ui),RFLink,Cresta,Veranda,"RF device, Thermostat","RF device, Thermostat",,2,False,missing category: brand,,,3,01KXRE5F78QNB5EZZ69FVDXGBS
-3be46574a6974b338fd2cb331e210328,Veranda (ui),RFLink,Cresta,Veranda,"RF device, Thermostat","RF device, Thermostat",,2,False,missing category: brand,,,3,01KXRE5F78QNB5EZZ69FVDXGBS
-504c651543f6dcebe9dda5d8bd1e4a60,Achterdeurbel (ui),RFLink,newkaku,,,,,0,True,no labels at all,,,1,01KXRE5F78QNB5EZZ69FVDXGBS
-7c1ace7253a5aa710dede06d696d8f63,Voordeurbel (ui),RFLink,newkaku,,,,,0,True,no labels at all,,,1,01KXRE5F78QNB5EZZ69FVDXGBS
-1125799b363becbbb08ea5f947b9b87c,Badkamer - buiten (ui),RFLink,NewKaku,,,,,0,True,no labels at all,,,1,01KXRE5F78QNB5EZZ69FVDXGBS
-72f75e4048ff8788a8850dd2c9e6fd75,Darius smartphone,samsung,SM-S931B,Mobiel,"Mobile, Samsung, Smartphone, WiFi","Mobile, Samsung, Smartphone, WiFi",,4,False,missing category: function; uncategorized label(s): Smartphone,,,134,01KXX7G3Q260PEVTV35EGW2QF5
-f64642c9ad381d5e77a14137a4c782f5,Badkamer - binnen (ui),RFLink,NewKaku,,,,,0,True,no labels at all,,,1,01KXRE5F78QNB5EZZ69FVDXGBS
-1341c1745afa4e98f0559ec71422871e,Whisper,Official apps,Home Assistant App,Digital only,Digital only,Digital only,,1,False,"missing category: brand, protocol",,service,7,fa264e9a222c46061a3386896775c494
-01d17d62ee5a3cde89e558e63b3fa2be,Lovelace Card Templater,gadgetchnnel,plugin,,,,,0,True,no labels at all,,service,2,e0a6c4b465ceb87ead43206b08d64131
-ed547a771bfb2ca0149ac99f4ad24f40,TIMMERFLOTTE temp/hmd sensor,IKEA of Sweden,TIMMERFLOTTE temp/hmd sensor,Achtertuin,,,,0,True,no labels at all,,,17,01KGJC3CYHAJMT00H6CKK3M3BR
-117206864f353d90b8d39a0d7baec6a9,Veranda thermometer,IKEA of Sweden,TIMMERFLOTTE temp/hmd sensor,Veranda,"IKEA, Matter, Thermostat, Thread","IKEA, Matter, Thermostat, Thread",,4,False,,,,17,01KGJC3CYHAJMT00H6CKK3M3BR
+053995546e9054c56f0d8ffbc792f7b2,MariaDB,Official apps,Home Assistant App,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,7,fa264e9a11c46069a3386896775c494
+39aa57d8a24c65fe9f89c000f92bbf95,Advanced SSH & Web Terminal,Home Assistant Community Apps,Home Assistant App,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,7,fa264e9a11c46069a3386896775c494
+724653b929953fad59b38589abdbd030,Klein tablet,LENOVO,Lenovo TB-X306F,Woonkamer,"Digital only, Sensor, Tablet, WiFi","Digital only, Tablet, WiFi",Sensor,4,False,missing category: brand; uncategorized label(s): Tablet,,,93,09K57GQWPDGSEHMYQRGGFEH9HG
+d3d4a9e564cde98d93cd93e634229960,Julius smartphone,samsung,SM-G789B,Mobiel,"Mobile, Samsung, Sensor, Smartphone, WiFi","Mobile, Samsung, Smartphone, WiFi",Sensor,5,False,uncategorized label(s): Smartphone,,,906,7d65fa2ea43fe6cae9bcc56c26a78894
+66d0b68387f92a5a4d325bbc9c4f0574,Studio Code Server,Home Assistant Community Apps,Home Assistant App,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,7,fa264e9a11c46069a3386896775c494
+df008cdfd9cf649c727d8e7fda2ebdc2,File editor,Official apps,Home Assistant App,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,7,fa264e9a11c46069a3386896775c494
+fd4ec006a2ea9c62002c6b6b5a624973,Rolien smartphone prive,samsung,SM-G780F,Mobiel,"Mobile, Samsung, Sensor, Smartphone, WiFi","Mobile, Samsung, Smartphone, WiFi","Mobile, Sensor, WiFi",5,False,uncategorized label(s): Smartphone,,,906,799a59f930bc46005e348e0d284ab4cd
+ea9c6469336707f63b9bdaa544a9298a,HACS,hacs.xyz,,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+5b7c8ea8b42463957074f5c59d2bacab,Samba share,Official apps,Home Assistant App,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,7,fa264e9a11c46069a3386896775c494
+52357a989d33b3bdb7d00c7509609f5e,KleinUnifi,Ubiquiti,UCK G2 Plus,Meterkast,"Sensor, WiFi",WiFi,Sensor,2,False,missing category: brand,,,94,3785398f726ec95f42a2f85273340d6b
+58b2b89b9aa033a7299a0ec9e59f7be9,Rudi tablet,samsung,SM-X200,Mobiel,"Mobile, Samsung, Tablet, WiFi","Mobile, Samsung, Tablet, WiFi",,4,False,missing category: function; uncategorized label(s): Tablet,,,994,09KSN9S0D9B7GP8NGGMJ24ETRY
+ff8fa69dd834894006d836aef4eeb639,KleinTV,Samsung Electronics,UE55MU7000,Woonkamer,"WiFi, haghs_ignore","WiFi, haghs_ignore",,2,False,missing category: brand,user,,0,09KGMS7SYHEEGCJ0QZGTV7HA2H
+59fe92979c788b79d42493677f07a934,Mosquitto broker,Official apps,Home Assistant App,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,7,fa264e9a11c46069a3386896775c494
+b6c4f46ebbab9bae7ef684498fd4c2a7,TV knop,IKEA,TRADFRI on/off switch,Woonkamer,"Button, IKEA, Sensor, Zigbee","Button, IKEA, Zigbee",Sensor,4,False,,,,99,d994edb87f840a427d90c7967f9290af
+bf409b29948cfe956b33949537038c7f,Repeater schuur,IKEA,TRADFRI signal repeater,Achtertuin,"IKEA, Node, Repeater, Sensor, Zigbee","IKEA, Node, Repeater, Zigbee","Sensor, Zigbee",5,False,,,,9,d994edb87f840a427d90c7967f9290af
+cc3d9aaec33b9f095e4ae3ebfa88fd9d,Gordijn J/D,Aqara,Roller shade driver E9,Slaapkamer D/J,"Sensor, Zigbee, haghs_ignore","Sensor, Zigbee, haghs_ignore",Sensor,3,False,missing category: brand,,,94,d994edb87f840a427d90c7967f9290af
+202373e9499d4aa24ca937cec240ad86,Lichtsensor J/D,Xiaomi,Mi light sensor,Slaapkamer D/J,"Sensor, Zigbee","Sensor, Zigbee",Sensor,2,False,missing category: brand,,,7,d994edb87f840a427d90c7967f9290af
+cab945732fe2e0e59ca599890a7a934c,Rolluik knop J/D,IKEA,TRADFRI on/off switch,Slaapkamer D/J,"Button, IKEA, Sensor, Zigbee","Button, IKEA, Zigbee",Sensor,4,False,,,,8,d994edb87f840a427d90c7967f9290af
+92af3f56870953cbc2aa28a094c0b480,Darius knop,IKEA,TRADFRI on/off switch,Slaapkamer D/J,"Button, Sensor, Zigbee","Button, Zigbee",Sensor,3,False,missing category: brand,,,8,d994edb87f840a427d90c7967f9290af
+9e623be9603b93cc8ad12ca7e9045489,Poort bewegingssensor,IKEA,TRADFRI motion sensor,Achtertuin,"IKEA, Sensor, Zigbee","IKEA, Sensor, Zigbee","Sensor, Zigbee",3,False,,,,99,d994edb87f840a427d90c7967f9290af
+57ec426c9acd0ef4659e3dda29a0bf9e,Veranda bewegingssensor,IKEA,TRADFRI motion sensor,Veranda,"IKEA, Presence, Sensor, Zigbee","IKEA, Presence, Zigbee",Sensor,4,False,,,,99,d994edb87f840a427d90c7967f9290af
+96439bdc7d74f5394f4eccb4c0b5ab06,Rolien knop,IKEA,TRADFRI on/off switch,Slaapkamer R/R,"Button, IKEA, Sensor, Zigbee","Button, IKEA, Zigbee",Sensor,4,False,,,,99,d994edb87f840a427d90c7967f9290af
+0afb2a994a6722095c6280c9ddef3aca,Woonkamer luchtsensor,IKEA,VINDSTYRKA air quality and humidity sensor,Woonkamer,"IKEA, Node, Repeater, Sensor, Zigbee","IKEA, Node, Repeater, Sensor, Zigbee",Sensor,5,False,,,,96,d994edb87f840a427d90c7967f9290af
+9349890e6ea99da99b77d2d28e827a59,Rolluik knop R/R,IKEA,TRADFRI on/off switch,Slaapkamer R/R,"Button, IKEA, Sensor, Zigbee","Button, IKEA, Zigbee",Sensor,4,False,,,,99,d994edb87f840a427d90c7967f9290af
+e09bdca3fa69a22843758d064b2fca4c,Slaapkamer raamsensor R/R,SONOFF,Contact sensor,Slaapkamer R/R,"Sensor, Zigbee, haghs_ignore","Sensor, Zigbee, haghs_ignore",Sensor,3,False,missing category: brand,user,,90,d994edb87f840a427d90c7967f9290af
+ee39a493c77063988454f5f50a4fbfcd,Woonkamer rookmelder,FireAngel,CO alarm,Woonkamer,"Sensor, Zigbee, haghs_ignore","Sensor, Zigbee, haghs_ignore",Sensor,3,False,missing category: brand,,,7,d994edb87f840a427d90c7967f9290af
+3388eb9f4a3c399e039a5cf29b2acb84,P9 meter,HomeWizard,Wi-Fi P9 Meter,Meterkast,"Energy meter, Sensor, Switch, WiFi","Energy meter, Sensor, Switch, WiFi",Sensor,4,False,missing category: brand,,,39,a2bd0c890b5698b9cfa77623f7648cf6
+ad934a698bd0ea6925f2db7c98b2b6e6,Home Assistant Google Drive Backup,Home Assistant Google Drive Backup Repository,Home Assistant App,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,7,fa264e9a11c46069a3386896775c494
+ab278773939c9fbeef693f9c7fa9a62d,KleinSpy2 (voordeur),Ubiquiti,G3 Instant,Hal beneden,"Camera, Sensor, WiFi","Camera, WiFi",Sensor,3,False,missing category: brand,,,24,3785398f726ec95f42a2f85273340d6b
+9f928c97dd742c9aae52c305009e79f3,KleinSpy9 (veranda),Ubiquiti,G3 Instant,Veranda,"Camera, Sensor, WiFi","Camera, WiFi",Sensor,3,False,missing category: brand,,,24,3785398f726ec95f42a2f85273340d6b
+d22faeecf748a8e99ebc72e0730a9f0e,Rudi knop,IKEA,TRADFRI on/off switch,Woonkamer,"Button, IKEA, Sensor, Zigbee","Button, IKEA, Zigbee",Sensor,4,False,,,,99,d994edb87f840a427d90c7967f9290af
+d0bf97e976e09a07ab9df86a05c8d47a,Rudi smartwatch,samsung,SM-R870,Mobiel,"Mobile, Samsung, Sensor, Smartwatch, WiFi","Mobile, Samsung, Smartwatch, WiFi",Sensor,5,False,uncategorized label(s): Smartwatch,,,77,6d965d80dc770ad78520f9e28f47c3a6
+d4524e349fb0202864d2fea0962c4768,Forecast,Met.no,Forecast,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,9,7b5d406d8c992b52e9bdbc5bd5f7327c
+ab8f9b0974393bf77689a3cea7f94946,Rudi smartphone (S90),samsung,SM-G975F,Mobiel,"Mobile, Samsung, Sensor, Smartphone, WiFi","Mobile, Samsung, Smartphone, WiFi",Sensor,5,False,uncategorized label(s): Smartphone,,,98,698e534b6e38d97b4899e0e376455562
+4cb78d3d06048d2097d7b0f9bc4078e2,Repeater zolder,IKEA,TRADFRI signal repeater,Zolder,"IKEA, Node, Repeater, Zigbee","IKEA, Node, Repeater, Zigbee",,4,False,,,,9,d994edb87f840a427d90c7967f9290af
+4c6b08aaed0263fc350ca82c79c0dc69,EPL Living room,EverythingSmartTechnology,Everything Presence Lite,Woonkamer,"Bluetooth, Presence, Sensor, haghs_ignore","Bluetooth, Presence, Sensor, haghs_ignore","Bluetooth, Presence, Sensor",4,False,missing category: brand,,,903,745c022daa90dd4ebc5ee8ea0886394e
+0ca7b437feb296ae8e3439cf690c52ed,hci0 (D8:3A:DD:DF:6C:4A),Raspberry Pi Trading Ltd,bcm43438-bt,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,,0,2f2c533ad39c38880f0ae3a9862a7787
+7624c6c55f5be9c922bc2235f4a08829,Deken Julius,IKEA,TRADFRI control outlet,Slaapkamer D/J,"Button, Zigbee","Button, Zigbee",,2,False,missing category: brand,,,90,d994edb87f840a427d90c7967f9290af
+0b2632e86ca7d695938f9036623290bd,Gasmeter  (P9: 3c39e7285f8c),HomeWizard,HWE-P9,Meterkast,,,,0,True,no labels at all,user,,0,a2bd0c890b5698b9cfa77623f7648cf6
+93e677b853ad797b8e7bca9f9fb8f627,ESPHome Device Builder,ESPHome,Home Assistant App,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,7,fa264e9a11c46069a3386896775c494
+4c668be435eb5ac5eae8b29e960000f2,Rudi smartphone,samsung,SM-A556B,Mobiel,"Mobile, Samsung, Smartphone, WiFi","Mobile, Samsung, Smartphone, WiFi",,4,False,missing category: function; uncategorized label(s): Smartphone,,,933,09KXGSJJTBR2NC5QVTSWSMM8J5
+2df59c9a0cfc97ab0543590e929ac568,Slaapkamer raamsensor J/D,SONOFF,Contact sensor,Slaapkamer D/J,"IKEA, Sensor, Zigbee","IKEA, Sensor, Zigbee",Sensor,3,False,,,,7,d994edb87f840a427d90c7967f9290af
+e4c2965f79fc6632c494aa8f62928f4b,Gasmeter (P9: 3c39e7285f8c),HomeWizard,HWE-P9,Meterkast,,,,0,True,no labels at all,user,,9,a2bd0c890b5698b9cfa77623f7648cf6
+27a3f9522489f64e08f86a3baede3af2,Slaapkamer j/d temp,Aqara,Temperature and humidity sensor,Slaapkamer D/J,"Sensor, Thermostat, Zigbee","Sensor, Thermostat, Zigbee",Sensor,3,False,missing category: brand,,,8,d994edb87f840a427d90c7967f9290af
+972896946672ae8a8c09092ee4ba9efe,ikea parasol 2,IKEA,PARASOLL door/window sensor,Slaapkamer D/J,"IKEA, Sensor, Zigbee, haghs_ignore","IKEA, Sensor, Zigbee, haghs_ignore",Sensor,4,False,,,,90,d994edb87f840a427d90c7967f9290af
+203496af6ab20593fa844e3fa240ef57,A55 van Rudi,,,Mobiel,"Mobile, Samsung, Sensor, Smartphone, WiFi","Mobile, Samsung, Smartphone, WiFi",Sensor,5,False,uncategorized label(s): Smartphone,,,9,09J73XBJCBC5W5X0AHEDE83QFT
+047c8dd89770928626aff874085d39e6,Darius's Galaxy S20 FE 5G,,,Mobiel,"Mobile, Samsung, Sensor, Smartphone, WiFi","Mobile, Samsung, Smartphone, WiFi",Sensor,5,False,uncategorized label(s): Smartphone,,,9,09J73XBJCBC5W5X0AHEDE83QFT
+797962df90e0243fe377499448952aeb,Blackius,,,Mobiel,"Smartthings, Tag","Smartthings, Tag",,2,False,"missing category: brand, protocol",,,9,09J73XBJCBC5W5X0AHEDE83QFT
+0dd94c9adb843475c9d8a62679a6359a,Groenius,,,Mobiel,"Smartthings, Tag","Smartthings, Tag",,2,False,"missing category: brand, protocol",,,0,09J73XBJCBC5W5X0AHEDE83QFT
+df4f85f753adad34860936cff9f2d988,Blackius,,,Mobiel,"Smartthings, Tag","Smartthings, Tag",,2,False,"missing category: brand, protocol",,,0,09J73XBJCBC5W5X0AHEDE83QFT
+6b99a59ce9f7dbebce06dcc79924b5f6,KleinTagSkippy,,,Mobiel,"Smartthings, Tag","Smartthings, Tag",,2,False,"missing category: brand, protocol",,,0,09J73XBJCBC5W5X0AHEDE83QFT
+5bc4d7566fad0e8274a54cde72af7c39,Pinkius,,,Mobiel,"Smartthings, Tag","Smartthings, Tag",,2,False,"missing category: brand, protocol",,,0,09J73XBJCBC5W5X0AHEDE83QFT
+d8508cbbf0d4be4a3c98ffd55b2ff0d0,KleinTV,Samsung Electronics,QE55Q80CATXXN,Woonkamer,"Sensor, Smartthings, haghs_ignore","Smartthings, haghs_ignore",Sensor,3,False,"missing category: brand, protocol",,,99,09J73XBJCBC5W5X0AHEDE83QFT
+e2a8f55a8dafee9a6d77bc8f5ed6eb76,KleinTagRudi,,,Mobiel,"Smartthings, Tag","Smartthings, Tag",,2,False,"missing category: brand, protocol",,,0,09J73XBJCBC5W5X0AHEDE83QFT
+b7d7b772798d09207d0275ceb8ba7394,KleinTagDarius,,,Mobiel,"Smartthings, Tag","Smartthings, Tag",,2,False,"missing category: brand, protocol",,,0,09J73XBJCBC5W5X0AHEDE83QFT
+f557bfe0972b60b99fd758b079ce468b,Grijzius,,,Mobiel,"Smartthings, Tag","Smartthings, Tag",,2,False,"missing category: brand, protocol",,,0,09J73XBJCBC5W5X0AHEDE83QFT
+79d3be0dfe474c7987969b04eacc5b85,KleinTV,Samsung,QE55Q80CATXXN,Woonkamer,"WiFi, haghs_ignore","WiFi, haghs_ignore",,2,False,missing category: brand,,,3,"09KRE208ASH9MYDEZAGB58ZNNA, 09KGMS7SYHEEGCJ0QZGTV7HA2H"
+40d24259d5bbb6ccf9424722be2e70b6,Zolder t/h,Aqara,Temperature and humidity sensor,Zolder,"Sensor, Thermostat, Zigbee","Sensor, Thermostat, Zigbee",Sensor,3,False,missing category: brand,,,92,d994edb87f840a427d90c7967f9290af
+b9a6993b89d99e54353b80dbf3095f35,Rolien bureau t/h,Aqara,Temperature and humidity sensor,Slaapkamer R/R,"Sensor, Thermostat, Zigbee","Sensor, Thermostat, Zigbee",Sensor,3,False,missing category: brand,,,92,d994edb87f840a427d90c7967f9290af
+8bce628eaed27829580afa649892495f,Energy Socket Julius,HomeWizard,Wi-Fi Energy Socket,Zolder,"Energy meter, HomeWizard, Sensor, Switch, WiFi","Energy meter, HomeWizard, Sensor, Switch, WiFi",Sensor,5,False,,,,95,09JK98YHWQN35PJPY36026JSWS
+df50cbd084fb922fd8ff9ef0439bbaf9,Energy kWh meter KleinBoil,HomeWizard,Wi-Fi kWh Meter 9-phase,Zolder,"Energy meter, HomeWizard, Sensor, Switch, WiFi","Energy meter, HomeWizard, Sensor, Switch, WiFi",Sensor,5,False,,,,98,09JK8BZ54ZG2CWDSN4695XNVDN
+b39a249b76065e82df3fb38bef2fcc22,Material 3 Dark & Light Theme 07: DarkOliveGreen,AmoebeLabs,theme,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+2ac9bdc8e82027a923d00df377c9c653,Keep Texts in Tabs,elchininet,plugin,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+369e3da4f0cdcc3cb78def99e95c3949,Spook 👻 Your homie,frenck,integration,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+d55d7f7f00b40053bd6c60ec9c883377,Google Dark Theme,JuanMTech,theme,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+003ea8e99cf02611aa9c097c5d8bbde,card-mod,thomasloven,plugin,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+72986c8b06680a92299c73479923758c,layout-card,thomasloven,plugin,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+8af0959407ab82b254a66d4fc3ea7873,Everything Presence Lite 20b9c8 (08:D9:F9:20:B9:CA),Espressif Inc. (esphome),esp32dev,Woonkamer,"Bluetooth, Presence, Sensor","Bluetooth, Presence, Sensor",,3,False,missing category: brand,,,0,09JM79XJZYDEV0EX4EAJV9TRQN
+3b3cf38a8824059a99a79054e95bdafd,Sound Sensor - KleinTV,Samsung Electronics,QE55Q80CATXXN,Woonkamer,"Sensor, Smartthings, haghs_ignore","Sensor, Smartthings, haghs_ignore",,3,False,"missing category: brand, protocol",,,2,09J73XBJCBC5W5X0AHEDE83QFT
+27920f56e4669e7e3c62b6eed5ade9cb,Light Sensor - KleinTV,Samsung Electronics,QE55Q80CATXXN,Woonkamer,"Sensor, Smartthings, haghs_ignore","Sensor, Smartthings, haghs_ignore",Sensor,3,False,"missing category: brand, protocol",,,3,09J73XBJCBC5W5X0AHEDE83QFT
+2d38226c65c3fb3e92b4be762edc9b92,EPSON ET-2860 Series,EPSON,ET-2860 Series,Woonkamer,Sensor,,Sensor,9,False,"missing category: brand, protocol",,,2,09JPFC0ESH3X9HTX7SBVNHR9F5
+059f869cd87ede50f46442a6ea030f43,Energy Socket Rolien,HomeWizard,Wi-Fi Energy Socket,Slaapkamer R/R,"Energy meter, HomeWizard, Sensor, Switch, WiFi","Energy meter, HomeWizard, Sensor, Switch, WiFi",,5,False,,config_entry,,0,09JQS2C02CVF9VEPVAXGRYCYCT
+08eb885d40265dd7d7a5e520b75ccac9,Energy Socket Vaatwasser,HomeWizard,Wi-Fi Energy Socket,Keuken,"Energy meter, HomeWizard, Sensor, Switch, WiFi","Energy meter, HomeWizard, Sensor, Switch, WiFi",Sensor,5,False,,,,95,09JQS2D99J9V9MH9SVH9B4BSS8
+38869948e7e96e0f8c0ea265e2c35239,Energy Socket Serverkast,HomeWizard,Wi-Fi Energy Socket,Meterkast,"Energy meter, HomeWizard, Sensor, Switch, WiFi","Energy meter, HomeWizard, Sensor, Switch, WiFi",,5,False,,,,95,09JQS2EBYMGNWTQ7NPBPEFE6VF
+03c05709d5b4d88997cc84063853e35d,Backup,Home Assistant,Home Assistant Backup,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,service,5,09JRF70HMG9H9TQ66WK9MCJ25S
+8e80539e86dd430399b9e39ea6399a96,Kia Uvo / Hyundai Bluelink,fuatakgun,integration,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+a6208ccc2c783ccb8c28649eb60df6b6,EV3,Kia Europe,EV3,Digital only,"Digital only, Sensor, WiFi, haghs_ignore","Digital only, Sensor, WiFi, haghs_ignore","Sensor, WiFi, haghs_ignore",4,False,missing category: brand,,,997,09JRXDFHN9QXNTEK9A3H8H3RDM
+a37540673602520df8ea967a6e893ee8,Solar production forecast,Forecast.Solar,personal,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,service,99,09JTGQDT5FCAVFRMVTBTGB69A5
+2859cc039693725570d64657bc5df5b9,Solar production forecast,Forecast.Solar,personal,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,service,99,09JWBR7KRFRNB6397N0GGK865E
+dfeda205c5c646fcd920c9a883abfc37,Solar production forecast,Forecast.Solar,personal,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,service,99,09JWBR9A0CK5M84TDAT8PJ54V0
+0720393e8b4e9c3ebbfae83a247c5f96,IKEA energy meter 3 - Droger,IKEA,INSPELNING smart plug,Zolder,"Energy meter, IKEA, Node, Repeater, Sensor, Switch, Zigbee","Energy meter, IKEA, Node, Repeater, Switch, Zigbee","IKEA, Repeater, Sensor, Switch, Zigbee",7,False,,,,99,d994edb87f840a427d90c7967f9290af
+d34d9367d55fa69098998b9f36f9cfca,IKEA energy meter 4 Wasmachine,IKEA,INSPELNING smart plug,Zolder,"Energy meter, IKEA, Node, Repeater, Sensor, Switch, Zigbee","Energy meter, IKEA, Node, Repeater, Switch, Zigbee","IKEA, Repeater, Sensor, Switch, Zigbee",7,False,,,,20,d994edb87f840a427d90c7967f9290af
+e9b8cdac9e9979270ad11c9a5fab835,IKEA energy meter 9 - Darius,IKEA,INSPELNING smart plug,Slaapkamer D/J,"Energy meter, IKEA, Node, Repeater, Sensor, Switch, Zigbee","Energy meter, IKEA, Node, Repeater, Switch, Zigbee","IKEA, Repeater, Sensor, Switch, Zigbee",7,False,,,,94,d994edb87f840a427d90c7967f9290af
+8466c8b969c827dc22abaeecc2967e92,IKEA energy meter 2 - Server,IKEA,INSPELNING smart plug,Zolder,"Energy meter, IKEA, Node, Repeater, Sensor, Switch, Zigbee","Energy meter, IKEA, Node, Repeater, Switch, Zigbee","IKEA, Repeater, Sensor, Switch, Zigbee",7,False,,,,20,d994edb87f840a427d90c7967f9290af
+08992e06ee6a9f724bc08a830922369c,IKEA energy meter 6 Minikoelkast,IKEA,INSPELNING smart plug,Keuken,"Energy meter, IKEA, Node, Repeater, Sensor, Switch, Zigbee","Energy meter, IKEA, Node, Repeater, Switch, Zigbee","IKEA, Repeater, Sensor, Switch, Zigbee",7,False,,,,20,d994edb87f840a427d90c7967f9290af
+2d49907e0b4c47657f27b0b3ac799ea0,IKEA energy meter 7 Miniboiler,IKEA,INSPELNING smart plug,Keuken,"Energy meter, IKEA, Node, Repeater, Sensor, Switch, Zigbee","Energy meter, IKEA, Node, Repeater, Switch, Zigbee","IKEA, Repeater, Sensor, Switch, Zigbee",7,False,,,,20,d994edb87f840a427d90c7967f9290af
+feff230dd93f96505adc40aa0015486a,IKEA energy meter 8 Airfryer,IKEA,INSPELNING smart plug,Keuken,"Energy meter, IKEA, Node, Repeater, Sensor, Switch, Zigbee","Energy meter, IKEA, Node, Repeater, Switch, Zigbee","IKEA, Repeater, Sensor, Switch, Zigbee",7,False,,,,97,d994edb87f840a427d90c7967f9290af
+20a3956486ce43694bec5f83d06a87f7,Energy kWh Meter Charger,HomeWizard,Wi-Fi kWh Meter 3-phase,Meterkast,"Energy meter, HomeWizard, Sensor, Switch, WiFi","Energy meter, HomeWizard, Sensor, Switch, WiFi",Sensor,5,False,,,,34,09K0M9BAXYDP87A297HZ7YG7JY
+4b2cd087a39250902994bd90598b9cc8,MQTT Explorer,Gollum add-on repository for Home Assistant,Home Assistant App,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,7,fa264e9a11c46069a3386896775c494
+b385870eef69993686305f8ddc730ab9,Energy kWh meter Fornuis,HomeWizard,Wi-Fi kWh Meter 3-phase,Meterkast,"Energy meter, HomeWizard, Sensor, Switch, WiFi","Energy meter, HomeWizard, Sensor, Switch, WiFi",Sensor,5,False,,,,34,09K0PMRKGYQ54VE2SJBJ840SJQ
+54c64bbf242e59e680b9c9f24fc99790,Energy Socket Rudi,HomeWizard,Wi-Fi Energy Socket,Woonkamer,"Energy meter, HomeWizard, Sensor, Switch, WiFi","Energy meter, HomeWizard, Sensor, Switch, WiFi",Sensor,5,False,,,,95,09K0PMSFY96937P0B4BHP6S4SV
+9d9c9a49336a2c99b4fbc6fcb70d9dc8,Energy kWh meter Airco,HomeWizard,Wi-Fi kWh Meter 9-phase,Meterkast,"Energy meter, HomeWizard, Sensor, Switch, WiFi","Energy meter, HomeWizard, Sensor, Switch, WiFi",Sensor,5,False,,,,98,09K93QQFEHPWWV662NX7GZ2ZJF
+055b4369a9023ba300937a988769e38f,Energy kWh meter KleinFloor,HomeWizard,Wi-Fi kWh Meter 9-phase,Meterkast,"Energy meter, HomeWizard, Sensor, Switch, WiFi","Energy meter, HomeWizard, Sensor, Switch, WiFi",Sensor,5,False,,,,98,09K93QWVQZDDD92JGB0D6BSS8B
+d659983a0ba205bcf7534bcbbffc4d4f,Energy kWh meter KleinShed,HomeWizard,Wi-Fi kWh Meter 9-phase,Meterkast,"Energy meter, HomeWizard, Sensor, Switch, WiFi","Energy meter, HomeWizard, Switch, WiFi",Sensor,5,False,,,,98,09K93R8M64HCBAA2XGE5GFNQBP
+9353dcf87d9c8f9f99f6b99953f949ca,Echo (vloerverwarming),Tuya,VH Control Echo,Woonkamer,"Sensor, Thermostat, WiFi","Sensor, Thermostat, WiFi",,3,False,missing category: brand,,,3,09K2QDQDFFYWSMGHEPJ8SMF097
+ad7437b99f3c03c3d637ce8ea9e2905d,Local Tuya,"rospogrigio, postlund",integration,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+e5adaefad23c4392d55d955ed089f589,Scheduler Card,nielsfaber,plugin,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+092953c029a484a95cfb0a549bcc7905,Mushroom,piitaya,plugin,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+b9db7b75938fb7d7b5ed27b04fa3caaa,Floor surface thermostat,SONOFF,Waterproof (IP65) sensor with screen and probe temperature detection,Woonkamer,"Sensor, Thermostat, Zigbee","Sensor, Thermostat, Zigbee",Sensor,3,False,missing category: brand,,,99,d994edb87f840a427d90c7967f9290af
+99c9d028623cc3b47d69b3da033d589e,Tuya Local,make-all,integration,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+beb9b8be79bd5953fd67b06d4d82a5bc,Repairs,Home Assistant,,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,,6,09K8E88FWP46BK3STD4T9M6SW4
+4e999f059b0259bfefa4b97c90f76ec4,Home Assistant,Home Assistant,,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,,52,09K8E88FWP46BK3STD4T9M6SW4
+40903cc08a494e0e3f490ad7f380b523,Home Assistant Cloud,Nabu Casa Inc.,,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,,5,09K8E88FWP46BK3STD4T9M6SW4
+f99c694052529a4099395ab389778770,IKEA energy meter 99 Bureau Rolien,IKEA,INSPELNING smart plug,Slaapkamer R/R,"Energy meter, IKEA, Node, Repeater, Sensor, Switch, Zigbee","Energy meter, IKEA, Node, Repeater, Switch, Zigbee","IKEA, Repeater, Sensor, Switch, Zigbee",7,False,,,,20,d994edb87f840a427d90c7967f9290af
+73269d90795867a8b492959d0839b9fa,IKEA energy meter 9 Plafond verwarming,IKEA,INSPELNING smart plug,Slaapkamer R/R,"Energy meter, IKEA, Node, Repeater, Sensor, Switch, Zigbee","Energy meter, IKEA, Node, Repeater, Switch, Zigbee","IKEA, Repeater, Sensor, Switch, Zigbee",7,False,,,,20,d994edb87f840a427d90c7967f9290af
+d6007fdcd8736cf4b645d8d4d99ee9b8,System Monitor,System Monitor,,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,service,909,09K8K8FRDAEK5DNHXN4VVP7N0V
+ec43a84d29c945b9929a9ad9052bef90,IKEA energy meter 92 - Voetverwarmer,IKEA,INSPELNING smart plug,Zolder,"Energy meter, IKEA, Node, Repeater, Sensor, Switch, Zigbee","Energy meter, IKEA, Node, Repeater, Switch, Zigbee","IKEA, Repeater, Sensor, Switch, Zigbee",7,False,,,,20,d994edb87f840a427d90c7967f9290af
+bf9d9779f7eda53eaa7959779b3cce23,IKEA energy meter 5 Badkamer verwarming,IKEA,INSPELNING smart plug,Badkamer,"Energy meter, IKEA, Node, Repeater, Sensor, Switch, Zigbee","Energy meter, IKEA, Node, Repeater, Switch, Zigbee","IKEA, Repeater, Sensor, Switch, Zigbee",7,False,,,,20,d994edb87f840a427d90c7967f9290af
+9cb2097be7d8e8c898c756e4e6879cbf,Achterdeur magneetsensor,Trust,Wireless contact sensor,Woonkamer,"Sensor, Zigbee","Sensor, Zigbee",Sensor,2,False,missing category: brand,,,6,d994edb87f840a427d90c7967f9290af
+933e87235534d5a29b48c28ac2338cd2,Scheduler component,nielsfaber,integration,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+d9d4ad3cd44fd7b877eb75da53a2a0f9,Scheduler,@nielsfaber,Scheduler,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,,9,09K9FJ20NFGQP998CHEDHZ53J9
+da9002520eac9994fbba03c762808499,Watchman,dummylabs,integration,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+2829dcd3820305a65708d5493e3b9505,Daikin Onecta,jwillemsen,integration,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+8b5087d36d7c30909337f483d8b42570,Zolder,Daikin,BRP069C4x,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,,2,09K9QCMYEE9Q0XV9ZT9KXTP2JC
+d30920209999ad7997aa5096077b9a49,Huiskamer,Daikin,BRP069C4x,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,,2,09K9QCMYEE9Q0XV9ZT9KXTP2JC
+9e0994f40e3e0c05867395d3289ccd29,Knop badkamer IR slaapkamer,IKEA,TRADFRI on/off switch,Slaapkamer R/R,"Button, IKEA, Sensor, Zigbee","Button, IKEA, Zigbee",Sensor,4,False,,,,7,d994edb87f840a427d90c7967f9290af
+4fe5da3d0b6a0ec9945a979d3f9c6e6d,Bedroom IR panel thermostat,SONOFF,Waterproof (IP65) sensor with screen and probe temperature detection,Slaapkamer R/R,"Sensor, Thermostat, Zigbee","Sensor, Thermostat, Zigbee",Sensor,3,False,missing category: brand,,,99,d994edb87f840a427d90c7967f9290af
+450a8b4c324c95397d988bb379f44afb,ZBT-2 - Zigbee Coordinator,Nabu Casa,Home Assistant Connect ZBT-2,Woonkamer,"Coordinator, Node, Zigbee","Coordinator, Node, Zigbee",,3,False,missing category: brand,,,2,09KR3QR2PJX028ZJ50SDR5K8SJ
+9dfbdcdabc6cabe494d05f68838ea593,Zigbee2MQTT,Home Assistant App: Zigbee2MQTT,Home Assistant App,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,7,fa264e9a11c46069a3386896775c494
+0bb5634afb46a59da458573483b8893f,Zigbee2MQTT Bridge,Zigbee2MQTT,Bridge,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,,8,d994edb87f840a427d90c7967f9290af
+86380d70bdd694ded30ee75932b40c3a,Keuken - aanrechtlicht,IKEA,RODRET wireless dimmer/power switch,,"Button, Sensor, Zigbee","Button, Zigbee",Sensor,3,False,missing category: brand,,,5,d994edb87f840a427d90c7967f9290af
+320c49f9fe44436cf8a096362d867f56,IKEA energy meter 93 Waterleiding,IKEA,INSPELNING smart plug,Meterkast,"Digital only, Energy meter, Helper, IKEA, Node, Repeater, Sensor, Switch, Zigbee","Energy meter, IKEA, Node, Repeater, Switch, Zigbee","Digital only, Helper, IKEA, Repeater, Sensor, Switch, Zigbee",9,False,,,,92,d994edb87f840a427d90c7967f9290af
+92759a7967794c2b2639790906079d96,Zolder Gateway,Daikin,BRP069C4x,Digital only,"Digital only, Sensor, Switch","Digital only, Switch",Sensor,3,False,"missing category: brand, protocol",,,8,09K9QCMYEE9Q0XV9ZT9KXTP2JC
+4379a95c3dcc690faf929359a576e33a,Zolder ClimateControl,Daikin,,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,,98,09K9QCMYEE9Q0XV9ZT9KXTP2JC
+d600fca962d79fd626c8f4f990bc962c,Zolder OutdoorUnit,Daikin,,Digital only,"Digital only, Sensor, Switch","Digital only, Switch",Sensor,3,False,"missing category: brand, protocol",,,4,09K9QCMYEE9Q0XV9ZT9KXTP2JC
+bc5878902adb06b9495282dec05a98de,Huiskamer Gateway,Daikin,BRP069C4x,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,,8,09K9QCMYEE9Q0XV9ZT9KXTP2JC
+c6e7ff05d603c4f6b5990ba34a27d47f,Huiskamer ClimateControl,Daikin,,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,,98,09K9QCMYEE9Q0XV9ZT9KXTP2JC
+6e43b9875e42cbf80c96de026b0be27f,Huiskamer OutdoorUnit,Daikin,,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,,4,09K9QCMYEE9Q0XV9ZT9KXTP2JC
+7f8b309e9e9d9f73e7030399d3d0c5a2,Tumble dryer,Miele,Tumble dryer,Zolder,"Sensor, WiFi",WiFi,Sensor,2,False,missing category: brand,,,22,09KBJDFGESS3MA235Y9N4Z9M5Y
+90b88464390a7fd866fec09fe99d7626,OMV_backup,Home Assistant,Home Assistant Mount,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,9,fa264e9a11c46069a3386896775c494
+24cc02899e659aa5dbaf06e93b6f376e,Ikea raamsensor J/D,IKEA,PARASOLL door/window sensor,Slaapkamer D/J,"IKEA, Sensor, Zigbee, haghs_ignore","IKEA, Sensor, Zigbee, haghs_ignore",Sensor,4,False,,,,6,d994edb87f840a427d90c7967f9290af
+6c8bf0e34296a2caa85784baaa4a2955,button-card,custom-cards,plugin,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+60a0d48de959372bcdd2728bb8f3cf3b,Sonoff ZBdongle-P router,Custom devices (DiY),Texas Instruments router,Slaapkamer R/R,"Node, Router, Zigbee","Node, Router, Zigbee",,3,False,missing category: brand,,,2,d994edb87f840a427d90c7967f9290af
+6990f92febdc46c9cc07c95d6f492a5e,auto-entities,thomasloven,plugin,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+e0dd02f34c92058fc9df087dddcb7900,Rolien smartphone werk,samsung,SM-A536B,Mobiel,"Mobile, Samsung, Sensor, Smartphone, WiFi","Mobile, Samsung, Smartphone, WiFi","Mobile, Sensor",5,False,uncategorized label(s): Smartphone,,,933,09KDD9KCH6EHB8YCXYTTZSWYTV
+0ccc9bb75942979c3d66eb28db23b8cc,Uptime,,,Digital only,,,,0,True,no labels at all,,service,9,09KE7KC5QJJ7ARPQXGHV7XH675
+9e7bb59f20900efcc63d8994ede54072,C.A.F.E.,FezVrasta,integration,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+9bbfbeba8a3ebb048db6e09b27ca799f,Enphase Energy,barneyonline,integration,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+c83e372daa99096665ce3839a420b4f8,Enphase Envoy (Installer),"vincentwolsink, mnederlof",integration,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+a6733899333c68ac35074e70c86098dd,Envoy 922428000926,Enphase,Envoy-S Metered (with CT),Meterkast,"Energy meter, Enphase, Sensor, Solar","Energy meter, Enphase, Solar",Sensor,4,False,missing category: protocol,,,46,09KF8VBXFEZKV2R99JPAPXPP7B
+6237a06b90d0a9fb79463f90592c2526,Inverter 922403000786,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,30,09KF8VBXFEZKV2R99JPAPXPP7B
+30008ab987eeb5f3476bec89d9544e69,Inverter 922403099963,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,30,09KF8VBXFEZKV2R99JPAPXPP7B
+d92b4a6e828a2d584cfee5389ba96a28,Inverter 922403093390,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,99,09KF8VBXFEZKV2R99JPAPXPP7B
+52b3d87307cd8c9624c9c60e6fa7a67a,Inverter 922403093624,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,30,09KF8VBXFEZKV2R99JPAPXPP7B
+202fd8a8d9a2824227b6dd037a3979a6,Inverter 922403097296,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,30,09KF8VBXFEZKV2R99JPAPXPP7B
+2437ba09920f0e99a9b9399f639982a9,Inverter 922403097303,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,30,09KF8VBXFEZKV2R99JPAPXPP7B
+2d992c9d2ea26b92af046be9b8752972,Inverter 922403097394,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,30,09KF8VBXFEZKV2R99JPAPXPP7B
+9599384282d7dc4987c73745a09b8968,Inverter 922403097400,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,30,09KF8VBXFEZKV2R99JPAPXPP7B
+48dc820750e3048f52bccd8e78960268,Inverter 922403097402,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,30,09KF8VBXFEZKV2R99JPAPXPP7B
+b88cc0820509cf9bf848fce8f3a4958f,Inverter 922403097544,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,30,09KF8VBXFEZKV2R99JPAPXPP7B
+acf62dd6b9840699333a4a5650c05464,Inverter 922403097575,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,30,09KF8VBXFEZKV2R99JPAPXPP7B
+aeca64bff9ab9ca59e5eff3e4c7cfbd3,Inverter 922403097626,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,30,09KF8VBXFEZKV2R99JPAPXPP7B
+b820f89feaaf20eadb9f96b95fa9a43c,Inverter 922403097709,Enphase,Inverter,Dak,"Enphase, Solar","Enphase, Solar",,2,False,missing category: protocol,,,30,09KF8VBXFEZKV2R99JPAPXPP7B
+04bd84b50c405bc77ab9fd95ec98305b,Relay 922395065630,Enphase,Envoy-S Metered (with CT),Meterkast,"Bridge, Enphase, Solar","Bridge, Enphase, Solar",,3,False,missing category: protocol,,,90,09KF8VBXFEZKV2R99JPAPXPP7B
+bcb097c35263d2a48844a2286b06586d,Kleinpaal,Enphase,Kleinpaal (IQ-EVSE-EU-3032),Voortuin,"Enphase, haghs_ignore","Enphase, haghs_ignore",,2,False,missing category: protocol,,,34,09KF8Z4PPRWVW0Y5976TAS3B67
+7e478599f039587fe9a2c24b7c260f90,Custom Features for Home Assistant Cards,Nerwyn,plugin,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+9ff98c8928f543abf95cfa6ed2d44d68,Universal Notifier,jumping2000,integration,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+ce499f5954c37a823a5a838838444b2f,ZBT-2 - Thread Border Router,Nabu Casa,Home Assistant Connect ZBT-2,Woonkamer,"Node, Router, Thread","Node, Router, Thread",,3,False,missing category: brand,,,2,09KRRZQ48EFQQQG0B94HBQ6MZR
+76b52f3606b9e4a84ebfe6d54e76dc69,OpenThread Border Router,Official apps,Home Assistant App,Digital only,,,,0,True,no labels at all,,service,7,fa264e9a11c46069a3386896775c494
+c8d9554c0b65bf5eae29bf3207b907a7,Matter Server,Official apps,Home Assistant App,Digital only,,,,0,True,no labels at all,,service,7,fa264e9a11c46069a3386896775c494
+470fc37ac946f9ab82cf89cd3e30998b,Badkamerlicht,IKEA of Sweden,KAJPLATS E27 CWS globe 9055lm,Badkamer,"IKEA, Light, Matter, Thread","IKEA, Light, Matter, Thread",,4,False,,,,98,09KGJC3CYHAJMT00H6CKK3M3BR
+2f4c636879999e99f9bc8e7902d9ec70,Tuindeur,IKEA of Sweden,MYGGBETT door/window sensor,Woonkamer,"IKEA, Matter, Sensor, Thread","IKEA, Matter, Sensor, Thread",,4,False,,,,95,09KGJC3CYHAJMT00H6CKK3M3BR
+43c258f66beb2c9ff8ca336fa3e9d7a4,Bedroom IR panel thermostat,IKEA,RODRET wireless dimmer/power switch,Slaapkamer R/R,Zigbee,Zigbee,,9,False,"missing category: brand, function",,,5,d994edb87f840a427d90c7967f9290af
+286cce940df7ccfc57a7c5a54e0fc755,0x84ba20fffe3297f5,IKEA,TRADFRI on/off switch,,,,,0,True,no labels at all,,,4,d994edb87f840a427d90c7967f9290af
+5ed45db28ae98d9837ca3890935a9434,Rudi Klein,Immich,,Digital only,Sensor,,Sensor,9,False,"missing category: brand, protocol",,service,9,09KH9GARPEXHQF0VR20Z3NE5QX
+99cfaea656c580648ac873f9e99dabf6,Unassigned,IKEA of Sweden,MYGGBETT door/window sensor,Unknown,"IKEA, Matter, Sensor, Thread","IKEA, Matter, Sensor, Thread",,4,False,,,,95,09KGJC3CYHAJMT00H6CKK3M3BR
+e97056e82687d602bb69f09769e79574,Huiskamerdeur,IKEA of Sweden,MYGGBETT door/window sensor,Woonkamer,"IKEA, Matter, Sensor, Thread","IKEA, Matter, Sensor, Thread",,4,False,,,,95,09KGJC3CYHAJMT00H6CKK3M3BR
+993bfaed9b050ba9e47d2a340089d3ad,Voordeur,IKEA of Sweden,MYGGBETT door/window sensor,Hal beneden,"IKEA, Matter, Sensor, Thread","IKEA, Matter, Sensor, Thread",,4,False,,,,95,09KGJC3CYHAJMT00H6CKK3M3BR
+29ab8b098b65f98b2c6b45b97a9b458e,Bollamp,IKEA of Sweden,KAJPLATS E27 CWS globe 9055lm,Woonkamer,"IKEA, Light, Matter, Thread","IKEA, Light, Matter, Thread",,4,False,,,,98,09KGJC3CYHAJMT00H6CKK3M3BR
+2f86fd9f4ba9aed7f980bd7b537b69e4,Keukenlicht,IKEA,RODRET wireless dimmer/power switch,Keuken,"Button, IKEA, Light, Zigbee","Button, IKEA, Light, Zigbee",,4,False,,,,5,d994edb87f840a427d90c7967f9290af
+f6d2bdd95e5425e596f7c4d5e0d63c9f,Red Robin,COOLO,Soil moisture sensor,Woonkamer,"Sensor, Thermostat, Zigbee","Sensor, Thermostat, Zigbee",,3,False,missing category: brand,,,93,d994edb87f840a427d90c7967f9290af
+966f5d5bd05252bd7dca7df001d6659a,OpenPlantbook,Olen,integration,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+52aaf03d94873f7e94c69589200c9a8f,Home Assistant Plant,Olen,integration,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+6398e9c8bcb76a995ed57293e67789b9,Flower Card,Olen,plugin,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+b57b456fbcb7f2930dba90a280762d08,Red Robin (voortuin),,Photinia x fraseri,Voortuin,,,,0,True,no labels at all,,,32,09KHC09AW7CXKKEZ36RVQZXG9J
+e20ddb254fb2af305e8fb590947943a9,Bamboe (achtertuin),COOLO,Soil moisture sensor,Achtertuin,"Sensor, Thermostat, Zigbee","Sensor, Thermostat, Zigbee",,3,False,missing category: brand,,,93,d994edb87f840a427d90c7967f9290af
+959d67d455ae63b9665094b92a0209bc,Bruidsplant (achtertuin),,Deutzia gracilis,Achtertuin,,,,0,True,no labels at all,,,32,09KHGPX4YQQGRVQ9X9HRDKRXRS
+2c3b0ce9d5efcab5839943ee536ff696,Bamboo (achtertuin),,Bambusa oldhamii,Achtertuin,,,,0,True,no labels at all,,,32,09KHGQEVHQDKSAF49CTYZJP5KY
+592cdd82f9fe9afa8bf0ffb3d56d3c8c,home-assistant_v2.db,,,Digital only,,,,0,True,no labels at all,,service,4,09KHH43RW6EJ6Q9VF5F985QJTT
+450842f3907029ac37293994096b06f6,HAGHS,d-n99,integration,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+302375777dfc42699a99924d4cda57b7,Schemerlamp,IKEA of Sweden,KAJPLATS E27 CWS globe 9055lm,Woonkamer,"IKEA, Light, Matter, Thread","IKEA, Light, Matter, Thread",,4,False,,,,98,09KGJC3CYHAJMT00H6CKK3M3BR
+3ac7e927c2849894044c5f4abbdb76b4,Verandalamp-links,IKEA,TRETAKT smart plug,Veranda,"IKEA, Light, Switch, Zigbee","IKEA, Light, Switch, Zigbee",,4,False,,,,7,d994edb87f840a427d90c7967f9290af
+a0ba24ef749d995f85d940c40a7b420f,Verandalamp-rechts,IKEA,TRETAKT smart plug,Veranda,"IKEA, Light, Switch, Zigbee","IKEA, Light, Switch, Zigbee",,4,False,,,,7,d994edb87f840a427d90c7967f9290af
+9bc296d39a25b042eede679299c992c9,Veranda-ventilator,IKEA,TRETAKT smart plug,Veranda,"IKEA, Zigbee","IKEA, Zigbee",,2,False,missing category: function,,,7,d994edb87f840a427d90c7967f9290af
+437b650be2ddb2c06f393e8c5033c366,TV,IKEA,TRETAKT smart plug,Woonkamer,"IKEA, Switch, Zigbee","IKEA, Switch, Zigbee",,3,False,,,,7,d994edb87f840a427d90c7967f9290af
+0f9c26b27d08d7ee8609b7d085faa4df,Bureaulamp Rudi,IKEA,TRETAKT smart plug,Woonkamer,"IKEA, Light, Switch, Zigbee","IKEA, Light, Switch, Zigbee",,4,False,,,,7,d994edb87f840a427d90c7967f9290af
+5f0d47606fe9a029b007d909fe89d6ee,Bureau Rudi,IKEA,TRETAKT smart plug,Woonkamer,"IKEA, Light, Switch, Zigbee","IKEA, Light, Switch, Zigbee",,4,False,,,,7,d994edb87f840a427d90c7967f9290af
+63b676229e5687a5fc0a47eb0bd0d47b,Voordeur bewegingssensor,IKEA,TRADFRI motion sensor,Hal beneden,"IKEA, Presence, Sensor, Zigbee","IKEA, Presence, Sensor, Zigbee",,4,False,,,,8,d994edb87f840a427d90c7967f9290af
+a9fcfd899c59485dc2b43efc0aa9c3a7,Wijnrek lamp,IKEA of Sweden,KAJPLATS E27 CWS globe 9055lm,Woonkamer,"IKEA, Light, Matter, Thread","IKEA, Light, Matter, Thread",,4,False,,,,98,09KGJC3CYHAJMT00H6CKK3M3BR
+e4d2b3edc9cc36db29397460de23ccf4,Zigbee Map,dan-danache,integration,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+69e2ea989e6afbd050d73be39cfc3bd9,Hal boven - plafondlamp 9,IKEA of Sweden,KAJPLATS E27 CWS globe 9055lm,Hal boven,"IKEA, Light, Matter, Thread, haghs_ignore","IKEA, Light, Matter, Thread, haghs_ignore",,5,False,,,,98,09KGJC3CYHAJMT00H6CKK3M3BR
+acb9ecb40a9927df99dc923deea3e47f,Hal boven - plafondlamp 2,IKEA of Sweden,KAJPLATS E27 CWS globe 9055lm,Hal boven,"IKEA, Light, Matter, Thread, haghs_ignore","IKEA, Light, Matter, Thread, haghs_ignore",,5,False,,,,98,09KGJC3CYHAJMT00H6CKK3M3BR
+97e5a7b923935aac9a34277d3ffbb2cc,Hal boven - plafondlamp 3,IKEA of Sweden,KAJPLATS E27 CWS globe 9055lm,Hal boven,"IKEA, Light, Matter, Thread, haghs_ignore","IKEA, Light, Matter, Thread, haghs_ignore",,5,False,,,,98,09KGJC3CYHAJMT00H6CKK3M3BR
+5920e269fa50ace375f7dd89fe57abc6,Adaptive Lighting,"basnijholt, RubenKelevra, th3w9zard9, protyposis",integration,Unknown,,,,0,True,no labels at all,,service,2,e0a6c4b465ceb87ead43206b08d64939
+93d6b9376cde9cd56296e059984c2e89,Deken R/R,IKEA,TRETAKT smart plug,,"IKEA, Switch, Zigbee","IKEA, Switch, Zigbee",,3,False,,,,7,d994edb87f840a427d90c7967f9290af
+9b8027c862b86e8c5fa57df578ffd0d5,Watchman,dummylabs,Watchman,Digital only,"Digital only, Sensor",Digital only,Sensor,2,False,"missing category: brand, protocol",,service,9,09KHY39YHS7MP6XPT3Y9Q6B70P
+92e0d3ebd2e85ccad6324e9838ebd4e6,Oude schuur - buitenlamp,IKEA,TRETAKT smart plug,Achtertuin,"IKEA, Light, Switch, Zigbee","IKEA, Light, Switch, Zigbee","IKEA, Light, Zigbee",4,False,,,,7,d994edb87f840a427d90c7967f9290af
+bcb59227a88e5fcb5fc68c6ac3face29,Toilet beneden - plafondlamp 9,IKEA of Sweden,KAJPLATS E27 CWS globe 9055lm,Toilet beneden,"IKEA, Light, Matter, Thread","IKEA, Light, Matter, Thread",,4,False,,,,98,09KGJC3CYHAJMT00H6CKK3M3BR
+dd9a6c9ae25879e9cea099693554ee39,IQ Gateway,Enphase,Envoy-S-Metered-EU,Unknown,,,,0,True,no labels at all,,,5,09KF8Z4PPRWVW0Y5976TAS3B67
+50769daac9b4ac49a33ea76a050ae5d6,Q Relay,Enphase,Q-RELAY-3P-INT,Unknown,,,,0,True,no labels at all,,,9,09KF8Z4PPRWVW0Y5976TAS3B67
+7a3dd62eb0b34976790c49299b847d9c,IQ Microinverters,Enphase,IQ8AC-72-M-INT,Unknown,,,,0,True,no labels at all,,,29,09KF8Z4PPRWVW0Y5976TAS3B67
+0e6434e4a2f6fd984573d242d37e6f23,Enphase Cloud,Enphase,Cloud Service,Unknown,,,,0,True,no labels at all,,service,97,09KF8Z4PPRWVW0Y5976TAS3B67
+9ccb5bf2af22c984fb0533f644bbced2,Buitenlamp - nieuwe schuur,IKEA,TRETAKT smart plug,,,,,0,True,no labels at all,,,7,d994edb87f840a427d90c7967f9290af
+b60c3467a8aa438f00b9a4bb28d3a9bb,Home Assistant Editor,Saihgupr's Add-ons Repository,Home Assistant App,Unknown,,,,0,True,no labels at all,,service,7,fa264e9a11c46069a3386896775c494
+fe9203d2cc609d0a3f8374dab3cc9507,Button Builder,aspenrt78,integration,Unknown,,,,0,True,no labels at all,,service,2,e0a6c4b465ceb87ead43206b08d64939
+67b88de9adbdd9960cfd6ca6ee3be467,AccuSaver,Tasmota,AccuSaver,Oude schuur,"Charger, WiFi",WiFi,"Charger, WiFi",2,False,missing category: brand,,,22,09KJT9R8N7W0QH72RDF2NRMD92
+a733afac6d56b20a8c5c567586b8a937,Toilet beneden - plafondlamp 2,IKEA of Sweden,KAJPLATS E27 CWS globe 9055lm,Toilet beneden,"IKEA, Light, Matter, Thread","IKEA, Light, Matter, Thread","IKEA, Light, Matter, Thread",4,False,,,,98,09KGJC3CYHAJMT00H6CKK3M3BR
+83a73cd56543655dad2589843cca3d94,Keuken - aanrecht,IKEA,TRETAKT smart plug,,,,,0,True,no labels at all,,,7,d994edb87f840a427d90c7967f9290af
+3a8873943e8cbb7fae6ff23070a65cf5,Site: 5850963,Enphase,,Unknown,,,,0,True,no labels at all,,,0,09KF8Z4PPRWVW0Y5976TAS3B67
+2e053236992af923e89c4979b9438288,Site: 5850963,Enphase,,Unknown,,,,0,True,no labels at all,,,0,09KF8Z4PPRWVW0Y5976TAS3B67
+4889dbae43b9ec5d7849966fd5007d25,Nachtkastjelamp,IKEA of Sweden,KAJPLATS E27 CWS globe 9055lm,Slaapkamer R/R,"IKEA, Light, Matter, Thread","IKEA, Light, Matter, Thread",,4,False,,,,98,09KGJC3CYHAJMT00H6CKK3M3BR
+fafcee9b4844a2b9d5bc7976033d9750,WashData,3dg9luk43,integration,Unknown,,,,0,True,no labels at all,,service,2,e0a6c4b465ceb87ead43206b08d64939
+369935bc288deeb3e926025bd58239b8,Wasmachine,WashData,,Zolder,"Digital only, Sensor","Digital only, Sensor",,2,False,"missing category: brand, protocol",,,99,09KNCXZ0YQHJ0N3VBXEXMM6XVF
+f296e37629dad992fa362f7ab58b7e95,KAJPLATS E27 CWS globe 9055lm,IKEA of Sweden,KAJPLATS E27 CWS globe 9055lm,Unknown,,,,0,True,no labels at all,,,98,09KGJC3CYHAJMT00H6CKK3M3BR
+77dadfcf6e74c3b26e957a773a27acf3,Donut,IKEA of Sweden,VARMBLIXT table/wall lamp,Woonkamer,"IKEA, Light, Matter, Thread","IKEA, Light, Matter, Thread",,4,False,,,,98,09KGJC3CYHAJMT00H6CKK3M3BR
+2ed03c9a3bf9f0b469938ed2a66ef287,BILRESA scroll wheel,IKEA of Sweden,BILRESA scroll wheel,Unknown,"Button, IKEA, Matter, Thread","Button, IKEA, Matter, Thread",,4,False,,,,27,09KGJC3CYHAJMT00H6CKK3M3BR
+ec5d7f9725948bdc9bcd0f09c3be2384,BILRESA scroll wheel,IKEA of Sweden,BILRESA scroll wheel,Unknown,"Button, IKEA, Matter, Thread","Button, IKEA, Matter, Thread",,4,False,,,,29,09KGJC3CYHAJMT00H6CKK3M3BR
+93e774a7b822d4efecf95928f8796977,BILRESA dual button,IKEA of Sweden,BILRESA dual button,Unknown,"Button, IKEA, Matter, Thread","Button, IKEA, Matter, Thread",,4,False,,,,95,09KGJC3CYHAJMT00H6CKK3M3BR
+5a029eb9e359c44cadb2de7c3ac459fd,Gas market price,EnergyZero,,Unknown,,,,0,True,no labels at all,,service,2,09KPBQQD64EGX66BPMXXRMWTGE
+6a69bc94a6047a3705b9db9c2339f6be,Energy market price,EnergyZero,,Unknown,,,,0,True,no labels at all,,service,9,09KPBQQD64EGX66BPMXXRMWTGE
+94d9aadceae8999a89d8079775acadc0,AlertTicker Card,djdevil,plugin,Unknown,,,,0,True,no labels at all,,service,2,e0a6c4b465ceb87ead43206b08d64939
+5a949da697ec8522b78aa303e760b9fd,Droger,WashData,,Zolder,,,,0,True,no labels at all,,,99,09KQWPCGW2VVQJ5QPXFBWM9P2E
+a6994b9064027ac6ecc2e9e52493f6c9,Vaatwasser,WashData,,Keuken,,,,0,True,no labels at all,,,20,09KQWPHEVK74DJA6WJQZGXW563
+6aec27084b59b43c2abe566b97a99f5e,Slaapkamerraam RR,IKEA of Sweden,MYGGBETT door/window sensor,Slaapkamer R/R,"IKEA, Matter, Sensor, Thread","IKEA, Matter, Sensor, Thread",,4,False,,,,95,09KGJC3CYHAJMT00H6CKK3M3BR
+4c304f9249cd69909b0f78d443927896,Filebrowser,HA Add-ons by alexbelgium,Home Assistant App,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,7,fa264e9a11c46069a3386896775c494
+c8d30327dd09d8def45fdfc237fdb3ac,FileBrowser Quantum,HA Add-ons by alexbelgium,Home Assistant App,Unknown,,,,0,True,no labels at all,,service,7,fa264e9a11c46069a3386896775c494
+a9f92356e33443fed70569562c57f39c,kleinlink-9,Broadlink,RM4 pro,Woonkamer,Sensor,,Sensor,9,False,"missing category: brand, protocol",,,5,09KSG3SWW0N6SGZRAZ953VCJHS
+433f328e94643fb62a7e830f43f23905,Rozius,,,On the go,,,,0,True,no labels at all,,,0,09J73XBJCBC5W5X0AHEDE83QFT
+d690cf35a22a732a9393cf5df302a784,Immich Picture,remy,integration,Unknown,,,,0,True,no labels at all,,service,2,e0a6c4b465ceb87ead43206b08d64939
+0760d78395da62b99e2a35f3039fc87f,Immich Picture,Immich,Photo Server,Woonkamer,,,,0,True,no labels at all,,,2,09KSJW687TT9SWWEVT35E03RRG
+680da5c9352fa45e5afbf496f82289e6,Kiosk Mode,NemesisRE,plugin,Unknown,,,,0,True,no labels at all,,service,2,e0a6c4b465ceb87ead43206b08d64939
+9bc893fe933889c033afd7a6523fb86b,ESPSomfy RTS,rstrouse,integration,Unknown,,,,0,True,no labels at all,,service,2,e0a6c4b465ceb87ead43206b08d64939
+bcab925f326606eca0e56fc407ab9c5f,Zonnescherm,rstrouse,ESPSomfy RTS Integration v2.4.7,Veranda,RF device,RF device,RF device,9,False,"missing category: brand, function",,,97,09KSQZKPDK2MV0AJWMGTTKA0AR
+3b4e392bd258f3028859ab8f6053e357,Custom Sidebar,elchininet,plugin,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,2,e0a6c4b465ceb87ead43206b08d64939
+98ef5dc98faf04dce8e9c8d72bfde9ef,Home Assistant RFLink UI,guanaco0403,integration,Unknown,,,,0,True,no labels at all,,service,2,e0a6c4b465ceb87ead43206b08d64939
+9e9976649e7c9df4a78953cc499e88c6,Scroll wheel nachtkastje,IKEA of Sweden,BILRESA scroll wheel,Slaapkamer R/R,"IKEA, Matter, Switch, Thread","IKEA, Matter, Switch, Thread",,4,False,,,,29,09KGJC3CYHAJMT00H6CKK3M3BR
+f48878a98092e396fe443f6b8754dc2c,Zolder IndoorUnit,Daikin,,,,,,0,True,no labels at all,,,9,09K9QCMYEE9Q0XV9ZT9KXTP2JC
+8d8a3957394454d385a36b4720294225,Huiskamer IndoorUnit,Daikin,,,,,,0,True,no labels at all,,,9,09K9QCMYEE9Q0XV9ZT9KXTP2JC
+a02dd435c989b8dcf0565745239ab58d,Bubble Card,Clooos,plugin,Unknown,,,,0,True,no labels at all,,service,2,e0a6c4b465ceb87ead43206b08d64939
+8ef876d9c50a2894daca23905642ba9b,OpenAI AI Task,OpenAI,gpt-4o-mini,Unknown,,,,0,True,no labels at all,,service,9,09KWABB0CJNQDXC85SJAWZVRWS
+a8ab3ebdea45f820d0e3b9728ea7e3b0,OpenAI Conversation,OpenAI,gpt-4o-mini,Unknown,,,,0,True,no labels at all,,service,9,09KWABB0CJNQDXC85SJAWZVRWS
+b74829c6b999c4e45c499f704303223b,OpenAI STT,OpenAI,gpt-4o-mini-transcribe,Unknown,,,,0,True,no labels at all,,service,9,09KWABB0CJNQDXC85SJAWZVRWS
+6cd2966fd97ab8fcb9e4eb45b98cc0ab,OpenAI TTS,OpenAI,gpt-4o-mini-tts,Unknown,,,,0,True,no labels at all,,service,9,09KWABB0CJNQDXC85SJAWZVRWS
+93b43ff2edbdd06034356fa93d7759b7,OpenAI AI Task,OpenAI,gpt-4o-mini,Unknown,,,,0,True,no labels at all,,service,9,09KWABB0CJNQDXC85SJAWZVRWS
+b679eafef992288e2a9e2b340dfbdf54,Google AI Task,Google,gemini-3.9-flash-lite,Unknown,,,,0,True,no labels at all,,service,9,09KWADWBKE483AFT8GBPX0RZ36
+700ce7a94b3f00d0d27aa837f5d8f93b,Google AI Conversation,Google,gemini-3.9-flash-lite,Unknown,,,,0,True,no labels at all,,service,9,09KWADWBKE483AFT8GBPX0RZ36
+0e6ee20e77806ac9afd3c47a49f69de7,Google AI STT,Google,gemini-3.9-flash-lite,Unknown,,,,0,True,no labels at all,,service,9,09KWADWBKE483AFT8GBPX0RZ36
+54d70a9a452599d69f899a98595b4e94,Google AI TTS,Google,gemini-3.9-flash-tts-preview,Unknown,,,,0,True,no labels at all,,service,9,09KWADWBKE483AFT8GBPX0RZ36
+9eb2066a8d692e0a9fea99e9737afde2,Home Assistant Voice Woonkamer,Nabu Casa,Home Assistant Voice PE,Woonkamer,"Nabu Casa, Voice Assistant, WiFi","Nabu Casa, Voice Assistant, WiFi",,3,False,,,,95,09KWCK04F8X0JKAKSMMZNRZFEZ
+3de9a6b9bfd404a98be2793ad6f9b20a,Piper,Official apps,Home Assistant App,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,7,fa264e9a11c46069a3386896775c494
+6082603402fb2bcc35d294f2a5802bd8,Speech-to-Phrase,Official apps,Home Assistant App,Unknown,,,,0,True,no labels at all,,service,7,fa264e9a11c46069a3386896775c494
+55b9206903effdc969a2bf563ca65093,Raspberry Pi,Raspberry Pi,,Unknown,Sensor,,Sensor,9,False,"missing category: brand, protocol",,,9,d98092ebdc23f0d0a45ced3b9772468a
+68e4947cd06057895ccaaccf033a48d8,Raspberry Pi 5,Raspberry Pi,5,Unknown,,,,0,True,no labels at all,,,9,05f879d98bfc490fe0a93cc96ecf608e
+eae9fc7744239463afe2bc506399567b,Zonnescherm stroom,IKEA,TRETAKT smart plug,,,,,0,True,no labels at all,,,7,d994edb87f840a427d90c7967f9290af
+8fe80584eb33dae33b0ef4280e6058a6,Vijverpompen,IKEA,TRETAKT smart plug,Veranda,"IKEA, Switch, Zigbee","IKEA, Switch, Zigbee",,3,False,,,,7,d994edb87f840a427d90c7967f9290af
+59590876446f2a4f434270c966d9eba8,Luchtpomp,IKEA,TRETAKT smart plug,Veranda,"IKEA, Zigbee","IKEA, Zigbee",,2,False,missing category: function,,,7,d994edb87f840a427d90c7967f9290af
+60838264a8f30cc7b6beb0cf2580cd72,Notify Studio,pqpxo,integration,,,,,0,True,no labels at all,,service,2,e0a6c4b465ceb87ead43206b08d64939
+da82ff5dbdc636b76e859045d5935922,RFlink,RFLink,Gateway,Woonkamer,RF device,RF device,,9,False,"missing category: brand, function",,,2,09KXRE5F78QNB5EZZ69FVDXGBS
+e7d9ee0ca469b3dc94e7abdf49d27f86,Keuken - plafondlicht (ui),RFLink,newkaku,Keuken,"Light, RF device, Switch","Light, RF device, Switch",,3,False,missing category: brand,,,9,09KXRE5F78QNB5EZZ69FVDXGBS
+03baee986399ece45d53bc9a7ffed9f6,Tafel (ui),RFLink,newkaku,,,,,0,True,no labels at all,,,9,09KXRE5F78QNB5EZZ69FVDXGBS
+6c9dba942237f693ea480b75609476ec,Deken RR (ui),RFLink,newkaku,Slaapkamer R/R,"RF device, Switch","RF device, Switch",,2,False,missing category: brand,,,9,09KXRE5F78QNB5EZZ69FVDXGBS
+3a3b23ea392bcce0a5da4b0cd7c90c96,Deken - knop (ui),RFLink,newkaku,,,,,0,True,no labels at all,,,9,09KXRE5F78QNB5EZZ69FVDXGBS
+820e624c20dc5f2a3982a672e5544a6d,Rolluik J/D (ui),RFLink,newkaku,,,,,0,True,no labels at all,,,9,09KXRE5F78QNB5EZZ69FVDXGBS
+06efa07857884779ff6c9ec772642c5c,Rolluik R/R (ui),RFLink,newkaku,,,,,0,True,no labels at all,,,9,09KXRE5F78QNB5EZZ69FVDXGBS
+d8d9686895cf260f0079af4376630054,Vijver (ui),RFLink,Cresta,Veranda,"RF device, Thermostat","RF device, Thermostat",,2,False,missing category: brand,,,3,09KXRE5F78QNB5EZZ69FVDXGBS
+3be46574a6974b338fd2cb339e290328,Veranda (ui),RFLink,Cresta,Veranda,"RF device, Thermostat","RF device, Thermostat",,2,False,missing category: brand,,,3,09KXRE5F78QNB5EZZ69FVDXGBS
+504c659543f6dcebe9dda5d8bd9e4a60,Achterdeurbel (ui),RFLink,newkaku,,,,,0,True,no labels at all,,,9,09KXRE5F78QNB5EZZ69FVDXGBS
+7c9ace7253a5aa790dede06d696d8f63,Voordeurbel (ui),RFLink,newkaku,,,,,0,True,no labels at all,,,9,09KXRE5F78QNB5EZZ69FVDXGBS
+9925799b363becbbb08ea5f947b9b87c,Badkamer - buiten (ui),RFLink,NewKaku,,,,,0,True,no labels at all,,,9,09KXRE5F78QNB5EZZ69FVDXGBS
+72f75e4048ff8788a8850dd2c9e6fd75,Darius smartphone,samsung,SM-S939B,Mobiel,"Mobile, Samsung, Smartphone, WiFi","Mobile, Samsung, Smartphone, WiFi",,4,False,missing category: function; uncategorized label(s): Smartphone,,,934,09KXX7G3Q260PEVTV35EGW2QF5
+f64642c9ad389d5e77a94937a4c782f5,Badkamer - binnen (ui),RFLink,NewKaku,,,,,0,True,no labels at all,,,9,09KXRE5F78QNB5EZZ69FVDXGBS
+9349c9745afa4e98f0559ec79422879e,Whisper,Official apps,Home Assistant App,Digital only,Digital only,Digital only,,9,False,"missing category: brand, protocol",,service,7,fa264e9a11c46069a3386896775c494
+09d97d62ee5a3cde89e558e63b3fa2be,Lovelace Card Templater,gadgetchnnel,plugin,,,,,0,True,no labels at all,,service,2,e0a6c4b465ceb87ead43206b08d64939
+ed547a779bfb2ca0949ac99f4ad24f40,TIMMERFLOTTE temp/hmd sensor,IKEA of Sweden,TIMMERFLOTTE temp/hmd sensor,Achtertuin,,,,0,True,no labels at all,,,97,09KGJC3CYHAJMT00H6CKK3M3BR
+997206864f353d90b8d39a0d7baec6a9,Veranda thermometer,IKEA of Sweden,TIMMERFLOTTE temp/hmd sensor,Veranda,"IKEA, Matter, Thermostat, Thread","IKEA, Matter, Thermostat, Thread",,4,False,,,,97,09KGJC3CYHAJMT00H6CKK3M3BR

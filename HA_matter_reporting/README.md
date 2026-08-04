@@ -17,17 +17,6 @@ node IDs, MAC addresses, Thread role/network info, serial numbers (where availab
 exposes an **Identify** button — plus it actively flags device pairs/groups that currently have *no*
 distinguishing information at all.
 
-```
-Important Note
-```
-
-* This script is **not** a Home Assistant add-on. It is a standalone Python script that runs on your local machine or
-  server and connects to Home Assistant via the WebSocket API.
-* It is designed to be run periodically (e.g., via cron) to generate a snapshot of your Home Assistant Matter devices.
-* It is intended for users who are comfortable with Python and command-line tools, and who have a working knowledge of
-  Home Assistant's device and entity model.
-* It is provided as-is, with no warranty or support. Use at your own risk. Live on the edge.
-
 ## Requirements
 
 - Python 3.10+
@@ -135,3 +124,14 @@ an Identify button is available, so you know which ones to physically blink-test
 - Requires the HA Matter integration; devices on other protocols (Zigbee, Z-Wave, etc.) are filtered out entirely.
 
 
+## Important Note
+
+* These scripts are **not** Home Assistant add-ons. They are standalone Python scripts that run on your local machine or server and connect to Home Assistant via the HA websocket api.
+* These scripts are not affiliated with or endorsed by Home Assistant. They are independent tools created by someone who thinks he's a developer.
+* They are designed to be run periodically (e.g., via cron), or manually, to generate a snapshot of your Home Assistant for analysis and reporting.
+* They are intended for users who are comfortable with Python and command-line tools, and who have a working knowledge of Home Assistant's device and entity model.
+* They are provided as-is, with no warranty or support. Use at your own risk. Live on the edge.
+* However, if you find them useful, please consider contributing back to the project by submitting issues, pull requests, or comforting compliments.
+* I want to extend my gratitude to my friend Claude for its support, inspiration, its context drift, hallucination loops, erratic behavior, and false outputs.
+```
+```
