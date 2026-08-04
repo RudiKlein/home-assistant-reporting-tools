@@ -8,6 +8,9 @@ Unlike the WebSocket-based tools in this repo (`matter_devices.py`,
 dependency, no persistent connection. It's a quick point-in-time snapshot of entity states rather than a registry/label
 audit.
 
+Notes: 
+The Excel workbook combines the influx_ha_entities.csv output with the home_assistant_entities.csv output to create a comparison of the two datasets. Read the [Excel workbook README](./HA_entities_reporting/README_excel.md) for more information.
+
 ## Requirements
 
 - Python 3.x

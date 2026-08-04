@@ -8,6 +8,10 @@ time-series data straight out of InfluxDB, which is useful when you want a list 
 *recorded* data (as opposed to what's currently registered in HA, which may include entities that have never reported,
 or exclude entities that were later removed from HA but still have historical data in InfluxDB).
 
+Notes: 
+The script is written for InfluxDB 2.x and the `influxdb-client` Python library. It will not work with InfluxDB 1.x, InfluxDB 3.x, or the older `influxdb` library.
+The Excel workbook combines the influx_ha_entities.csv output with the home_assistant_entities.csv output to create a comparison of the two datasets. Read the [Excel workbook README](./HA_influx_reporting/README_excel.md) for more information.
+
 ## Requirements
 
 - Python 3.x
