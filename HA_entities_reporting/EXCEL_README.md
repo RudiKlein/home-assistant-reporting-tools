@@ -1,4 +1,4 @@
-## Importing Influx reporting CSV data into Excel
+## Importing Home Assistant entities reporting CSV data into Excel
 
 In this folder you will find 2 files that represent the data collected from the Matter reporting tool. The first file is a CSV that contains the raw data, while the second file is an Excel spreadsheet that contains a formatted version of the data.
 
@@ -8,7 +8,7 @@ The Excel file is named "HA_entities_comparison.xlsx" and provides a more user-f
 
 Note: the HA_entities_comparison.xlsx is identical to the HA_entities_comparison.xlsx file in the HA_entities_reporting folder, but it is included here for convenience.
 
-The Excel file used both influx_ha_entities.csv and the home_assistant_entities.csv, produced by the Home Assistant entities reporting tool (see folder HA_entities_reporting in this repo), to create a comparison of the two datasets. 
+The Excel file used both influx_ha_entities.csv and the home_assistant_entities.csv, produced by the Home Assistant entities reporting tool (see folder HA_influx_reporting in this repo), to create a comparison of the two datasets. 
 
 The CSV data was imported into the Excel file, by using Excel's built-in data import functionality. In order to insert your own data into the Excel file, you can follow these steps:
 
