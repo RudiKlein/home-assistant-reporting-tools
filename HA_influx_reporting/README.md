@@ -10,7 +10,7 @@ or exclude entities that were later removed from HA but still have historical da
 
 Notes: 
 The script is written for InfluxDB 2.x and the `influxdb-client` Python library. It will not work with InfluxDB 1.x, InfluxDB 3.x, or the older `influxdb` library.
-The Excel workbook combines the influx_ha_entities.csv output with the home_assistant_entities.csv output to create a comparison of the two datasets. Read the [Excel workbook README](./HA_influx_reporting/README_excel.md) for more information.
+The Excel workbook combines the influx_ha_entities.csv output with the home_assistant_entities.csv output to create a comparison of the two datasets. Read the [Excel workbook README](./HA_influx_reporting/EXCEL_README.md) for more information.
 
 ## Requirements
 

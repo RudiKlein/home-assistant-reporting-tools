@@ -9,7 +9,7 @@ dependency, no persistent connection. It's a quick point-in-time snapshot of ent
 audit.
 
 Notes: 
-The Excel workbook combines the influx_ha_entities.csv output with the home_assistant_entities.csv output to create a comparison of the two datasets. Read the [Excel workbook README](./HA_entities_reporting/README_excel.md) for more information.
+The Excel workbook combines the influx_ha_entities.csv output with the home_assistant_entities.csv output to create a comparison of the two datasets. Read the [Excel workbook README](./HA_entities_reporting/EXCEL_README.md) for more information.
 
 ## Requirements
 
