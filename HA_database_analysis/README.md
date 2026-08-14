@@ -1,13 +1,13 @@
-# **HA Database Diagnostic Tool**
+# **HA Database Reporting Tool**
 
-A command-line diagnostic tool for Home Assistant’s SQLite recorder database (home-assistant\_v2.db). It pinpoints what is actually driving storage growth, identifies noisy entities, checks for un-purged statistics bloat, and safe-guards against temporary WAL file read errors—all without extra Python dependencies.
+A command-line diagnostic tool for Home Assistant’s SQLite recorder database (home-assistant_v2.db). It pinpoints what is actually driving storage growth, identifies noisy entities, checks for un-purged statistics bloat, and safe-guards against temporary WAL file read errors—all without extra Python dependencies.
 
 ## **Why this exists**
 
 When Home Assistant's database keeps growing despite regular purge routines (recorder.purge), the cause is usually one of three things:
 
-> 1. **Unfiltered high-frequency entities** continually writing state changes or bloated attribute payloads into states and state\_attributes.  
-> 2. **Long-term statistics accumulation**, which ignores purge\_keep\_days by design and builds up indefinitely in statistics / statistics\_short\_term.  
+> 1. **Unfiltered high-frequency entities** continually writing state changes or bloated attribute payloads into states and state_attributes.  
+> 2. **Long-term statistics accumulation**, which ignores purge_keep_days by design and builds up indefinitely in statistics / statistics_short_term.  
 > 3. **Unreclaimed SQLite page fragmentation**, where purges delete rows but the file size doesn't shrink because pages aren't vacuumed or repacked.
 
 Running direct SQLite queries against a live Home Assistant database can easily trigger scary-looking database disk image is malformed errors. This isn't actual corruption—it's an inconsistent read state across the main .db file and its active Write-Ahead Log (-wal).  
@@ -16,84 +16,84 @@ This script safely isolates the environment, checkpoints unflushed WAL data, han
 ## **Requirements**
 
 * Python 3.8+ (uses standard library modules only: sqlite3, argparse, shutil, os)  
-* Access to your home-assistant\_v2.db file (and any accompanying \-wal / \-shm sidecar files)
+* Access to your home-assistant_v2.db file (and any accompanying -wal / -shm sidecar files)
 
 ## **Quick Start**
 
 Run the diagnostic directly against your database file:
 
 ```Bash  
-python3 ha\_db\_diagnose.py /path/to/home-assistant\_v2.db
+python3 ha_database_reporting.py /path/to/home-assistant_v2.db
 ```
 Show the top 50 noisiest entities instead of the default 20:
 
 ```Bash  
-python3 ha\_db\_diagnose.py /path/to/home-assistant\_v2.db \--top 50
+python3 ha_database_reporting.py /path/to/home-assistant_v2.db --top 50
 ```
 
 > **Note on Live Databases:** By default, the script automatically creates a temporary copy (.diagcopy) of your database and sidecar files before performing a WAL checkpoint and analysis. This allows you to run it safely while Home Assistant is actively running.
 
 ## **CLI Options**
 
-| Argument | Description | Default |
-| :---- | :---- | :---- |
-| db\_path | **Required.** Path to home-assistant\_v2.db (or a copy). | — |
-| \--top N | Number of top noisy entities/events to display per report section. | 20 |
-| \--no-copy | Work directly on db\_path instead of creating a temporary .diagcopy file. | False |
-| \--no-checkpoint | Skip the automatic PRAGMA wal\_checkpoint(TRUNCATE) step on the working copy. | False |
-
-## **What It Diagnoses**
+| Argument             | Description                                                                                | Default |
+|:---------------------|:-------------------------------------------------------------------------------------------|:--------|
+| db_path              | **Required.** Path to home-assistant_v2.db (or a copy).                                    | —       |
+| --top N              | **Optional.** Number of top noisy entities/events to display per report section.           | 20      |
+| --no-copy            | **Optional.**Work directly on db_path instead of creating a temporary .diagcopy file.      | False   |
+| --no-checkpoint      | **Optional.** Skip the automatic PRAGMA wal_checkpoint(TRUNCATE) step on the working copy. | False   |
+| --output <REPORT.md> | **Optional.** Path to the output the Markdown file with the results.                       | —       |
+## **What It Reports**
 
 The script executes a sequential analysis across the database, surfacing key metrics in distinct sections:
 
 > 1. **File-Level & Allocation Info**: Evaluates raw page counts, page sizes, and freelist space. Flags if significant unused pages exist that require a VACUUM to reclaim disk space.  
-> 2. **Schema Auto-Detection**: Detects whether the database uses the modern schema split (states\_meta / event\_types, HA Core $\\ge$ 2023.4) or legacy inline columns, adjusting internal SQL queries automatically.  
+> 2. **Schema Auto-Detection**: Detects whether the database uses the modern schema split (states_meta / event_types, HA Core $ge$ 2023.4) or legacy inline columns, adjusting internal SQL queries automatically.  
 > 3. **Table Sizes**: Utilizes the SQLite dbstat virtual table for byte-accurate table size and percentage breakdowns. Falls back to page-size estimation and row counts if dbstat is unavailable in your Python build.  
-> 4. **Top State History Bloat**: Counts state records per entity\_id in the states table to locate high-frequency updates (e.g., power meters, sensor noise).  
+> 4. **Top State History Bloat**: Counts state records per entity_id in the states table to locate high-frequency updates (e.g., power meters, sensor noise).  
 > 5. **Top Event Types**: Counts record density in events (for legacy/older installations).  
-> 6. **Long-Term Statistics Bloat**: Audits statistics and statistics\_short\_term record counts by entity.  
-> 7. **Attribute Payload Bloat**: Measures average and total byte sizes inside state\_attributes grouped by entity, identifying entities saving large payloads (e.g., full weather forecast arrays or attributes updated every second).
+> 6. **Long-Term Statistics Bloat**: Audits statistics and statistics_short_term record counts by entity.  
+> 7. **Attribute Payload Bloat**: Measures average and total byte sizes inside state_attributes grouped by entity, identifying entities saving large payloads (e.g., full weather forecast arrays or attributes updated every second).
 
 ## **Sample Output**
 
 ```Plaintext  
-\======================================================================  
+======================================================================  
 FILE-LEVEL INFO  
-\======================================================================  
+======================================================================  
 Total file size (from pages): 1.4GB  
 Free/unused pages (reclaimable via VACUUM): 420.0MB  
-\>\> Significant free space exists that a VACUUM/repack hasn't reclaimed.
+>> Significant free space exists that a VACUUM/repack hasn't reclaimed.
 
-Schema: new (states\_meta/event\_types split)
+Schema: new (states_meta/event_types split)
 
-\======================================================================  
+======================================================================  
 TABLE SIZES  
-\======================================================================  
+======================================================================  
 states                                620.4MB  ( 43.5%)  
-state\_attributes                      412.1MB  ( 28.9%)  
+state_attributes                      412.1MB  ( 28.9%)  
 statistics                            210.0MB  ( 14.7%)  
 ...
 
-\======================================================================  
-TOP 20 ENTITIES IN 'states' TABLE (row count \= history bloat)  
-\======================================================================  
-sensor.realtime\_power\_consumption             142050  
-sensor.processor\_use                            98210  
+======================================================================  
+TOP 20 ENTITIES IN 'states' TABLE (row count = history bloat)  
+======================================================================  
+sensor.realtime_power_consumption             142050  
+sensor.processor_use                            98210  
 ...
 
-\======================================================================  
-TOP 20 ENTITIES IN 'statistics' / 'statistics\_short\_term'  
-\======================================================================  
-NOTE: recorder.purge does NOT clean these tables based on keep\_days.  
+======================================================================  
+TOP 20 ENTITIES IN 'statistics' / 'statistics_short_term'  
+======================================================================  
+NOTE: recorder.purge does NOT clean these tables based on keep_days.  
 ...
 
 ## **How to Act on the Findings**
 
-* **If states or state\_attributes is huge**: Add the top noisy entities returned by the script to your recorder: exclude configuration in configuration.yaml (entities: or entity\_globs:).  
-* **If statistics or statistics\_short\_term dominates**: Decreasing purge\_keep\_days won't clean this up. Go to **Developer Tools \> Actions** in Home Assistant and run recorder.purge\_entities on specific high-volume statistic\_ids, or exclude them from long-term statistics tracking.  
+* **If states or state_attributes is huge**: Add the top noisy entities returned by the script to your recorder: exclude configuration in configuration.yaml (entities: or entity_globs:).  
+* **If statistics or statistics_short_term dominates**: Decreasing purge_keep_days won't clean this up. Go to **Developer Tools > Actions** in Home Assistant and run recorder.purge_entities on specific high-volume statistic_ids, or exclude them from long-term statistics tracking.  
 * **If Free/Unused Pages are large**: Your database contains dead space leftover from purged rows. Stop Home Assistant and run a manual vacuum:  
   Bash  
-  sqlite3 home-assistant\_v2.db 'VACUUM;'
+  sqlite3 home-assistant_v2.db 'VACUUM;'
 ```
 
 ## **Important Notes**
