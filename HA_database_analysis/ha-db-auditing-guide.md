@@ -10,7 +10,7 @@ despite regular purges, and how to work with it safely.
 A bloated recorder database usually comes from one of two very different
 problems, and it's important not to conflate them:
 
-1. **Purge isn't actually enforcing `purge_keep_days`** — the config is
+1. **Purge isn't actually enforcing `purge_keep_days`** - the config is
    wrong, disabled, or silently failing.
 2. **Purge is working exactly as configured, but the configured window
    still contains an enormous number of rows** because one or more
@@ -46,21 +46,21 @@ recorder:
 
 Things to check:
 
-- **`auto_purge: true`** — without this, purge only runs when manually
+- **`auto_purge: true`** - without this, purge only runs when manually
   triggered.
-- **`auto_repack: true`** — without this, deleted rows are marked free
+- **`auto_repack: true`** - without this, deleted rows are marked free
   internally but the file doesn't shrink.
-- **Overly broad domain excludes** — excluding an entire domain (e.g.
+- **Overly broad domain excludes** - excluding an entire domain (e.g.
   `climate`, `binary_sensor`) removes history/statistics for *every* entity
   in that domain, which may be more than intended. Prefer specific
   `entities:` or `entity_globs:` over blanket domain excludes unless you
   really mean "none of these, ever."
-- **Dead/placeholder globs** — a glob like `everything*` that doesn't match
+- **Dead/placeholder globs** - a glob like `everything*` that doesn't match
   any real entity_id does nothing. Double check every glob actually matches
   something with a quick query (Section 5) before relying on it.
 - **`exclude` only affects the *recorder* database.** If you also export
   states to InfluxDB, Prometheus, etc., those integrations read from the
-  state bus directly and are unaffected by recorder excludes — safe to
+  state bus directly and are unaffected by recorder excludes - safe to
   exclude noisy entities from recorder without losing your Grafana/InfluxDB
   history.
 
@@ -78,7 +78,7 @@ sequence:
 alias: Database cleanup (purge)
 ```
 
-This is correct — `repack: true` is what reclaims disk space, and
+This is correct - `repack: true` is what reclaims disk space, and
 `keep_days` should match (or be tighter than) your `purge_keep_days` config.
 If this runs without error in the HA log, purge is executing. Whether it's
 *sufficient* is a separate question, answered in Section 6.
@@ -92,8 +92,8 @@ In WAL mode, recent writes live in a separate `home-assistant_v2.db-wal`
 file (plus a `-shm` shared-memory index file) until they're checkpointed
 back into the main `.db` file.
 
-**Symptom:** you open the `.db` file directly — especially while HA is still
-running — and get:
+**Symptom:** you open the `.db` file directly - especially while HA is still
+running - and get:
 
 ```
 Error: database disk image is malformed
@@ -111,19 +111,26 @@ still trip over pages that reference data currently sitting in the WAL.
 **How to resolve it:**
 
 > **Note**  
-> Stopping Home Assistant  
+> Stopping and Starting Home Assistant  
 The way you stop and start Home Assistant depends on your installation type. Use the appropriate commands for your setup:
 
 ```
-systemctl stop home-assistant   # Linux systemd
+Stop Home Assistant
+
+# Linux systemd
+systemctl stop home-assistant   
 or
-ha core stop  # Home Assistant OS / Supervised
+# Home Assistant OS / Supervised
+ha core stop  
 
-systemctl start home-assistant   # Linux systemd
+
+Start Home Assistant
+
+# Linux systemd
+systemctl start home-assistant   
 or
-ha core start  # Home Assistant OS / Supervised
-
-
+# Home Assistant OS / Supervised
+ha core start 
 ```
 
 ```bash
@@ -141,7 +148,7 @@ sqlite3 home-assistant_v2.db.copy
 ```
 
 Then re-run your query. If it now succeeds, the earlier error was purely a
-live-read artifact — nothing is actually wrong with the database.
+live-read artifact - nothing is actually wrong with the database.
 
 **Rule of thumb:** if you see `-wal` and/or `-shm` files sitting next to
 `home-assistant_v2.db`, do not draw any conclusions about corruption until
@@ -160,7 +167,7 @@ PRAGMA integrity_check;
 
 - **Returns `ok`** → the database is structurally sound. Any earlier error
   was a WAL/read artifact (Section 3) or something narrower like a damaged
-  single index — try `REINDEX <table>;` and re-test.
+  single index - try `REINDEX <table>;` and re-test.
 - **Returns a list of problems** → genuine corruption. Recovery options, in
   order of preference:
 
@@ -183,7 +190,7 @@ Start Home Assistant!
 
 If recovery isn't clean, or the corruption is extensive, it's often faster
 and more reliable to let HA rebuild a fresh database rather than nurse a
-damaged file back to health — especially if the `statistics` table (see
+damaged file back to health - especially if the `statistics` table (see
 Section 6) was already dominating the file size and not worth preserving
 anyway:
 
@@ -195,16 +202,16 @@ mv home-assistant_v2.db-shm home-assistant_v2.db-shm.bak 2>/dev/null
 ```
 
 Start Home Assistant!   
-**Why databases corrupt in the first place** — worth checking so it doesn't
+**Why databases corrupt in the first place** - worth checking so it doesn't
 recur:
 - Unclean shutdown / power loss mid-write
-- SD card wear (common on HAOS/Raspberry Pi installs — SQLite + SD cards is
+- SD card wear (common on HAOS/Raspberry Pi installs - SQLite + SD cards is
   a known long-term reliability weak point)
 - Underlying storage/filesystem issues (disk errors, snapshot problems,
   unexpected container/pod restarts if HA runs in a VM or container)
 
 If this is a recurring risk, consider moving the recorder to MariaDB/Postgres
-instead of SQLite — worthwhile if you already run a database server
+instead of SQLite - worthwhile if you already run a database server
 elsewhere in your infrastructure.
 
 ---
@@ -237,12 +244,12 @@ ORDER BY bytes DESC
 LIMIT 15;
 ```
 
-(Requires a `sqlite3` build with `SQLITE_ENABLE_DBSTAT_VTAB` — most distro
+(Requires a `sqlite3` build with `SQLITE_ENABLE_DBSTAT_VTAB` - most distro
 builds have it.)
 
 ### 5.3 Top entities by state-change count
 
-On HA core ≥ 2023.4, `states` no longer stores `entity_id` inline — it's
+On HA core ≥ 2023.4, `states` no longer stores `entity_id` inline - it's
 split into `states_meta`:
 
 ```sql
@@ -278,7 +285,7 @@ LIMIT 25;
 ### 5.5 Attribute payload bloat
 
 Some entities carry unusually large `attributes` payloads (long lists,
-forecast arrays, JSON blobs) — this shows up in `state_attributes`, not
+forecast arrays, JSON blobs) - this shows up in `state_attributes`, not
 `states` row count:
 
 ```sql
@@ -302,9 +309,9 @@ FROM states;
 ```
 
 If `oldest` is much older than your configured `purge_keep_days`, purge is
-not working — check the HA log for `recorder.purge` errors. If the range
+not working - check the HA log for `recorder.purge` errors. If the range
 matches your configured window, purge is working correctly and the row
-count you're seeing really is what your setup generates in that window —
+count you're seeing really is what your setup generates in that window -
 the problem is entity-level noise, not purge.
 
 ---
@@ -315,13 +322,13 @@ the problem is entity-level noise, not purge.
 tables. They do **not** clean the `statistics` table, regardless of how
 short you set `keep_days`.
 
-Any entity with a `state_class` (most sensors — power, energy, temperature,
+Any entity with a `state_class` (most sensors - power, energy, temperature,
 etc.) gets long-term statistics generated and retained **indefinitely** by
 default, because these feed the Energy dashboard and long-term history
 graphs. Only `statistics_short_term` is auto-cleaned (kept roughly 10 days).
 
-If you have many sensors with `state_class` set — which is typical for
-energy monitoring integrations — `statistics` can dwarf `states` even when
+If you have many sensors with `state_class` set - which is typical for
+energy monitoring integrations - `statistics` can dwarf `states` even when
 purge is working perfectly.
 
 **Check it:**
@@ -339,7 +346,7 @@ LIMIT 25;
 against the noisiest `statistic_id`s. Unlike a normal purge, this *does*
 remove statistics for the targeted entities. Alternatively, exclude the
 entity entirely via `recorder: exclude`, understanding this removes both
-`states` and `statistics` for it — fine for instantaneous readings you don't
+`states` and `statistics` for it - fine for instantaneous readings you don't
 need historical stats on, not fine for anything feeding the Energy
 dashboard.
 
@@ -353,16 +360,16 @@ power plugs, etc.):
 
 Each energy socket typically exposes multiple sensors:
 
-- **Cumulative totals** (kWh import/export) — update relatively rarely,
+- **Cumulative totals** (kWh import/export) - update relatively rarely,
   monotonically increasing, feed the Energy dashboard. **Worth keeping.**
 - **Instantaneous readings** (active power W, voltage V, current A,
-  power factor, frequency) — update every few seconds, only useful in the
+  power factor, frequency) - update every few seconds, only useful in the
   moment, not meaningful as long-term history. **Prime purge/exclude
   candidates.**
 
 With several sockets each exposing 4-6 instantaneous sensors polling every
 few seconds, this alone can generate well over a million `states` rows per
-day — entirely independent of any purge misconfiguration.
+day - entirely independent of any purge misconfiguration.
 
 **Diagnosis:**
 
@@ -375,7 +382,7 @@ GROUP BY sm.entity_id
 ORDER BY n DESC;
 ```
 
-**Fix** — exclude the instantaneous sensors by pattern, keep the cumulative
+**Fix** - exclude the instantaneous sensors by pattern, keep the cumulative
 ones:
 
 ```yaml
@@ -391,7 +398,7 @@ recorder:
 ```
 
 Adjust suffixes to match your actual entity naming (varies by device model /
-firmware). Do **not** exclude the `_total_power_import_kwh`-style entities —
+firmware). Do **not** exclude the `_total_power_import_kwh`-style entities -
 those are what the Energy dashboard and long-term statistics depend on.
 
 ---
@@ -426,12 +433,12 @@ Start Home Assistant!
 
 Run through in this order when the database is growing unexpectedly:
 
-1. ☐ Check for `-wal`/`-shm` files before running any manual SQL — if
+1. ☐ Check for `-wal`/`-shm` files before running any manual SQL - if
    present, stop HA (or checkpoint a copy) before drawing conclusions.
-2. ☐ `PRAGMA integrity_check;` — confirm the database is structurally sound.
-3. ☐ Check `MIN(last_updated_ts)`/`MAX(last_updated_ts)` on `states` —
+2. ☐ `PRAGMA integrity_check;` - confirm the database is structurally sound.
+3. ☐ Check `MIN(last_updated_ts)`/`MAX(last_updated_ts)` on `states` -
    confirm purge is actually enforcing `purge_keep_days`.
-4. ☐ Row counts / byte sizes per table — identify which table dominates.
+4. ☐ Row counts / byte sizes per table - identify which table dominates.
 5. ☐ If `states` dominates: top-entities-by-count query → add noisy
    entities to `exclude`.
 6. ☐ If `statistics`/`statistics_short_term` dominates: top statistic_ids
