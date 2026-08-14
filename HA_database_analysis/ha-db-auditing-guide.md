@@ -110,9 +110,24 @@ still trip over pages that reference data currently sitting in the WAL.
 
 **How to resolve it:**
 
+> **Note**  
+> Stopping Home Assistant  
+The way you stop and start Home Assistant depends on your installation type. Use the appropriate commands for your setup:
+
+```
+systemctl stop home-assistant   # Linux systemd
+or
+ha core stop  # Home Assistant OS / Supervised
+
+systemctl start home-assistant   # Linux systemd
+or
+ha core start  # Home Assistant OS / Supervised
+
+
+```
+
 ```bash
 # 1. Stop Home Assistant so nothing is actively writing
-systemctl stop home-assistant   # adjust for your setup (HAOS, container, etc.)
 
 # 2. Force a full checkpoint, merging -wal into the main file
 sqlite3 home-assistant_v2.db "PRAGMA wal_checkpoint(TRUNCATE);"
@@ -157,12 +172,14 @@ sqlite3 recovered.db "PRAGMA integrity_check;"
 
 If `.recover` produces a clean database, swap it in:
 
+
+Stop Home Assistant!
 ```bash
-systemctl stop home-assistant
 mv home-assistant_v2.db home-assistant_v2.db.old
 mv recovered.db home-assistant_v2.db
-systemctl start home-assistant
 ```
+
+Start Home Assistant!  
 
 If recovery isn't clean, or the corruption is extensive, it's often faster
 and more reliable to let HA rebuild a fresh database rather than nurse a
@@ -170,14 +187,14 @@ damaged file back to health — especially if the `statistics` table (see
 Section 6) was already dominating the file size and not worth preserving
 anyway:
 
+Stop Home Assistant!
 ```bash
-systemctl stop home-assistant
 mv home-assistant_v2.db home-assistant_v2.db.corrupt-backup-$(date +%F)
 mv home-assistant_v2.db-wal home-assistant_v2.db-wal.bak 2>/dev/null
 mv home-assistant_v2.db-shm home-assistant_v2.db-shm.bak 2>/dev/null
-systemctl start home-assistant
 ```
 
+Start Home Assistant!   
 **Why databases corrupt in the first place** — worth checking so it doesn't
 recur:
 - Unclean shutdown / power loss mid-write
@@ -396,11 +413,12 @@ If there's substantial free space that repack hasn't reclaimed, run a
 manual `VACUUM` on a **stopped** HA instance (VACUUM rewrites the entire
 file, so this can take a while on a multi-GB database):
 
+
+Stop Home Assistant! 
 ```bash
-systemctl stop home-assistant
 sqlite3 home-assistant_v2.db "VACUUM;"
-systemctl start home-assistant
 ```
+Start Home Assistant!
 
 ---
 
